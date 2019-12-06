@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # FrontendZing
+=======
+# ZingDoiHoaTien
+>>>>>>> 3be2fc63c1f029e6c41eafdc62256a70d26fa560
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.17.
 
