@@ -1,0 +1,22 @@
+<h1>My Awesome List</h1>
+<a routerLink="/create-singer">Create Singer</a>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Name</th>
+    <th scope="col">Image</th>
+    <th scope="col">MyList</th>
+    <th scope="col">PlayList</th>
+  </tr>
+  </thead>
+  <tbody *ngFor="let aws of singerList">
+  <tr>
+    <td> {{ aws.name }}</td>
+    <td> {{ aws.image }}</td>
+    <td> {{ aws.myList }}</td>
+    <td> {{ aws.playlist }}</td>
+    <td><a [routerLink]="['edit-singer',aws.id]">Edit</a></td>
+    <td><a [routerLink]="['delete-singer',aws.id]">Delete</a></td>
+  </tr>
+  </tbody>
+</table>
