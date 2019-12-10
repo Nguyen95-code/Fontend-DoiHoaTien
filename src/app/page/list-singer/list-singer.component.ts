@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Singer} from '../../interface/singer';
-import {SingerService} from '../../service/singer.service';
+import {SingerService} from '../../service/singer/singer.service';
 
 @Component({
   selector: 'app-list-singer',

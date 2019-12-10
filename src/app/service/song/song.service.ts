@@ -10,7 +10,7 @@ export class SongService {
   private songUrl = 'https://zingdoihoatien.herokuapp.com/api/songs';
   private newSongUrl = 'https://zingdoihoatien.herokuapp.com/api/songs/new';
   constructor(private http: HttpClient) { }
-  getList(): Observable<Song[]> {
+  getListNew(): Observable<Song[]> {
     return this.http.get<Song[]>(this.newSongUrl);
   }
   create(song): Observable<Song> {
@@ -21,5 +21,8 @@ export class SongService {
   }
   delete(id: number): Observable<Song> {
     return  this.http.delete<Song>(this.songUrl + '/' + id);
+  }
+  getAllSong(): Observable<Song[]> {
+    return this.http.get<Song[]>(this.songUrl);
   }
 }

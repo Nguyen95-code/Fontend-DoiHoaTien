@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SongService } from '../../../service/song/song.service';
 import { Song } from '../../../interface/song';
 import {Subscription} from 'rxjs';
-import {ActivatedRoute, ParamMap} from '@angular/router';
+import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 
 @Component({
   selector: 'app-delete-song',
@@ -16,7 +16,8 @@ export class DeleteSongComponent implements OnInit {
   sub: Subscription;
 
   constructor(private songService: SongService,
-              private activateRoute: ActivatedRoute) { }
+              private activateRoute: ActivatedRoute,
+              private router: Router) { }
 
   ngOnInit() {
     this.sub = this.activateRoute.paramMap.subscribe((paramMap: ParamMap) => {
@@ -32,6 +33,7 @@ export class DeleteSongComponent implements OnInit {
   delete() {
     this.songService.delete(this.song.id).subscribe(() => {
       this.messageSuccess = 'Delete Success';
+      this.router.navigate(['']);
     }, () => {
       this.messageError = 'Delete Error';
     });

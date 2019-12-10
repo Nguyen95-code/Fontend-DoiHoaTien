@@ -1,3 +1,5 @@
+<button routerLink="create-song">Create new song</button>
+
 <h2>Bài hát nổi bật</h2>
 <div class="container-fluid padding">
   <div class="row padding">
@@ -16,8 +18,23 @@
     <hr class="my-4">
   </div>
 </div>
+
+<h2>Tất cả bài hát</h2>
+<div class="row">
+<span class="col-md-3" *ngFor="let song of songList">
+  <span class="card">
+    <img src="{{song.image}}" class="card-img-top" alt="...">
+    <span class="card-body">
+      <h5 class="card-title">{{song.name}}</h5>
+      <p class="card-text">{{song.description}}</p>
+      <a [routerLink]="['detail-song', song.id]" class="btn btn-primary">Chi tiết bài hát</a>
+    </span>
+  </span>
+</span>
+</div>
+
 <h2>List new Song</h2>
-<a routerLink="create-song">Create</a>
+
 <div class="row">
   <div *ngFor="let song of listNewSong" class="col-md-3">
     <div class="card">
@@ -30,6 +47,3 @@
     </div>
   </div>
 </div>
-
-
-
