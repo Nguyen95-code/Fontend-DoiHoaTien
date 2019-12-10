@@ -22,12 +22,12 @@
 <h2>Tất cả bài hát</h2>
 <div class="row">
 <span class="col-md-3" *ngFor="let song of songList">
-  <span class="card">
-    <img src="{{song.image}}" class="card-img-top" alt="...">
+  <span class="card" style="height: 500px; width: 100%">
+    <img src="{{song.image}}" class="card-img-top" style="width: 100%; height: 50%">
     <span class="card-body">
       <h5 class="card-title">{{song.name}}</h5>
       <p class="card-text">{{song.description}}</p>
-      <a [routerLink]="['detail-song', song.id]" class="btn btn-primary">Chi tiết bài hát</a>
+      <a [routerLink]="['detail-song', song.id]" class="btn btn-primary" style="bottom: 0px">Chi tiết bài hát</a>
     </span>
   </span>
 </span>

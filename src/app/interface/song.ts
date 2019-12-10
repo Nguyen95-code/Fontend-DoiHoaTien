@@ -2,11 +2,10 @@ import DateTimeFormat = Intl.DateTimeFormat;
 import {Singer} from './singer';
 
 export interface Song {
-  id: number;
+  id?: number;
   name: string;
   link: string;
   image: string;
   description: string;
-  createDate: DateTimeFormat;
-  singer: Singer;
+  singer?: Singer;
 }

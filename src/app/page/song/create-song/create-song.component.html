@@ -1,19 +1,19 @@
-<form #songForm="ngForm" (ngSubmit)="createSong(songForm)" class="form-group">
+<form [formGroup]="songForm" (ngSubmit)="createSong()" class="form-group">
   <div >
     <label >Name of music</label>
-    <input type="text" class="form-control" ngModel name="name" >
+    <input type="text" class="form-control" formControlName="name" >
   </div>
   <div >
     <label >Description of music</label>
-    <input type="text" class="form-control" ngModel name="description" placeholder="description">
+    <input type="text" class="form-control" formControlName="description" placeholder="description">
   </div>
   <div >
-    <label >Example file music</label>
-    <input type="file" class="form-control-file" ngModel name="link" >
+    <label >File music</label>
+    <input type="file" class="form-control-file" formControlName="link" (change)="uploadAudio($event)">
   </div>
   <div >
-    <label >Example file img</label>
-    <input type="file" class="form-control-file" ngModel name="image" >
+    <label >File image</label>
+    <input type="file" class="form-control-file" formControlName="image" (change)="uploadImage($event)">
   </div>
   <input type="submit" class="btn btn-success mr-2" value="Create">
   <button type="button" class="btn btn-warning " routerLink="">Cancel</button>

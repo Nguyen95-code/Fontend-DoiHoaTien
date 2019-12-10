@@ -12,9 +12,14 @@ import { SongService} from './service/song/song.service';
 import { SingerService} from './service/singer/singer.service';
 import { HttpClientModule } from '@angular/common/http';
 import { DetailSongComponent } from './page/song/detail-song/detail-song.component';
-import {FormsModule} from '@angular/forms';
-import { ListSongComponent } from './page/list-song/list-song.component';
-import {ListSingerComponent} from './page/list-singer/list-singer.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ListSongComponent } from './page/song/list-song/list-song.component';
+import {ListSingerComponent} from './page/singer/list-singer/list-singer.component';
+import {environment} from "../environments/environment";
+import {AngularFireModule} from "@angular/fire";
+import {AngularFireDatabaseModule} from "@angular/fire/database";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MaterialModule} from "./meterial.module";
 
 
 @NgModule({
@@ -34,7 +39,12 @@ import {ListSingerComponent} from './page/list-singer/list-singer.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [
     SongService,
