@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './block/header/header.component';
@@ -15,6 +14,9 @@ import { SingerService} from './service/singer/singer.service';
 import { HttpClientModule } from '@angular/common/http';
 import { DetailSongComponent } from './page/song/detail-song/detail-song.component';
 import {FormsModule} from '@angular/forms';
+import { ListSongComponent } from './component/list-song/list-song.component';
+import {ListSingerComponent} from './component/list-singer/list-singer.component';
+
 
 @NgModule({
   declarations: [
@@ -26,10 +28,11 @@ import {FormsModule} from '@angular/forms';
     FooterComponent,
     CreateSongComponent,
     DeleteSongComponent,
-    DetailSongComponent
+    DetailSongComponent,
+    ListSongComponent,
+    ListSingerComponent
   ],
   imports: [
-    AppRoutingModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
