@@ -15,13 +15,4 @@ export class SingerService {
   getAllSinger(): Observable<Singer[]> {
     return this.http.get<Singer[]>(this.API_URL);
   }
-  create(singer: Singer) {
-    return this.http.post(this.API_URL, singer);
-  }
-  edit(id: number, singer: Singer): Observable<Singer> {
-    return this.http.put<Singer>(`${this.API_URL}/${id}`, singer);
-  }
-  getById(id: string): Observable<Singer> {
-    return this.http.get<Singer>(`${this.API_URL}/${id}`);
-  }
 }
