@@ -3,8 +3,8 @@ import {Song} from '../../../interface/song';
 import {Subscription} from 'rxjs';
 import {SongService} from '../../../service/song/song.service';
 import {ActivatedRoute, ParamMap} from '@angular/router';
-import {StreamState} from "../../../interface/stream-state";
-import {AudioService} from "../../../service/player/audio.service";
+import {StreamState} from '../../../interface/stream-state';
+import {AudioService} from '../../../service/player/audio.service';
 
 
 @Component({
@@ -13,9 +13,6 @@ import {AudioService} from "../../../service/player/audio.service";
   styleUrls: ['./detail-song.component.scss']
 })
 export class DetailSongComponent implements OnInit {
-
-  song: Song;
-  sub: Subscription;
   constructor(private songService: SongService,
               private activateRoute: ActivatedRoute,
               private audioService: AudioService) {
@@ -23,6 +20,13 @@ export class DetailSongComponent implements OnInit {
       this.state = state;
     });
   }
+
+  song: Song;
+  sub: Subscription;
+  state: StreamState;
+  volume;
+
+  onVolume = true;
 
   ngOnInit() {
     this.sub = this.activateRoute.paramMap.subscribe((paraMap: ParamMap) => {
@@ -35,12 +39,8 @@ export class DetailSongComponent implements OnInit {
     });
   }
 
-  files: Array<any> = [];
-  state: StreamState;
-  volume;
-
-  isEndSongs(){
-    if (this.state.readableCurrentTime == this.state.readableDuration){
+  isEndSongs() {
+    if (this.state.readableCurrentTime === this.state.readableDuration) {
       this.next();
     }
   }
@@ -48,7 +48,7 @@ export class DetailSongComponent implements OnInit {
   playStream(url) {
     this.audioService.playStream(url).subscribe(events => {
       // listening for fun here
-      if (this.state.readableDuration == this.state.readableCurrentTime){
+      if (this.state.readableDuration === this.state.readableCurrentTime) {
         this.next();
       }
     });
@@ -79,19 +79,17 @@ export class DetailSongComponent implements OnInit {
     this.audioService.seekTo(change.value);
   }
 
-  onVolume = true;
-
-  turnOnVolume(){
+  turnOnVolume() {
     this.audioService.onVolume();
     this.onVolume = true;
   }
 
-  turnOffVolume(){
+  turnOffVolume() {
     this.audioService.offVolume();
     this.onVolume = false;
   }
 
-  onChangVolume(volume){
-    this.audioService.changeVolume(volume.value/100);
+  onChangVolume(volume) {
+    this.audioService.changeVolume(volume.value / 100);
   }
 }
