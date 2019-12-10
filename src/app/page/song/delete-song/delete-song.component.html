@@ -1,0 +1,22 @@
+<div class="text-center">
+  <h2>Are you sure?</h2>
+</div>
+
+<div *ngIf="messageSuccess" class="alert alert-success">
+  <p>{{messageSuccess}}</p>
+</div>
+<div *ngIf="messageError" class="alert alert-danger">
+  <p>{{messageError}}</p>
+</div>
+
+<label class="col">
+  Tag:
+  <span>{{song.name}}</span>
+</label>
+<label class="col">
+  Descriptions:
+  <span>{{song.description}}</span>
+</label>
+<div class="col">
+  <button class="btn btn-info" type="submit" (click)="delete()">Delete</button>
+</div>

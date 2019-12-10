@@ -1,4 +1,5 @@
 import DateTimeFormat = Intl.DateTimeFormat;
+import {Singer} from './singer';
 
 export interface Song {
   id: number;
@@ -7,5 +8,5 @@ export interface Song {
   image: string;
   description: string;
   createDate: DateTimeFormat;
-  singerId: number;
+  singer: Singer;
 }

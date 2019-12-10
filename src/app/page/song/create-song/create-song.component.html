@@ -1,20 +1,21 @@
 <p>create-song works!</p>
-<form>
-  <div class="form-group">
-    <label for="name">Name of music</label>
-    <input type="text" class="form-control" id="name" >
+<form #songForm="ngForm" (ngSubmit)="createSong(songForm)" class="form-group">
+  <div >
+    <label >Name of music</label>
+    <input type="text" class="form-control" ngModel name="name" >
   </div>
-  <div class="form-group">
-    <label for="description">Description of music</label>
-    <input type="text" class="form-control" id="description" placeholder="description">
+  <div >
+    <label >Description of music</label>
+    <input type="text" class="form-control" ngModel name="description" placeholder="description">
   </div>
-  <div class="form-group">
-      <label for="musicFile">Example file music</label>
-      <input type="file" class="form-control-file" id="musicFile">
+  <div >
+    <label >Example file music</label>
+    <input type="file" class="form-control-file" ngModel name="link" >
   </div>
-  <div class="form-group">
-    <label for="imgFile">Example file img</label>
-    <input type="file" class="form-control-file" id="imgFile">
+  <div >
+    <label >Example file img</label>
+    <input type="file" class="form-control-file" ngModel name="image" >
   </div>
-  <button type="button" class="btn btn-outline-success">Success</button>
+  <input type="submit" class="btn btn-success mr-2" value="Create">
+  <button type="button" class="btn btn-warning " routerLink="">Cancel</button>
 </form>

@@ -9,7 +9,12 @@ import { MenuComponent } from './block/menu/menu.component';
 import { ListSongNewComponent } from './page/song/list-song-new/list-song-new.component';
 import { FooterComponent } from './block/footer/footer.component';
 import { CreateSongComponent } from './page/song/create-song/create-song.component';
-import { DeleteSongComponent } from './delete-song/delete-song.component';
+import { DeleteSongComponent } from './page/song/delete-song/delete-song.component';
+import { SongService} from './service/song/song.service';
+import { SingerService} from './service/singer/singer.service';
+import { HttpClientModule } from '@angular/common/http';
+import { DetailSongComponent } from './page/song/detail-song/detail-song.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,13 +25,20 @@ import { DeleteSongComponent } from './delete-song/delete-song.component';
     ListSongNewComponent,
     FooterComponent,
     CreateSongComponent,
-    DeleteSongComponent
+    DeleteSongComponent,
+    DetailSongComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    SongService,
+    SingerService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

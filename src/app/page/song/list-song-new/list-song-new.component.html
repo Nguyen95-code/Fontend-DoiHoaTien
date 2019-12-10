@@ -17,17 +17,15 @@
   </div>
 </div>
 <h2>List new Song</h2>
+<a routerLink="create-song">Create</a>
 <div class="row">
-  <div *ngFor="let i of listNewSong" class="col-md-3">
+  <div *ngFor="let song of listNewSong" class="col-md-3">
     <div class="card">
-      <img class="card-img-top"
-           src="http://afamilycdn.com/2019/8/29/rin3378bichphuong-copy-15670124601321264846894-1567070161078679754605.jpg"
-           class="img-fluid">
+      <img class="card-img-top img-fluid" src="{{song.image}}">
       <div class="card-body">
-        <h4 class="card-title">Đi Du Đưa Đi</h4>
-        <p class="card-text">Trẻ trâu và vô cùng manh động. Tuy nhiên người đầy đồ chơi và cũng là thanh niên pk
-          kinh nhất</p>
-        <a href="#" class="btn btn-outline-secondary">Vào đây mà nhìn</a>
+        <h4 class="card-title">{{song.name}}</h4>
+        <!--<h4 class="card-title">{{song.singer.name}}</h4>-->
+        <a class="btn btn-outline-secondary" [routerLink]="['detail-song', song.id]">Vào đây mà nhìn</a>
       </div>
     </div>
   </div>

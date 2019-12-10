@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {SongService} from '../../../service/song/song.service';
 
 @Component({
   selector: 'app-create-song',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateSongComponent implements OnInit {
 
-  constructor() { }
+  constructor(private songService: SongService) { }
 
   ngOnInit() {
   }
-
+  createSong(songForm) {
+    this.songService.create(songForm.value).subscribe(() => {
+      console.log('add thành công!');
+      songForm.resetForm();
+    }, error => {
+      console.log('lỗi' + error);
+    });
+  }
 }

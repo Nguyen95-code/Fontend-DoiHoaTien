@@ -1,0 +1,13 @@
+<div class="card">
+<!--  <img class="card-img-top"-->
+<!--       src="{{song.image}}"-->
+<!--       class="img-fluid">-->
+  <div class="card-body">
+    <h4 class="card-title">{{song.name}}</h4>
+    <h4 class="card-title">{{song.description}}</h4>
+<!--    <h4 class="card-title">{{song.singer.name}}</h4>-->
+  </div>
+  <button [routerLink]="['delete-song',song.id]">Delete</button>
+</div>
+
+
