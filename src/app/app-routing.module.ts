@@ -24,6 +24,10 @@ const routes: Routes = [
   {
     path: '',
     component: ListSongNewComponent
+  },
+  {
+    path: '',
+    component: ListSongComponent
   }
 ];
 
@@ -31,5 +35,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {
-}
+export class AppRoutingModule { }
