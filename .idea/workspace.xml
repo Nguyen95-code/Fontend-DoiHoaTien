@@ -3,31 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="00dfc23f-e965-4f4c-9cf9-9876955163d9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/block/menu/menu.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/block/menu/menu.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/component/list-singer/list-singer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/list-singer/list-singer.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/component/list-singer/list-singer.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/list-singer/list-singer.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/component/list-singer/list-singer.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/list-singer/list-singer.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/component/list-singer/list-singer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/list-singer/list-singer.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/component/list-song/list-song.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/list-song/list-song.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/component/list-song/list-song.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/list-song/list-song.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/component/list-song/list-song.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/list-song/list-song.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/component/list-song/list-song.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/list-song/list-song.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page/song/create-song/create-song.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/song/create-song/create-song.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page/song/delete-song/delete-song.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/song/delete-song/delete-song.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page/song/list-song-new/list-song-new.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page/song/list-song-new/list-song-new.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page/song/list-song-new/list-song-new.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page/song/list-song-new/list-song-new.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/service/singer.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/service/singer.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/service/singer/singer.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/service/singer/singer.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/service/singer/singer.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/service/song.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/service/song.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/service/song/song.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/service/song/song.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/block/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/block/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/block/header/header.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/block/header/header.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page/list-song/list-song.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/list-song/list-song.component.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,6 +55,7 @@
       <option name="presentableId" value="Default" />
       <updated>1575946852770</updated>
       <workItem from="1575946856321" duration="1397000" />
+      <workItem from="1575962704452" duration="2795000" />
     </task>
     <servers />
   </component>

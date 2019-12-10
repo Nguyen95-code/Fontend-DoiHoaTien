@@ -1,9 +1,10 @@
-
 <div>
   <nav class="navbar navbar-expand-md navbar-light bd-light sticky-top">
     <div class="container-fluid">
       <a class="navbar-branch" href="#">
-        <img src="http://photoservice.gamesao.vn/Resources/Upload/Images/Editor/30/Nh%E1%BB%AFng%20k%C3%BD%20%E1%BB%A9c%20kh%C3%B4ng%20th%E1%BB%83%20n%C3%A0o%20qu%C3%AAn%20v%E1%BB%81%20bi%E1%BB%87t%20%C4%91%E1%BB%99i%20R%20nh%C3%AD%20nh%E1%BB%91%20trong%20Pokemon/rocket.jpg" height="50">
+        <img
+          src="http://photoservice.gamesao.vn/Resources/Upload/Images/Editor/30/Nh%E1%BB%AFng%20k%C3%BD%20%E1%BB%A9c%20kh%C3%B4ng%20th%E1%BB%83%20n%C3%A0o%20qu%C3%AAn%20v%E1%BB%81%20bi%E1%BB%87t%20%C4%91%E1%BB%99i%20R%20nh%C3%AD%20nh%E1%BB%91%20trong%20Pokemon/rocket.jpg"
+          height="50">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
         <span class="navbar-toggler-icon"></span>
@@ -11,10 +12,14 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <div class="custom-file">
-            <form class="example" action="/action_page.php">
-              <input type="text" placeholder="Search.." name="search">
-              <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
+<!--            <form class="example m-2" action="/action_page.php">-->
+<!--              <input type="text" placeholder="Search.." name="search">-->
+<!--              <button type="submit">c</button>-->
+<!--            </form>-->
+            <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-success" type="submit"><i class="fa fa-search"></i></button>
+          </form>
           </div>
           <li class="nav-item">
             <a class="nav-link active" href="#">Home</a>
@@ -31,24 +36,34 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Connect</a>
           </li>
+          <div class="btn-group">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Right-aligned menu
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+              <button class="dropdown-item" type="button" routerLink="create-song"><i style='font-size:24px' class='fas' >&#xf574;</i> Create new Song</button>
+              <button class="dropdown-item" type="button">Another action</button>
+              <button class="dropdown-item" type="button">Something else here</button>
+            </div>
+          </div>
         </ul>
       </div>
     </div>
   </nav>
-  <!-- <div id="slides" class="carousel slide" data-ride="carousel">
+  <div id="slides" class="carousel slide" data-ride="carousel">
     <ul class="carousel-indicators">
-      <li data-target="#slides" data-slide-to="0" class="active" ></li>
-      <li data-target="#slides" data-slide-to="1" ></li>
-      <li data-target="#slides" data-slide-to="2" ></li>
-      <li data-target="#slides" data-slide-to="3" ></li>
+      <li data-target="#slides" data-slide-to="0" class="active"></li>
+      <li data-target="#slides" data-slide-to="1"></li>
+      <li data-target="#slides" data-slide-to="2"></li>
+      <li data-target="#slides" data-slide-to="3"></li>
     </ul>
     <div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="https://github.com/NguyenViet07/img-zing/blob/master/1.jpg?raw=true">
+          <img src="https://github.com/NguyenViet07/img-zing/blob/master/bp123.png?raw=true" style="height: 800px">
           <div class="carousel-caption">
-            <h1 class="display-2">Maver</h1>
-            <h3>Avenger</h3>
+            <h1 class="display-2">Zing</h1>
+            <h3>MP3</h3>
             <button type="button" class="btn btn-outline-light btn-lg">
               View Turtorials
             </button>
@@ -56,13 +71,14 @@
           </div>
         </div>
         <div class="carousel-item ">
-          <img src="https://github.com/NguyenViet07/img-zing/blob/master/2.jpg?raw=true"></div>
-        <div class="carousel-item " class="img-fluid">
-          <img src="https://github.com/NguyenViet07/img-zing/blob/master/3.jpg?raw=true"></div>
-        <div class="carousel-item " class="img-fluid">
-          <img src="https://github.com/NguyenViet07/img-zing/blob/master/4.jpg?raw=true"></div>
+          <img src="https://github.com/NguyenViet07/img-zing/blob/master/st.jpg?raw=true" style="height: 800px">
+        </div>
+        <div class="carousel-item ">
+          <img src="https://github.com/NguyenViet07/img-zing/blob/master/Hoang-Yen-Chibi---cover.jpg?raw=true" style="height: 800px"></div>
+        <div class="carousel-item ">
+          <img src="https://github.com/NguyenViet07/img-zing/blob/master/cp1.jpg?raw=true" style="height: 800px"></div>
       </div>
     </div>
-  </div> -->
+  </div>
 </div>
 
