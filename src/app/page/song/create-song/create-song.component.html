@@ -1,9 +1,13 @@
 <form [formGroup]="songForm" (ngSubmit)="createSong()" class="form-group">
   <div *ngIf="uploadAudioSuccess" class="alert-success alert">
-    Audio Success
+    Upload Audio Success
   </div>
   <div *ngIf="uploadImageSuccess" class="alert-success alert">
-    Upload Image
+    Upload Image Success
+  </div>
+  <div *ngIf="(!uploadAudioSuccess && songForm.get('link').value != '') ||
+        (!uploadImageSuccess && songForm.get('image').value != '')" class="alert alert-primary">
+    Uploading!!!
   </div>
   <div >
     <label >Name of music</label>

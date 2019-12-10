@@ -49,10 +49,10 @@ export class CreateSongComponent implements OnInit {
             alert('Please wait upload file');
           } else {
             this.song = {
-              name: this.songForm.value.name,
+              name: this.songForm.value.name.trim(),
               link: this.nameAudioURL,
               image: this.nameImageURL,
-              description: this.songForm.value.description
+              description: this.songForm.value.description.trim()
             };
             this.songService.create(this.song).subscribe(() => {
               console.log('Add thành công!');
