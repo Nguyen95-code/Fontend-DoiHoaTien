@@ -50,14 +50,14 @@
 <br>
 <h2>Tất cả bài hát</h2>
 <div class="row">
-<span class="col-md-3" *ngFor="let song of songList">
+<span class="col-md-3" *ngFor="let song of songList" style="padding: 5px">
   <div class="card bg-dark text-white" [routerLink]="['detail-song', song.id]">
-  <img src="{{song.image}}" class="card-img">
+  <img src="{{song.image}}" class="card-img" style="height: 300px">
   <div class="card-img-overlay">
     <h5 class="card-title" style="color: red">{{song.name}}</h5>
-    <p *ngIf="song.description.length <= 20" class="card-title" style="font-size: 75%; color: black">{{song.description}}</p>
+    <p *ngIf="song.description.length <= 20" class="card-title" style="font-size: 75%; color: white">{{song.description}}</p>
     <p *ngIf="song.description.length > 20" class="card-title"
-       style="font-size: 75%; color: black">{{song.description.substring(0, 20) + '...'}}</p>
+       style="font-size: 75%; color: white">{{song.description.substring(0, 20) + '...'}}</p>
   </div>
   </div>
 </span>
@@ -69,14 +69,14 @@
 <h2>List new Song</h2>
 
 <div class="row">
-<span class="col-md-3" *ngFor="let song of listNewSong">
+<span class="col-md-3" *ngFor="let song of listNewSong" style="padding: 5px">
   <div class="card bg-dark text-white" [routerLink]="['detail-song', song.id]">
-  <img src="{{song.image}}" class="card-img">
+  <img src="{{song.image}}" class="card-img" style="height: 300px">
   <div class="card-img-overlay">
     <h5 class="card-title" style="color: red">{{song.name}}</h5>
-    <p *ngIf="song.description.length <= 20" class="card-title" style="font-size: 75%; color: black">{{song.description}}</p>
+    <p *ngIf="song.description.length <= 20" class="card-title" style="font-size: 75%; color: white">{{song.description}}</p>
     <p *ngIf="song.description.length > 20" class="card-title"
-       style="font-size: 75%; color: black">{{song.description.substring(0, 20) + '...'}}</p>
+       style="font-size: 75%; color: white">{{song.description.substring(0, 20) + '...'}}</p>
   </div>
   </div>
 </span>
