@@ -1,5 +1,7 @@
 import DateTimeFormat = Intl.DateTimeFormat;
 import {Singer} from './singer';
+import {Playlist} from './playlist';
+import {Album} from './album';
 
 export interface Song {
   id?: number;
@@ -8,4 +10,6 @@ export interface Song {
   image: string;
   description: string;
   singer?: Singer;
+  playlist: Playlist[];
+  album: Album[];
 }
