@@ -1,7 +1,16 @@
+import {Song} from './song';
+import {Album} from './album';
+import {Playlist} from './playlist';
+
 export interface Singer {
-  id: number;
+  id?: number;
   name: string;
   image: string;
-  myList: string;
-  playlist: string;
+  address: string;
+  identityCard: string;
+  identityCardImage: string;
+  company?: string;
+  myList: Song[];
+  playlist: Playlist[];
+  albumList: Album[];
 }

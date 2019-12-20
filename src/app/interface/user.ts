@@ -1,7 +1,8 @@
+import {Playlist} from './playlist';
 
 export interface User {
-  id: number;
+  id?: number;
   name: string;
   image: string;
-  playlist: string[];
+  playlist: Playlist[];
 }

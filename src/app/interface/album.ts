@@ -1,9 +1,10 @@
 import {Singer} from './singer';
+import {Song} from './song';
 
 export interface Album {
-  id: number;
+  id?: string;
   name: string;
   image: string;
-  songList: string[];
   singer?: Singer;
+  songList: Song[];
 }

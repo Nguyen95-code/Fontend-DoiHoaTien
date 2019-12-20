@@ -2,8 +2,154 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="453a4fa7-5ba2-4604-bb8a-60748c1601a8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/interface/playlist.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/css/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/css/aos.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/css/bootstrap-datepicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/css/bootstrap/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/css/bootstrap/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/css/fl-bigmug-line.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/css/jquery-ui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/css/magnific-popup.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/css/mediaelementplayer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/css/owl.carousel.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/css/owl.theme.default.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/css/progress-bar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/fonts/bigmug-line/fl-bigmug-line.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/fonts/bigmug-line/fl-bigmug-line.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/fonts/bigmug-line/fl-bigmug-line.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/fonts/bigmug-line/fl-bigmug-line.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/fonts/flaticon/backup.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/fonts/flaticon/font/Flaticon.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/fonts/flaticon/font/Flaticon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/fonts/flaticon/font/Flaticon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/fonts/flaticon/font/Flaticon.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/fonts/flaticon/font/_flaticon.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/fonts/flaticon/font/_flaticon.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/fonts/flaticon/font/flaticon.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/fonts/flaticon/font/flaticon.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/fonts/flaticon/license/license.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/fonts/icomoon/Read Me.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/fonts/icomoon/demo-files/demo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/fonts/icomoon/demo-files/demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/fonts/icomoon/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/fonts/icomoon/fonts/icomoon.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/fonts/icomoon/fonts/icomoon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/fonts/icomoon/fonts/icomoon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/fonts/icomoon/fonts/icomoon.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/fonts/icomoon/selection.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/fonts/icomoon/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/images/hero_bg_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/images/hero_bg_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/images/hero_bg_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/images/hero_bg_4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/images/img_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/images/img_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/images/img_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/images/img_4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/images/person_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/images/person_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/images/person_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/images/person_4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/images/person_5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/images/person_6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/_site-base.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/_site-blocks.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/_site-navbar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/_alert.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/_badge.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/_breadcrumb.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/_button-group.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/_buttons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/_card.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/_carousel.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/_close.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/_code.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/_custom-forms.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/_dropdown.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/_forms.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/_functions.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/_grid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/_images.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/_input-group.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/_jumbotron.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/_list-group.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/_media.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/_modal.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/_nav.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/_navbar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/_pagination.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/_popover.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/_print.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/_progress.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/_reboot.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/_root.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/_tables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/_tooltip.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/_transitions.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/_type.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/_utilities.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/bootstrap-grid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/bootstrap-reboot.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/bootstrap.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/mixins/_alert.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/mixins/_background-variant.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/mixins/_badge.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/mixins/_border-radius.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/mixins/_box-shadow.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/mixins/_breakpoints.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/mixins/_buttons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/mixins/_caret.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/mixins/_clearfix.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/mixins/_float.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/mixins/_forms.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/mixins/_gradients.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/mixins/_grid-framework.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/mixins/_grid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/mixins/_hover.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/mixins/_image.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/mixins/_list-group.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/mixins/_lists.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/mixins/_nav-divider.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/mixins/_pagination.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/mixins/_reset-text.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/mixins/_resize.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/mixins/_screen-reader.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/mixins/_size.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/mixins/_table-row.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/mixins/_text-emphasis.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/mixins/_text-hide.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/mixins/_text-truncate.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/mixins/_transition.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/mixins/_visibility.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/utilities/_align.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/utilities/_background.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/utilities/_borders.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/utilities/_clearfix.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/utilities/_display.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/utilities/_embed.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/utilities/_flex.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/utilities/_float.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/utilities/_position.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/utilities/_screenreaders.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/utilities/_shadows.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/utilities/_sizing.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/utilities/_spacing.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/utilities/_text.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/bootstrap/utilities/_visibility.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/scss/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/block/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/block/footer/footer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/block/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/block/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/interface/album.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/interface/album.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/interface/singer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/interface/singer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/interface/song.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/interface/song.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/interface/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/interface/user.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page/song/create-song/create-song.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/song/create-song/create-song.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,21 +157,24 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="frontend-zing" />
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>link</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="MIXED" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
-  <component name="ProjectId" id="1V2lH5ASoahRRCsl4JmDErm095y" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="571" />
+    <option name="y" value="16" />
+    <option name="width" value="798" />
+    <option name="height" value="688" />
+  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -33,25 +182,22 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app/black-box" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="D:\zing\frontend-zing\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="D:\Codegym\Module 4 - Project\zing-front-end\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\zing\frontend-zing\src\app\interface" />
       <recent name="D:\Codegym\Module 4 - Project\zing-front-end\src\app\interface" />
       <recent name="D:\Codegym\Module 4 - Project\zing-front-end\src\app" />
       <recent name="D:\Codegym\Module 4 - Project\zing-front-end\src\app\service\player" />
       <recent name="D:\Codegym\Module 4 - Project\zing-front-end\src\app\service" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\zing\frontend-zing\src\app\black-box" />
+      <recent name="D:\Codegym\Module 4 - Project\zing-front-end\src\app\page\song" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -71,7 +217,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="453a4fa7-5ba2-4604-bb8a-60748c1601a8" name="Default Changelist" comment="" />
+      <changelist id="00dfc23f-e965-4f4c-9cf9-9876955163d9" name="Default Changelist" comment="" />
       <created>1575948360077</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -81,21 +227,9 @@
       <workItem from="1575962233009" duration="7280000" />
       <workItem from="1575946856321" duration="1397000" />
       <workItem from="1575962704452" duration="2795000" />
-      <workItem from="1576458990172" duration="2885000" />
-      <workItem from="1576465933614" duration="3501000" />
-      <workItem from="1576505840932" duration="55000" />
-      <workItem from="1576806439020" duration="4729000" />
+      <workItem from="1576752561158" duration="684000" />
     </task>
     <servers />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
