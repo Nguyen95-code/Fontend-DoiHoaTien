@@ -5,10 +5,10 @@ import {SongService} from "../../../service/song/song.service";
 
 @Component({
   selector: 'app-list-song',
-  templateUrl: './list-song.component.html',
-  styleUrls: ['./list-song.component.scss']
+  templateUrl: './list-song-new.component.html',
+  styleUrls: ['./list-song-new.component.scss']
 })
-export class ListSongComponent implements OnInit {
+export class ListSongNewComponent implements OnInit {
   songList: Song[] = [];
   listNewSong: Song[] = [];
   constructor(private songService: SongService) {

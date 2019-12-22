@@ -1,0 +1,44 @@
+
+<h2>Bài hát nổi bật</h2>
+<div class="container-fluid padding">
+  <div class="row padding">
+    <div class="col-md-12 col-lg-6">
+      <p>name: Hãy Trao Cho Anh</p>
+      <p>singer Sơn Tùng</p>
+      <p>description</p>
+      <audio></audio>
+      <br>
+    </div>
+    <div class="col-lg-6">
+      <img
+        src="http://kenh14cdn.com/crop/640_360/2019/12/5/photo1562070771315-1562070771900-crop-1562070788898874611958-15755527951611137027236-crop-157555280281298082080.jpg"
+        class="img-fluid">
+    </div>
+    <hr class="my-4">
+  </div>
+</div>
+<br>
+<br>
+
+<div class="site-section">
+  <div class="container">
+    <div class="row">
+      <div class="site-section-heading text-center mb-5 w-border col-md-6 mx-auto">
+        <h2>Danh sách bài hát mới nhất</h2>
+      </div>
+    </div>
+
+    <div class="row" *ngFor="let song of listNewSong">
+      <div class="col-md-6 col-lg-4 mb-5 mb-lg-5" style="position: relative">
+        <div class="team-member" >
+          <img src="{{song.image}}" alt="Image" class="img-fluid">
+          <h2 style="position: relative; background-color: #edf0f5; width: 100%; text-align: center;">{{song.name}}</h2>
+          <div class="text container">
+            <p class="mb-4">{{song.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

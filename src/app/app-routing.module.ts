@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {DetailSongComponent} from './page/song/detail-song/detail-song.component';
 import {DeleteSongComponent} from './page/song/delete-song/delete-song.component';
 import {CreateSongComponent} from './page/song/create-song/create-song.component';
-import {ListSongComponent} from './page/song/list-song/list-song.component';
+import {ListSongNewComponent} from './page/song/list-song-new/list-song-new.component';
 
 
 
@@ -22,11 +22,11 @@ const routes: Routes = [
   },
   {
     path: '',
-    component: ListSongComponent
+    component: ListSongNewComponent
   },
   {
-    path: 'list-song',
-    component: ListSongComponent
+    path: 'list-song-new',
+    component: ListSongNewComponent
   }
 ];
 

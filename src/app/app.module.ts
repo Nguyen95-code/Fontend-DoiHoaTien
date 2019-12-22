@@ -13,7 +13,7 @@ import { SingerService} from './service/singer/singer.service';
 import { HttpClientModule } from '@angular/common/http';
 import { DetailSongComponent } from './page/song/detail-song/detail-song.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { ListSongComponent } from './page/song/list-song/list-song.component';
+import { ListSongNewComponent } from './page/song/list-song-new/list-song-new.component';
 import {ListSingerComponent} from './page/singer/list-singer/list-singer.component';
 import {environment} from "../environments/environment";
 import {AngularFireModule} from "@angular/fire";
@@ -32,7 +32,7 @@ import {MaterialModule} from "./meterial.module";
     CreateSongComponent,
     DeleteSongComponent,
     DetailSongComponent,
-    ListSongComponent,
+    ListSongNewComponent,
     ListSingerComponent
   ],
   imports: [
