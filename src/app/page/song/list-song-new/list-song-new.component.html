@@ -22,23 +22,23 @@
 
 <div class="site-section">
   <div class="container">
-    <div class="row">
+    <div class="row ">
       <div class="site-section-heading text-center mb-5 w-border col-md-6 mx-auto">
         <h2>Danh sách bài hát mới nhất</h2>
       </div>
     </div>
 
-    <div class="row" *ngFor="let song of listNewSong">
-      <div class="col-md-6 col-lg-4 mb-5 mb-lg-5" style="position: relative"  [routerLink]="['detail-song', song.id]">
+    <div class="row">
+      <span class="col-md-6 col-lg-4 mb-5 mb-lg-5" [routerLink]="['detail-song', song.id]" *ngFor="let song of listNewSong">
         <div class="team-member" >
           <img src="{{song.image}}" alt="Image" class="img-fluid">
-          <h2 style="position: relative; background-color: #edf0f5; width: 100%; text-align: center;">{{song.name}}</h2>
+          <h2 style="background-color: #edf0f5; width: 100%; text-align: center;">{{song.name}}</h2>
           <div class="text container">
             <p class="mb-4">{{song.description}}</p>
           </div>
         </div>
-      </div>
+      </span>
     </div>
-
   </div>
 </div>
+
