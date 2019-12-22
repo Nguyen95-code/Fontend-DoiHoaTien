@@ -29,7 +29,7 @@
     </div>
 
     <div class="row" *ngFor="let song of listNewSong">
-      <div class="col-md-6 col-lg-4 mb-5 mb-lg-5" style="position: relative">
+      <div class="col-md-6 col-lg-4 mb-5 mb-lg-5" style="position: relative"  [routerLink]="['detail-song', song.id]">
         <div class="team-member" >
           <img src="{{song.image}}" alt="Image" class="img-fluid">
           <h2 style="position: relative; background-color: #edf0f5; width: 100%; text-align: center;">{{song.name}}</h2>

@@ -32,6 +32,10 @@ const routes: Routes = [
   {
     path: 'list-song',
     component: ListSongComponent
+  },
+  {
+    path: 'list-song/detail-song/:id',
+    component: DetailSongComponent
   }
 ];
 

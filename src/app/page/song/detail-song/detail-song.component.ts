@@ -59,6 +59,7 @@ export class DetailSongComponent implements OnInit {
   }
 
   play() {
+    this.audioService.stop();
     this.playStream(this.song.link);
     this.audioService.play();
   }

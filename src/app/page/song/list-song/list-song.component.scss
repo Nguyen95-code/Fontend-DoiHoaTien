@@ -1,0 +1,49 @@
+.container {
+  .main-toolbar {
+    .toolbar-btn {
+      font-size: 16px;
+      margin-right: 5px ;
+      cursor: pointer;
+    }
+  }
+
+  .content {
+    .logo {
+      margin: 2.5rem !important;
+      text-align: center;
+      font-size: 24px;
+      color: #3f51b5;
+      .mat-icon {
+        height: 100px !important;
+        width: 100% !important;
+        font-size: 160px !important;
+      }
+    }
+  }
+
+  .media-footer {
+    position: relative !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    .time-slider {
+      width: 10% !important;
+      margin-left: 5px !important;
+      margin-right: 5px !important;
+    }
+    .media-action-bar {
+      width: 100% !important;
+      padding: 2.5rem !important;
+      justify-content: center !important;
+      .mat-icon {
+        height: 48px !important;
+        width: 100% !important;
+        font-size: 48px !important;
+      }
+    }
+    .volume-slider {
+      width: 10% !important;
+      margin-left: 5px !important;
+      margin-right: 5px !important;
+    }
+  }
+}

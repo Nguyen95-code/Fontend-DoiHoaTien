@@ -1,99 +1,54 @@
 <div class="site-section bg-light">
   <div class="container">
 
-    <div class="row mb-5" data-aos="fade-up">
+    <div class="row mb-5">
       <div class="col-md-12 text-center">
-        <h2 class="font-weight-bold text-black">Trending Music Of The Week</h2>
+        <h2 class="font-weight-bold text-black">Tất cả bài hát</h2>
       </div>
     </div>
 
-    <div class="d-block d-md-flex podcast-entry bg-white mb-5" data-aos="fade-up">
-      <div class="image" style="background-image: url('../../../../theme/images/img_1.jpg');"></div>
-      <div class="text">
-
-        <h3 class="font-weight-light"><a href="single-post.html">Episode 08: How To Create Web Page Using Bootstrap 4</a></h3>
-        <div class=" mb-3"><span class="text-black-opacity-05"><small>By Mike Smith <span class="sep">/</span> 16 September 2017 <span class="sep">/</span> 1:30:20</small></span></div>
-        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti repellat mollitia consequatur, optio nesciunt placeat. Iste voluptates excepturi tenetur, nesciunt.</p>
-
-        <div class="player">
-          <audio id="player2" preload="none" controls style="max-width: 100%">
-            <source src="http://www.largesound.com/ashborytour/sound/AshboryBYU.mp3" type="audio/mp3">
-          </audio>
-        </div>
-
+    <div class="d-block d-md-flex podcast-entry bg-white mb-5" *ngFor="let song of songList">
+      <div class="col-md-4">
+        <img src="{{song.image}}" class="card-img" style="position: relative; height: 100%">
       </div>
-    </div>
-
-
-    <div class="d-block d-md-flex podcast-entry bg-white mb-5" data-aos="fade-up">
-      <div class="image" style="background-image: url('images/img_2.jpg');"></div>
       <div class="text">
 
-        <h3 class="font-weight-light"><a href="single-post.html">Episode 07: How To Create Web Page Using Bootstrap 4</a></h3>
-        <div class=" mb-3"><span class="text-black-opacity-05"><small>By Mike Smith <span class="sep">/</span> 16 September 2017 <span class="sep">/</span> 1:30:20</small></span></div>
-        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti repellat mollitia consequatur, optio nesciunt placeat. Iste voluptates excepturi tenetur, nesciunt.</p>
+        <h2 class="font-weight-light"  [routerLink]="['detail-song', song.id]">
+          {{song.name}}
+        </h2>
+        <p class="mb-4">{{song.description}}</p>
 
-
-        <div class="player">
-          <audio id="player2" preload="none" controls style="max-width: 100%">
-            <source src="http://www.largesound.com/ashborytour/sound/AshboryBYU.mp3" type="audio/mp3">
-          </audio>
-        </div>
-
-      </div>
-    </div>
-
-
-    <div class="d-block d-md-flex podcast-entry bg-white mb-5" data-aos="fade-up">
-      <div class="image" style="background-image: url('images/img_3.jpg');"></div>
-      <div class="text">
-
-        <h3 class="font-weight-light"><a href="single-post.html">Episode 06: How To Create Web Page Using Bootstrap 4</a></h3>
-        <div class=" mb-3"><span class="text-black-opacity-05"><small>By Mike Smith <span class="sep">/</span> 16 September 2017 <span class="sep">/</span> 1:30:20</small></span></div>
-        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti repellat mollitia consequatur, optio nesciunt placeat. Iste voluptates excepturi tenetur, nesciunt.</p>
-
-        <div class="player">
-          <audio id="player2" preload="none" controls style="max-width: 100%">
-            <source src="http://www.largesound.com/ashborytour/sound/AshboryBYU.mp3" type="audio/mp3">
-          </audio>
+        <div class="media-footer">
+          <mat-toolbar>
+            <mat-toolbar-row>
+              <button mat-button (click)="play(song)" [disabled]="state?.error" *ngIf="!state?.playing">
+                <mat-icon mat-list-icon>play_circle_filled</mat-icon>
+              </button>
+              <button mat-button (click)="pause()" *ngIf="state?.playing">
+                <mat-icon mat-list-icon>pause</mat-icon>
+              </button>
+              <span style="font-size: 15px" *ngIf="!state?.playing">00:00:00</span>
+              <span style="font-size: 15px" *ngIf="state?.playing">{{ state?.readableCurrentTime }}</span>
+              <mat-slider class="time-slider" min="0" [max]="state?.duration" step="1" [value]="state?.currentTime"
+                          (input)="onSliderChangeEnd($event)"
+                          [disabled]="state?.error">
+              </mat-slider>
+              <span style="font-size: 15px" *ngIf="!state?.playing">00:00:00</span>
+              <span style="font-size: 15px" *ngIf="state?.playing">{{ state?.readableDuration }}</span>
+              <div style="padding-left: 2rem">
+              <span *ngIf="!onVolume">
+                <span class="glyphicon glyphicon-volume-off" (click)="turnOnVolume()"> </span>
+              </span>
+                <span *ngIf="onVolume">
+                  <span class="glyphicon glyphicon-volume-up" (click)="turnOffVolume()"></span>
+                </span>
+                <mat-slider class="volume-slider" min="0" [max]="100" step="1" [value]="volume"
+                            (input)="onChangVolume($event)"></mat-slider>
+              </div>
+            </mat-toolbar-row>
+          </mat-toolbar>
         </div>
       </div>
     </div>
-
-
-    <div class="d-block d-md-flex podcast-entry bg-white mb-5" data-aos="fade-up">
-      <div class="image" style="background-image: url('images/img_4.jpg');"></div>
-      <div class="text">
-
-        <h3 class="font-weight-light"><a href="single-post.html">Episode 05: How To Create Web Page Using Bootstrap 4</a></h3>
-        <div class=" mb-3"><span class="text-black-opacity-05"><small>By Mike Smith <span class="sep">/</span> 16 September 2017 <span class="sep">/</span> 1:30:20</small></span></div>
-        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti repellat mollitia consequatur, optio nesciunt placeat. Iste voluptates excepturi tenetur, nesciunt.</p>
-
-        <div class="player">
-          <audio id="player2" preload="none" controls style="max-width: 100%">
-            <source src="http://www.largesound.com/ashborytour/sound/AshboryBYU.mp3" type="audio/mp3">
-          </audio>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="d-block d-md-flex podcast-entry bg-white mb-5" data-aos="fade-up">
-      <div class="image" style="background-image: url('images/img_1.jpg');"></div>
-      <div class="text">
-
-        <h3 class="font-weight-light"><a href="single-post.html">Episode 04: How To Create Web Page Using Bootstrap 4</a></h3>
-        <div class=" mb-3"><span class="text-black-opacity-05"><small>By Mike Smith <span class="sep">/</span> 16 September 2017 <span class="sep">/</span> 1:30:20</small></span></div>
-        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti repellat mollitia consequatur, optio nesciunt placeat. Iste voluptates excepturi tenetur, nesciunt.</p>
-
-        <div class="player">
-          <audio id="player2" preload="none" controls style="max-width: 100%">
-            <source src="http://www.largesound.com/ashborytour/sound/AshboryBYU.mp3" type="audio/mp3">
-          </audio>
-        </div>
-      </div>
-    </div>
-
-
   </div>
 </div>
