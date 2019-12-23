@@ -13,28 +13,33 @@
       </div>
       <div class="text">
 
-        <h2 class="font-weight-light"  [routerLink]="['detail-song', song.id]">
+        <h2 class="font-weight-light" [routerLink]="['detail-song', song.id]">
           {{song.name}}
         </h2>
         <p class="mb-4">{{song.description}}</p>
 
         <div class="media-footer">
           <mat-toolbar>
-            <mat-toolbar-row>
+            <mat-toolbar-row *ngIf="!playSong[song.id]">
+              <button mat-button (click)="play(song)" [disabled]="state?.error" >
+                <mat-icon mat-list-icon>play_circle_filled</mat-icon>
+              </button>
+            </mat-toolbar-row>
+            <mat-toolbar-row *ngIf="playSong[song.id]">
               <button mat-button (click)="play(song)" [disabled]="state?.error" *ngIf="!state?.playing">
                 <mat-icon mat-list-icon>play_circle_filled</mat-icon>
               </button>
               <button mat-button (click)="pause()" *ngIf="state?.playing">
                 <mat-icon mat-list-icon>pause</mat-icon>
               </button>
-              <span style="font-size: 15px" *ngIf="!state?.playing">00:00:00</span>
-              <span style="font-size: 15px" *ngIf="state?.playing">{{ state?.readableCurrentTime }}</span>
+              <span style="font-size: 15px" *ngIf="!state?.playing && currentTime==0">00:00:00</span>
+              <span style="font-size: 15px" *ngIf="state?.playing || currentTime!=0">{{ state?.readableCurrentTime }}</span>
               <mat-slider class="time-slider" min="0" [max]="state?.duration" step="1" [value]="state?.currentTime"
                           (input)="onSliderChangeEnd($event)"
                           [disabled]="state?.error">
               </mat-slider>
-              <span style="font-size: 15px" *ngIf="!state?.playing">00:00:00</span>
-              <span style="font-size: 15px" *ngIf="state?.playing">{{ state?.readableDuration }}</span>
+              <span style="font-size: 15px" *ngIf="!state?.playing && currentTime==0">00:00:00</span>
+              <span style="font-size: 15px" *ngIf="state?.playing || currentTime!=0">{{ state?.readableDuration }}</span>
               <div style="padding-left: 2rem">
               <span *ngIf="!onVolume">
                 <span class="glyphicon glyphicon-volume-off" (click)="turnOnVolume()"> </span>
