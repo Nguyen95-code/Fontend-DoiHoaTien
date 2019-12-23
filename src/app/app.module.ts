@@ -19,7 +19,8 @@ import {environment} from "../environments/environment";
 import {AngularFireModule} from "@angular/fire";
 import {AngularFireDatabaseModule} from "@angular/fire/database";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MaterialModule} from "./meterial.module";
+import {MaterialModule} from "./meterial/meterial.module";
+import { RegisterComponent } from './page/users/register/register.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import {MaterialModule} from "./meterial.module";
     DeleteSongComponent,
     DetailSongComponent,
     ListSongComponent,
-    ListSingerComponent
+    ListSingerComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
