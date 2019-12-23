@@ -6,12 +6,6 @@
     Uploading!!!
   </div>
   <div class="form-group">
-    <div class="social-login">
-      <button class="btn facebook-btn social-btn" type="button"><span><i class="fab fa-facebook-f"></i> Sign up with Facebook</span> </button>
-    </div>
-    <div class="social-login">
-      <button class="btn google-btn social-btn" type="button"><span><i class="fab fa-google-plus-g"></i> Sign up with Google+</span> </button>
-    </div>
     <label>Tên đăng nhập: </label>
     <input type="user" class="form-control" placeholder="Tên đăng nhập của bạn" required name="">
     <label>Mật khẩu: </label>
@@ -46,5 +40,93 @@
     <label> Tôi đồng ý điều khoản sử dụng </label>
     <br>
     <button class="btn btn-success" type="submit">Gửi</button>
+    <div class="social-login">
+      <button class="btn facebook-btn social-btn" type="button"><span><i class="fab fa-facebook-f"></i> Sign up with Facebook</span> </button>
+    </div>
+    <div class="social-login">
+      <button class="btn google-btn social-btn" type="button"><span><i class="fab fa-google-plus-g"></i> Sign up with Google+</span> </button>
+    </div>
   </div>
 </form>
+<!--<from [formGroup]="userForm" (ngSubmit)="createUser()">-->
+<!--  <div class="container">-->
+<!--    <div *ngIf="uploadImageSuccess" class="alert-success alert">-->
+<!--      Upload Image Success-->
+<!--    </div>-->
+<!--    <div *ngIf="(!uploadImageSuccess && userForm.get('image').value != '')" class="alert alert-primary">-->
+<!--      Uploading!!!-->
+<!--    </div>-->
+<!--    <div class="row">-->
+<!--      <div class="col-lg-10 col-xl-9 mx-auto">-->
+<!--        <div class="card card-signin flex-row my-5">-->
+<!--          <div class="card-img-left d-none d-md-flex">-->
+<!--            &lt;!&ndash; Background image for card set in CSS! &ndash;&gt;-->
+<!--          </div>-->
+<!--          <div class="card-body">-->
+<!--            <h5 class="card-title text-center">Register</h5>-->
+<!--            <div class="form-label-group">-->
+<!--              <input type="text" id="inputUserame" class="form-control" placeholder="Username" required autofocus>-->
+<!--              <label for="inputUserame">Username</label>-->
+<!--            </div>-->
+
+<!--            <div class="form-label-group">-->
+<!--              <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>-->
+<!--              <label for="inputEmail">Email address</label>-->
+<!--            </div>-->
+
+<!--            <hr>-->
+
+<!--            <div class="form-label-group">-->
+<!--              <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>-->
+<!--              <label for="inputPassword">Password</label>-->
+<!--            </div>-->
+
+<!--            <div class="form-label-group">-->
+<!--              <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Password" required>-->
+<!--              <label for="inputConfirmPassword">Confirm password</label>-->
+<!--            </div>-->
+
+<!--            <div>-->
+<!--              <label>Tên</label>-->
+<!--              <input type="text" class="form-control" placeholder="Tên của bạn" formControlName="name">-->
+<!--            </div>-->
+<!--            <div class="alert alert-danger" role="alert"-->
+<!--                 *ngIf="userForm.get('name').value.trim() == '' && userForm.get('name').touched">-->
+<!--              Name is required-->
+<!--            </div>-->
+<!--            <div class="alert alert-danger" role="alert"-->
+<!--                 *ngIf="userForm.get('name').value.trim().length < 6 && userForm.get('name').touched">-->
+<!--              Name must be longer than 6 characters-->
+<!--            </div>-->
+<!--            <div>-->
+
+<!--              <div>-->
+<!--                <label>Avata</label>-->
+<!--                <input type="file" class="form-control-file" formControlName="image" (change)="uploadImage($event)">-->
+<!--              </div>-->
+<!--              <div class="alert alert-danger" role="alert"-->
+<!--                   *ngIf="userForm.get('image').invalid && userForm.get('image').touched">-->
+<!--                Image is required-->
+<!--              </div>-->
+<!--              <div class="alert alert-danger" *ngIf="!checkImage">-->
+<!--                This is not image-->
+<!--              </div>-->
+<!--              <input type="checkbox" required name="">-->
+<!--              <label> Tôi đồng ý điều khoản sử dụng </label>-->
+
+<!--              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Register</button>-->
+<!--              <a class="d-block text-center mt-2 small" href="#">Sign In</a>-->
+<!--              <hr class="my-4">-->
+<!--              <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i-->
+<!--                class="fab fa-google mr-2"></i> Sign up with Google-->
+<!--              </button>-->
+<!--              <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i-->
+<!--                class="fab fa-facebook-f mr-2"></i> Sign up with Facebook-->
+<!--              </button>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</from>-->
