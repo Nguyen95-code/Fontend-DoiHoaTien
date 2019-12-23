@@ -21,6 +21,7 @@ import {AngularFireDatabaseModule} from "@angular/fire/database";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MaterialModule} from "./meterial/meterial.module";
 import { RegisterComponent } from './page/users/register/register.component';
+import { LoginComponent } from './page/login/login.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { RegisterComponent } from './page/users/register/register.component';
     DetailSongComponent,
     ListSongComponent,
     ListSingerComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

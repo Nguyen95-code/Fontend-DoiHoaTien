@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="453a4fa7-5ba2-4604-bb8a-60748c1601a8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/service/player/img.service.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/service/player/img.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/block/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/block/header/header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/meterial.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/meterial/meterial.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page/song/create-song/create-song.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/song/create-song/create-song.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/service/song/song.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/service/song/song.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,11 +46,11 @@
       <recent name="D:\zing\frontend-zing\src\app\service\player" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\zing\frontend-zing\src\app\page" />
       <recent name="D:\zing\frontend-zing\src\app\service\user" />
       <recent name="D:\zing\frontend-zing\src\app\page\users" />
       <recent name="D:\zing\frontend-zing\src\app\meterial" />
       <recent name="D:\Codegym\Module 4 - Project\zing-front-end\src\app\interface" />
-      <recent name="D:\Codegym\Module 4 - Project\zing-front-end\src\app" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -89,7 +83,7 @@
       <workItem from="1576752561158" duration="684000" />
       <workItem from="1576942743543" duration="4187000" />
       <workItem from="1577010311663" duration="7152000" />
-      <workItem from="1577063096397" duration="3106000" />
+      <workItem from="1577063096397" duration="3654000" />
     </task>
     <servers />
   </component>
