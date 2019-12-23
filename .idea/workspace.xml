@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="453a4fa7-5ba2-4604-bb8a-60748c1601a8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page/song/create-song/create-song.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/song/create-song/create-song.component.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -107,8 +106,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/page/song/create-song/create-song.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="25" column="123" selection-start-line="25" selection-start-column="123" selection-end-line="25" selection-end-column="123" />
+            <state relative-caret-position="187">
+              <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
               <folding>
                 <element signature="n#style#0;n#textarea#0;n#div#6;n#form#0;n#!!top" expanded="true" />
               </folding>
@@ -331,12 +330,12 @@
       <workItem from="1576816453940" duration="7867000" />
       <workItem from="1577025339902" duration="10097000" />
       <workItem from="1577066318613" duration="1088000" />
-      <workItem from="1577070918716" duration="104000" />
+      <workItem from="1577070918716" duration="982000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45671000" />
+    <option name="totallyTimeSpent" value="46549000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -740,8 +739,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/page/song/create-song/create-song.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="25" column="123" selection-start-line="25" selection-start-column="123" selection-end-line="25" selection-end-column="123" />
+        <state relative-caret-position="187">
+          <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
           <folding>
             <element signature="n#style#0;n#textarea#0;n#div#6;n#form#0;n#!!top" expanded="true" />
           </folding>
