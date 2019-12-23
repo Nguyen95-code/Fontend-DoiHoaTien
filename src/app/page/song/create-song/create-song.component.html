@@ -23,7 +23,7 @@
   </div>
   <div>
     <label >Description of music</label>
-    <input type="text" class="form-control" formControlName="description" placeholder="description">
+    <textarea type="text" class="form-control" formControlName="description" placeholder="description" style="height: 300px"></textarea>
   </div>
   <div class="alert alert-danger" role="alert"
        *ngIf="songForm.get('description').value.trim() == '' && songForm.get('description').touched">
