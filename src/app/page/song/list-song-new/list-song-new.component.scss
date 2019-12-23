@@ -1,0 +1,26 @@
+.navbar{
+  background-color: rgba(82,64,120,09) !important;
+}
+.navbar li a {
+  size: 6px;
+  color: white !important;
+}
+.navbar li a:hover {
+  color: black !important;
+}
+.carousel-inner img {
+  width: 100%;
+}
+.carousel-caption{
+  position: absolute;
+  top: 50%;
+}
+.carousel-caption h1{
+  font-size: 400%;
+  text-transform: uppercase;
+  text-shadow: 5px 5px 15px #000;
+}
+.carousel-caption h3{
+  font-size: 200%;
+  text-shadow: 5px 5px 15px #000;
+}

@@ -13,13 +13,16 @@ import { SingerService} from './service/singer/singer.service';
 import { HttpClientModule } from '@angular/common/http';
 import { DetailSongComponent } from './page/song/detail-song/detail-song.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { ListSongComponent } from './page/song/list-song/list-song.component';
 import {ListSingerComponent} from './page/singer/list-singer/list-singer.component';
-import {environment} from "../environments/environment";
-import {AngularFireModule} from "@angular/fire";
-import {AngularFireDatabaseModule} from "@angular/fire/database";
+import {environment} from '../environments/environment';
+import {AngularFireModule} from '@angular/fire';
+import {AngularFireDatabaseModule} from '@angular/fire/database';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MaterialModule} from "./meterial.module";
+import { RegisterComponent } from './page/users/register/register.component';
+import { LoginComponent } from './page/login/login.component';
+import {MaterialModule} from './block/meterial/meterial.module';
+import { ListSongComponent } from './page/song/list-song/list-song.component';
+import {ListSongNewComponent} from './page/song/list-song-new/list-song-new.component';
 
 
 @NgModule({
@@ -32,8 +35,12 @@ import {MaterialModule} from "./meterial.module";
     CreateSongComponent,
     DeleteSongComponent,
     DetailSongComponent,
+    ListSongNewComponent,
+    ListSingerComponent,
     ListSongComponent,
-    ListSingerComponent
+    ListSingerComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

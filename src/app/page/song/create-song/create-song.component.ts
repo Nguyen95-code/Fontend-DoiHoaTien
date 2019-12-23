@@ -52,7 +52,9 @@ export class CreateSongComponent implements OnInit {
               name: this.songForm.value.name.trim(),
               link: this.nameAudioURL,
               image: this.nameImageURL,
-              description: this.songForm.value.description.trim()
+              description: this.songForm.value.description.trim(),
+              playlist: [],
+              album: []
             };
             this.songService.create(this.song).subscribe(() => {
               console.log('Add thành công!');

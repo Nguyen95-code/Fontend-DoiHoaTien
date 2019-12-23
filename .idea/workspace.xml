@@ -3,6 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="453a4fa7-5ba2-4604-bb8a-60748c1601a8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/block/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/block/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page/login/login.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/login/login.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page/users/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/users/register/register.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page/users/register/register.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/users/register/register.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+>>>>>>> dev-Viet
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,15 +21,23 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="frontend-zing" />
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>link</find>
+      <find>has-</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
   <component name="ProjectId" id="1VOCERFbCs9RLIemc0kHTfOgcXF" />
+=======
+  <component name="ProjectId" id="1VIZnKyURLyHaj6kfJhNX5c7RhT" />
+>>>>>>> dev-Viet
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -26,22 +45,32 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="D:\Codegym\Module 4 - Project\zing-front-end\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="D:\zing\frontend-zing\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\zing\frontend-zing\src\theme\css" />
+      <recent name="D:\zing\frontend-zing\src\theme\jquery" />
+      <recent name="D:\zing\frontend-zing\src\theme\css\bootstrap" />
+      <recent name="D:\zing\frontend-zing\src\app\page" />
+      <recent name="D:\zing\frontend-zing\src\app\service\user" />
+      <recent name="D:\zing\frontend-zing\src\app\page\users" />
+      <recent name="D:\zing\frontend-zing\src\app\meterial" />
+      <recent name="D:\Codegym\Module 4 - Project\zing-front-end\src\app\block\meterial" />
       <recent name="D:\Codegym\Module 4 - Project\zing-front-end\src\app\interface" />
       <recent name="D:\Codegym\Module 4 - Project\zing-front-end\src\app" />
       <recent name="D:\Codegym\Module 4 - Project\zing-front-end\src\app\service\player" />
       <recent name="D:\Codegym\Module 4 - Project\zing-front-end\src\app\service" />
-      <recent name="D:\Codegym\Module 4 - Project\zing-front-end\src\app\page\song" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Codegym\Module 4 - Project\zing-front-end\src\assets" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -71,7 +100,17 @@
       <workItem from="1575962233009" duration="7280000" />
       <workItem from="1575946856321" duration="1397000" />
       <workItem from="1575962704452" duration="2795000" />
+<<<<<<< HEAD
       <workItem from="1577114643722" duration="280000" />
+=======
+      <workItem from="1576816453940" duration="7867000" />
+      <workItem from="1577025339902" duration="9808000" />
+      <workItem from="1576752561158" duration="684000" />
+      <workItem from="1576942743543" duration="4187000" />
+      <workItem from="1577010311663" duration="7152000" />
+      <workItem from="1577063096397" duration="4009000" />
+      <workItem from="1577069408943" duration="4709000" />
+>>>>>>> dev-Viet
     </task>
     <servers />
   </component>
@@ -92,7 +131,13 @@
       <map>
         <entry key="MAIN">
           <value>
+<<<<<<< HEAD
             <State />
+=======
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+>>>>>>> dev-Viet
           </value>
         </entry>
       </map>
