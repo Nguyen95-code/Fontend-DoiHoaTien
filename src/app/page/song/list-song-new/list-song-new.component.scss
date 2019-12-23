@@ -1,3 +1,13 @@
+.navbar{
+  background-color: rgba(82,64,120,09) !important;
+}
+.navbar li a {
+  size: 6px;
+  color: white !important;
+}
+.navbar li a:hover {
+  color: black !important;
+}
 .carousel-inner img {
   width: 100%;
 }

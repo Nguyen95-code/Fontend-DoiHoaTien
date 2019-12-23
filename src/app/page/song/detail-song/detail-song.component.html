@@ -1,3 +1,6 @@
+<br/>
+<br/>
+
 <div class="container">
   <mat-toolbar color="primary" class="main-toolbar">
     <div style="position: relative; width: 97%">{{song.name}}</div>
@@ -8,21 +11,13 @@
   </mat-toolbar>
   <div class="content">
     <div class="logo">
-      <img src="{{song.image}}" style="position:relative; width: 50%; height: 50%;">
+      <img src="{{song.image}}" style="position:relative; width: 30%; height: 30%;">
       <div>{{song.description}}</div>
     </div>
   </div>
   <div class="media-footer">
     <mat-toolbar color="primary">
       <mat-toolbar-row>
-        {{ state?.readableCurrentTime }}
-        <mat-slider class="time-slider" min="0" [max]="state?.duration" step="1" [value]="state?.currentTime"
-                    (input)="onSliderChangeEnd($event)"
-                    [disabled]="state?.error">
-        </mat-slider>
-        {{ state?.readableDuration }}
-      </mat-toolbar-row>
-      <mat-toolbar-row class="media-action-bar">
         <button mat-button (click)="previous()">
           <mat-icon mat-list-icon>skip_previous</mat-icon>
         </button>
@@ -35,19 +30,23 @@
         <button mat-button (click)="next()">
           <mat-icon mat-list-icon>skip_next</mat-icon>
         </button>
-        <div>
-        <span *ngIf="!onVolume">
-          <span class="glyphicon glyphicon-volume-off" (click)="turnOnVolume()"> </span>
-        </span>
+        {{ state?.readableCurrentTime }}
+        <mat-slider class="time-slider" min="0" [max]="state?.duration" step="1" [value]="state?.currentTime"
+                    (input)="onSliderChangeEnd($event)"
+                    [disabled]="state?.error">
+        </mat-slider>
+        {{ state?.readableDuration}}
+        <div style="padding-left: 2rem">
+              <span *ngIf="!onVolume">
+                <span class="glyphicon glyphicon-volume-off" (click)="turnOnVolume()"></span>
+              </span>
           <span *ngIf="onVolume">
-          <span class="glyphicon glyphicon-volume-up" (click)="turnOffVolume()"></span>
-        </span>
-
+                  <span class="glyphicon glyphicon-volume-up" (click)="turnOffVolume()"></span>
+                </span>
           <mat-slider class="time-slider" min="0" [max]="100" step="1" [value]="volume"
-                      (input)="onChangVolume($event)"></mat-slider>
+                      (input)="onChangVolume($event)" style="width: 10%!important; position: relative"></mat-slider>
         </div>
       </mat-toolbar-row>
-
     </mat-toolbar>
 
   </div>
