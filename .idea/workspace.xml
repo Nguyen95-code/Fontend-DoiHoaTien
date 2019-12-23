@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="453a4fa7-5ba2-4604-bb8a-60748c1601a8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/block/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/block/footer/footer.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/block/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/block/header/header.component.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +18,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectId" id="1VOCERFbCs9RLIemc0kHTfOgcXF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -62,7 +61,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="00dfc23f-e965-4f4c-9cf9-9876955163d9" name="Default Changelist" comment="" />
+      <changelist id="453a4fa7-5ba2-4604-bb8a-60748c1601a8" name="Default Changelist" comment="" />
       <created>1575948360077</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -72,6 +71,7 @@
       <workItem from="1575962233009" duration="7280000" />
       <workItem from="1575946856321" duration="1397000" />
       <workItem from="1575962704452" duration="2795000" />
+      <workItem from="1577114643722" duration="280000" />
     </task>
     <servers />
   </component>
@@ -88,6 +88,15 @@
     <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="RECENT_FILTERS">
       <map>
         <entry key="Branch">
