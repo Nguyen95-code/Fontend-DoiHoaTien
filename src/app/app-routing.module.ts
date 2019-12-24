@@ -5,7 +5,8 @@ import {DeleteSongComponent} from './page/song/delete-song/delete-song.component
 import {CreateSongComponent} from './page/song/create-song/create-song.component';
 import {ListSongNewComponent} from './page/song/list-song-new/list-song-new.component';
 import {ListSongComponent} from './page/song/list-song/list-song.component';
-
+import {RegisterComponent} from './page/users/register/register.component';
+import {LoginComponent} from './page/login/login.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,14 @@ const routes: Routes = [
   {
     path: 'create-song',
     component: CreateSongComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   },
   {
     path: '',
