@@ -37,4 +37,8 @@ export class PlaylistService {
   addSong(playlistId, song): Observable<Playlist> {
     return this.http.post<Playlist>(this.PLAYLIST_API + '/' + playlistId, song);
   }
+
+  removeSong(playlistId, songId): Observable<Playlist> {
+    return this.http.delete<Playlist>(this.PLAYLIST_API + '/' + playlistId + '/' + songId);
+  }
 }

@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {SongService} from '../../../service/song/song.service';
-import {ActivatedRoute, ParamMap} from '@angular/router';
+import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {AudioService} from '../../../service/player/audio.service';
 import {Song} from '../../../interface/song';
 import {Subscription} from 'rxjs';
@@ -17,7 +17,8 @@ export class DetailPlaylistComponent implements OnInit {
   constructor(private playlistService: PlaylistService,
               private activateRoute: ActivatedRoute,
               private audioService: AudioService,
-              private songService: SongService) {
+              private songService: SongService,
+              private router: Router) {
     this.audioService.getState().subscribe(state => {
       this.state = state;
     });
@@ -92,7 +93,7 @@ export class DetailPlaylistComponent implements OnInit {
 
   previous() {
     if (this.songIdNow === 0) {
-      this.songIdNow = this.listSong.length-1;
+      this.songIdNow = this.listSong.length - 1;
     } else {
       this.songIdNow--;
     }
@@ -151,6 +152,14 @@ export class DetailPlaylistComponent implements OnInit {
       });
     }, error1 => {
       console.log(error1);
+    });
+  }
+
+  remove(song) {
+    this.playlistService.removeSong(this.playlist.id, song.id).subscribe(() => {
+      window.location.reload();
+    }, error => {
+      console.log(error);
     });
   }
 }

@@ -55,11 +55,11 @@
     </mat-toolbar>
     <table class="table table-borderless">
       <tbody>
-      <tr *ngFor="let song of listSong" (click)="playSong(song.id)">
-        <td>{{song.name}}</td>
-        <td *ngIf="song === listSong[songIdNow]"><span class="glyphicon glyphicon-play"></span></td>
-        <td *ngIf="song !== listSong[songIdNow]"></td>
-        <td><h3 class="glyphicon glyphicon-remove"></h3></td>
+      <tr *ngFor="let song of listSong">
+        <td (click)="playSong(song.id)">{{song.name}}</td>
+        <td *ngIf="song === listSong[songIdNow]" (click)="playSong(song.id)"><span class="glyphicon glyphicon-play"></span></td>
+        <td *ngIf="song !== listSong[songIdNow]" (click)="playSong(song.id)"></td>
+        <td><button class="glyphicon glyphicon-remove" (click)="remove(song)"></button></td>
       </tr>
       </tbody>
     </table>
