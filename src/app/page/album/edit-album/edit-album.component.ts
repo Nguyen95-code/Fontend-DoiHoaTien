@@ -1,24 +1,20 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, ParamMap, Router} from '@angular/router';
-import {PlaylistService} from '../../../service/playlist/playlist.service';
 import {Subscription} from 'rxjs';
-import {Playlist} from '../../../interface/playlist';
-import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {FormBuilder, FormControl, FormGroup} from '@angular/forms';
+import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import * as firebase from 'firebase';
-import {environment} from '../../../../environments/environment';
-
-firebase.initializeApp(environment.firebase);
+import {Album} from '../../../interface/album';
+import {AlbumService} from '../../../service/album/album.service';
 
 @Component({
-  selector: 'app-edit-playlist',
-  templateUrl: './edit-playlist.component.html',
-  styleUrls: ['./edit-playlist.component.scss']
+  selector: 'app-edit-album',
+  templateUrl: './edit-album.component.html',
+  styleUrls: ['./edit-album.component.scss']
 })
-export class EditPlaylistComponent implements OnInit {
-
+export class EditAlbumComponent implements OnInit {
   sub: Subscription;
-  playlist: Playlist;
-  playlistForm: FormGroup = new FormGroup({
+  album: Album;
+  albumForm: FormGroup = new FormGroup({
     name: new FormControl(''),
     image: new FormControl('')
   });
@@ -26,7 +22,7 @@ export class EditPlaylistComponent implements OnInit {
   uploadImageSuccess: boolean;
   checkImage: boolean;
 
-  constructor(private playlistService: PlaylistService,
+  constructor(private albumService: AlbumService,
               private activateRoute: ActivatedRoute,
               private fb: FormBuilder,
               private router: Router) {
@@ -35,28 +31,29 @@ export class EditPlaylistComponent implements OnInit {
   ngOnInit() {
     this.sub = this.activateRoute.paramMap.subscribe((paraMap: ParamMap) => {
       const id = paraMap.get('id');
-      this.playlistService.detail(id).subscribe(next => {
-        this.playlist = next;
+      this.albumService.detail(id).subscribe(next => {
+        this.album = next;
       }, error1 => {
         console.log(error1);
       });
     });
   }
 
-  editPlaylist() {
-    if (!this.uploadImageSuccess && this.playlistForm.value.image !== '') {
+  editAlbum() {
+    const checkValid = this.albumForm.valid && this.albumForm.value.name.trim().length >= 6;
+    if (!this.uploadImageSuccess && this.albumForm.value.image !== '') {
       alert('Vui lòng đợi upload file xong');
     } else {
-      if (this.playlistForm.value.name.trim() !== '') {
-        this.playlist.name = this.playlistForm.value.name.trim();
+      if (this.albumForm.value.name.trim() !== '') {
+        this.album.name = this.albumForm.value.name.trim();
       }
-      if (this.playlistForm.value.image !== '') {
-        this.playlist.image = this.nameImageURL;
+      if (this.albumForm.value.image !== '') {
+        this.album.image = this.nameImageURL;
       }
-      this.playlistService.edit(this.playlist).subscribe(() => {
+      this.albumService.edit(this.album).subscribe(() => {
         console.log('Add thành công!');
-        this.router.navigate(['list-playlist']);
-        this.playlistForm.reset();
+        this.router.navigate(['list-album']);
+        this.albumForm.reset();
       }, error => {
         console.log('lỗi' + error);
       });

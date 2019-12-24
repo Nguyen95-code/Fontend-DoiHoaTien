@@ -9,15 +9,15 @@
 </div>
 <div class="container">
   <mat-toolbar color="primary" class="main-toolbar">
-    <div style="position: relative; width: 97%">{{playlist.name}}</div>
+    <div style="position: relative; width: 97%">{{album.name}}</div>
     <div style="position: relative; width: 3%; float: right">
-      <a [routerLink]="['edit-playlist',playlist.id]"
+      <a [routerLink]="['edit-album',album.id]"
          style="color: #bb0000; font-size: 200%">Edit</a>
     </div>
   </mat-toolbar>
   <div class="content">
     <div class="logo container">
-      <img src="{{playlist.image}}" style="position:relative; width: 30%; height: 30%;">
+      <img src="{{album.image}}" style="position:relative; width: 30%; height: 30%;">
     </div>
   </div>
   <div class="media-footer">

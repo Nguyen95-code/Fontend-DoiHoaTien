@@ -1,6 +1,9 @@
+<a routerLink="create-playlist">Create playlist</a>
 <div class="row">
   <div *ngFor="let playlist of listPlaylist" class="col-md-3">
-    <img src="{{playlist.image}}" style="width: 100%">
-    <h3 class="container">{{playlist.name}}</h3>
+    <div [routerLink]="['detail-playlist',playlist.id]">
+      <img src="{{playlist.image}}" style="width: 100%">
+      <h3 class="container">{{playlist.name}}</h3>
+    </div>
   </div>
 </div>

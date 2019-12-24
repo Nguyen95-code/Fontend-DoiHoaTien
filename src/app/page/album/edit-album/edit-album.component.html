@@ -1,0 +1,24 @@
+<form [formGroup]="albumForm" (ngSubmit)="editAlbum()" class="form-group">
+
+  <div *ngIf="uploadImageSuccess" class="alert-success alert">
+    Upload Image Thành Công
+  </div>
+
+  <div *ngIf="(!uploadImageSuccess && albumForm.get('image').value != '')" class="alert alert-danger">
+    Đang Upload. Xin vui lòng chờ trong giây lát!!!
+  </div>
+
+  <div>
+    <label>Tên Album</label>
+    <input type="text" class="form-control" formControlName="name" placeholder="Tên Album" value="{{album.name}}">
+  </div>
+  <div>
+    <label>File ảnh đại diện Album</label>
+    <img src="{{album.image}}"/>
+    <input type="file" class="form-control-file" formControlName="image" (change)="uploadImage($event)"/>
+  </div>
+
+  <input type="submit" class="btn btn-success mr-2" value="Cập nhật">
+
+  <button type="button" class="btn btn-warning" routerLink="list-album">Hủy</button>
+</form>
