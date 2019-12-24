@@ -1,15 +1,23 @@
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Thêm bài hát
+</a>
+<div (click)="playAll()">
+  <span class="glyphicon glyphicon-play"></span><span>  Nghe tất cả</span>
+</div>
+<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+  <a class="dropdown-item" *ngFor="let song of songAll" (click)="addSong(song.id)">{{song.name}}</a>
+</div>
 <div class="container">
   <mat-toolbar color="primary" class="main-toolbar">
-    <div style="position: relative; width: 97%">{{song.name}}</div>
+    <div style="position: relative; width: 97%">{{playlist.name}}</div>
     <div style="position: relative; width: 3%; float: right">
-      <a class="glyphicon glyphicon-remove" [routerLink]="['delete-song',song.id]"
+      <a class="glyphicon glyphicon-remove" [routerLink]="['delete-playlist',playlist.id]"
          style="color: #bb0000; font-size: 200%"></a>
     </div>
   </mat-toolbar>
   <div class="content">
-    <div class="logo">
-      <img src="{{song.image}}" style="position:relative; width: 30%; height: 30%;">
-      <div>{{song.description}}</div>
+    <div class="logo container">
+      <img src="{{playlist.image}}" style="position:relative; width: 30%; height: 30%;">
     </div>
   </div>
   <div class="media-footer">
@@ -45,7 +53,16 @@
         </div>
       </mat-toolbar-row>
     </mat-toolbar>
-
+    <table class="table table-borderless">
+      <tbody>
+      <tr *ngFor="let song of listSong" (click)="playSong(song.id)">
+        <td>{{song.name}}</td>
+        <td *ngIf="song === listSong[songIdNow]"><span class="glyphicon glyphicon-play"></span></td>
+        <td *ngIf="song !== listSong[songIdNow]"></td>
+        <td><h3 class="glyphicon glyphicon-remove"></h3></td>
+      </tr>
+      </tbody>
+    </table>
   </div>
 </div>
 

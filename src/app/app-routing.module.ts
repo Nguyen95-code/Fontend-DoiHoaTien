@@ -10,6 +10,7 @@ import {LoginComponent} from './page/users/login/login.component';
 import {CreatePlaylistComponent} from './page/playlist/create-playlist/create-playlist.component';
 import {ListPlaylistComponent} from './page/playlist/list-playlist/list-playlist.component';
 import {EditPlaylistComponent} from './page/playlist/edit-playlist/edit-playlist.component';
+import {DetailPlaylistComponent} from './page/playlist/detail-playlist/detail-playlist.component';
 
 const routes: Routes = [
   {
@@ -59,6 +60,10 @@ const routes: Routes = [
   {
     path: 'edit-playlist/:id',
     component: EditPlaylistComponent
+  },
+  {
+    path: 'detail-playlist/:id',
+    component: DetailPlaylistComponent
   }
 ];
 
