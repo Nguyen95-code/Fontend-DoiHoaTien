@@ -78,11 +78,11 @@ const routes: Routes = [
     component: ListAlbumComponent
   },
   {
-    path: 'edit-album/:id',
+    path: 'list-album/detail-album/:id/edit-album/:id',
     component: EditAlbumComponent
   },
   {
-    path: 'detail-album/:id',
+    path: 'list-album/detail-album/:id',
     component: PlayAlbumComponent
   }
 ];
