@@ -6,7 +6,8 @@ import {CreateSongComponent} from './page/song/create-song/create-song.component
 import {ListSongNewComponent} from './page/song/list-song-new/list-song-new.component';
 import {ListSongComponent} from './page/song/list-song/list-song.component';
 import {RegisterComponent} from './page/users/register/register.component';
-import {LoginComponent} from './page/login/login.component';
+import {LoginComponent} from './page/users/login/login.component';
+import {CreatePlaylistComponent} from './page/playlist/create-playlist/create-playlist.component';
 
 
 const routes: Routes = [
@@ -39,12 +40,16 @@ const routes: Routes = [
     component: ListSongNewComponent
   },
   {
-    path: 'list-song',
+    path: 'list-playlist',
     component: ListSongComponent
   },
   {
     path: 'list-song/detail-song/:id',
     component: DetailSongComponent
+  },
+  {
+    path: 'create-playlist',
+    component: CreatePlaylistComponent
   }
 ];
 

@@ -19,10 +19,11 @@ import {AngularFireModule} from '@angular/fire';
 import {AngularFireDatabaseModule} from '@angular/fire/database';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterComponent } from './page/users/register/register.component';
-import { LoginComponent } from './page/login/login.component';
+import { LoginComponent } from './page/users/login/login.component';
 import {MaterialModule} from './block/meterial/meterial.module';
 import { ListSongComponent } from './page/song/list-song/list-song.component';
 import {ListSongNewComponent} from './page/song/list-song-new/list-song-new.component';
+import { CreatePlaylistComponent } from './page/playlist/create-playlist/create-playlist.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import {ListSongNewComponent} from './page/song/list-song-new/list-song-new.comp
     ListSongComponent,
     ListSingerComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    CreatePlaylistComponent
   ],
   imports: [
     BrowserModule,

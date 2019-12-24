@@ -6,6 +6,7 @@ import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import * as firebase from 'firebase';
 import {Song} from '../../../interface/song';
 
+
 @Component({
   selector: 'app-create-song',
   templateUrl: './create-song.component.html',
@@ -58,7 +59,6 @@ export class CreateSongComponent implements OnInit {
             };
             this.songService.create(this.song).subscribe(() => {
               console.log('Add thành công!');
-              alert('Upload success');
               this.router.navigate(['']);
               this.songForm.reset();
             }, error => {
