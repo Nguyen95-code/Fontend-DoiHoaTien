@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {AudioService} from '../../../service/player/audio.service';
 import {SongService} from '../../../service/song/song.service';
@@ -160,6 +160,14 @@ export class PlayAlbumComponent implements OnInit {
       window.location.reload();
     }, error => {
       console.log(error);
+    });
+  }
+
+  delete(album) {
+    this.albumService.delete(album.id).subscribe(() => {
+      this.router.navigate(['list-album']);
+    }, error1 => {
+      console.log(error1);
     });
   }
 }

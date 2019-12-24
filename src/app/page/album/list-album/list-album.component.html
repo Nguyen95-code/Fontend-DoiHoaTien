@@ -1,7 +1,9 @@
 <a routerLink="create-album">Create album</a>
 <div class="row">
-  <div *ngFor="let album of listAlbum" class="col-md-3" [routerLink]="['detail-album', album.id]">
-    <img src="{{album.image}}" style="width: 100%">
-    <h3 class="container">{{album.name}}</h3>
+  <div *ngFor="let album of listAlbum" class="col-md-3">
+    <div [routerLink]="['detail-album', album.id]">
+      <img src="{{album.image}}" style="width: 100%">
+      <h3 class="container">{{album.name}}</h3>
+    </div>
   </div>
 </div>

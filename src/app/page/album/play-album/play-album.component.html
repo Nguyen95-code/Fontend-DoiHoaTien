@@ -10,9 +10,11 @@
 <div class="container">
   <mat-toolbar color="primary" class="main-toolbar">
     <div style="position: relative; width: 97%">{{album.name}}</div>
-    <div style="position: relative; width: 3%; float: right">
+    <div style="position: relative; width: 10%; float: right">
       <a [routerLink]="['edit-album',album.id]"
-         style="color: #bb0000; font-size: 200%">Edit</a>
+         style="color: #bb0000;">Edit</a>
+      <button (click)="delete(album)"
+         style="color: white; padding-left: 10%">Delete</button>
     </div>
   </mat-toolbar>
   <div class="content">
