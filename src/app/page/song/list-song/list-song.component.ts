@@ -14,7 +14,6 @@ import {StreamState} from '../../../interface/stream-state';
 export class ListSongComponent implements OnInit {
   song: Song;
   songList: Song[] = [];
-  number: number[] = [];
   sub: Subscription;
   state: StreamState;
   volume;
@@ -35,10 +34,6 @@ export class ListSongComponent implements OnInit {
     }, error => {
       console.log(error);
     });
-
-    for (let i = 0; i < this.songList.length; i++) {
-      this.number.push(i);
-    }
   }
 
   isEndSongs() {

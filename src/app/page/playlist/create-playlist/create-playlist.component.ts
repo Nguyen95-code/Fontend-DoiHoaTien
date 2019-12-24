@@ -16,7 +16,7 @@ export class CreatePlaylistComponent implements OnInit {
   constructor(private playlistService: PlaylistService,
               private fb: FormBuilder,
               private db: AngularFireDatabase,
-              private  router: Router, ) { }
+              private  router: Router) { }
 
   playlistForm: FormGroup;
 
@@ -46,7 +46,7 @@ export class CreatePlaylistComponent implements OnInit {
             };
             this.playlistService.create(this.playlist).subscribe(() => {
               console.log('Add thành công!');
-              this.router.navigate(['']);
+              this.router.navigate(['list-playlist']);
               this.playlistForm.reset();
             }, error => {
               console.log('lỗi' + error);

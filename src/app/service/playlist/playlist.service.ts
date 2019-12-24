@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {Song} from '../../interface/song';
+
 import {Playlist} from '../../interface/playlist';
 
 @Injectable({
@@ -11,8 +11,8 @@ export class PlaylistService {
   private PLAYLIST_API = 'http://zingdoihoatien.herokuapp.com/api/playlists';
   constructor(private http: HttpClient) { }
 
-  create(playlist): Observable<Song> {
-    return this.http.post<Song>(this.PLAYLIST_API, playlist);
+  create(playlist): Observable<Playlist> {
+    return this.http.post<Playlist>(this.PLAYLIST_API, playlist);
   }
 
   detail(id: string): Observable<Playlist> {
@@ -23,7 +23,11 @@ export class PlaylistService {
     return  this.http.delete<Playlist>(this.PLAYLIST_API + '/' + id);
   }
 
-  getAllSong(): Observable<Playlist[]> {
+  edit(playlist: Playlist): Observable<Playlist> {
+    return this.http.put<Playlist>(this.PLAYLIST_API, playlist);
+  }
+
+  getAllPlaylist(): Observable<Playlist[]> {
     return this.http.get<Playlist[]>(this.PLAYLIST_API);
   }
 }

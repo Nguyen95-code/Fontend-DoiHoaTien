@@ -24,7 +24,8 @@ import {MaterialModule} from './block/meterial/meterial.module';
 import { ListSongComponent } from './page/song/list-song/list-song.component';
 import {ListSongNewComponent} from './page/song/list-song-new/list-song-new.component';
 import { CreatePlaylistComponent } from './page/playlist/create-playlist/create-playlist.component';
-
+import { ListPlaylistComponent } from './page/playlist/list-playlist/list-playlist.component';
+import { EditPlaylistComponent } from './page/playlist/edit-playlist/edit-playlist.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,9 @@ import { CreatePlaylistComponent } from './page/playlist/create-playlist/create-
     ListSingerComponent,
     RegisterComponent,
     LoginComponent,
-    CreatePlaylistComponent
+    CreatePlaylistComponent,
+    ListPlaylistComponent,
+    EditPlaylistComponent
   ],
   imports: [
     BrowserModule,

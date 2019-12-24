@@ -8,7 +8,8 @@ import {ListSongComponent} from './page/song/list-song/list-song.component';
 import {RegisterComponent} from './page/users/register/register.component';
 import {LoginComponent} from './page/users/login/login.component';
 import {CreatePlaylistComponent} from './page/playlist/create-playlist/create-playlist.component';
-
+import {ListPlaylistComponent} from './page/playlist/list-playlist/list-playlist.component';
+import {EditPlaylistComponent} from './page/playlist/edit-playlist/edit-playlist.component';
 
 const routes: Routes = [
   {
@@ -40,7 +41,7 @@ const routes: Routes = [
     component: ListSongNewComponent
   },
   {
-    path: 'list-playlist',
+    path: 'list-song',
     component: ListSongComponent
   },
   {
@@ -50,6 +51,14 @@ const routes: Routes = [
   {
     path: 'create-playlist',
     component: CreatePlaylistComponent
+  },
+  {
+    path: 'list-playlist',
+    component: ListPlaylistComponent
+  },
+  {
+    path: 'edit-playlist/:id',
+    component: EditPlaylistComponent
   }
 ];
 
