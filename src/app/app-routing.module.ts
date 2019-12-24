@@ -11,6 +11,8 @@ import {CreatePlaylistComponent} from './page/playlist/create-playlist/create-pl
 import {ListPlaylistComponent} from './page/playlist/list-playlist/list-playlist.component';
 import {EditPlaylistComponent} from './page/playlist/edit-playlist/edit-playlist.component';
 import {DetailPlaylistComponent} from './page/playlist/detail-playlist/detail-playlist.component';
+import {CreateAlbumComponent} from './page/album/create-album/create-album.component';
+import {ListAlbumComponent} from './page/album/list-album/list-album.component';
 
 const routes: Routes = [
   {
@@ -64,6 +66,14 @@ const routes: Routes = [
   {
     path: 'detail-playlist/:id',
     component: DetailPlaylistComponent
+  },
+  {
+    path: 'create-album',
+    component: CreateAlbumComponent
+  },
+  {
+    path: 'list-album',
+    component: ListAlbumComponent
   }
 ];
 

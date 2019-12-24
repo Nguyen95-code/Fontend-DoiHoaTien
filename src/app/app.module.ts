@@ -27,6 +27,8 @@ import { CreatePlaylistComponent } from './page/playlist/create-playlist/create-
 import { ListPlaylistComponent } from './page/playlist/list-playlist/list-playlist.component';
 import { EditPlaylistComponent } from './page/playlist/edit-playlist/edit-playlist.component';
 import { DetailPlaylistComponent } from './page/playlist/detail-playlist/detail-playlist.component';
+import { CreateAlbumComponent } from './page/album/create-album/create-album.component';
+import { ListAlbumComponent } from './page/album/list-album/list-album.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { DetailPlaylistComponent } from './page/playlist/detail-playlist/detail-
     CreatePlaylistComponent,
     ListPlaylistComponent,
     EditPlaylistComponent,
-    DetailPlaylistComponent
+    DetailPlaylistComponent,
+    CreateAlbumComponent,
+    ListAlbumComponent
   ],
   imports: [
     BrowserModule,
