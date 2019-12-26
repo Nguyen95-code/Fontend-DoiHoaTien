@@ -47,7 +47,7 @@ export class DetailSongComponent implements OnInit {
       this.userService.getUserByUsername(username).subscribe(next => {
         this.currentUser = next;
         console.log(this.currentUser);
-        if (this.currentUser.roles.name === 'ROLE_SINGER'){
+        if (this.currentUser.roles.name === 'ROLE_SINGER') {
           this.isSinger = true;
         } else { this.isSinger = false; }
       }, error1 => {

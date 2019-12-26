@@ -15,6 +15,7 @@ import {CreateAlbumComponent} from './page/album/create-album/create-album.compo
 import {ListAlbumComponent} from './page/album/list-album/list-album.component';
 import {EditAlbumComponent} from './page/album/edit-album/edit-album.component';
 import {PlayAlbumComponent} from './page/album/play-album/play-album.component';
+import {ChangePasswordComponent} from './page/users/change-password/change-password.component';
 
 const routes: Routes = [
   {
@@ -39,6 +40,10 @@ const routes: Routes = [
   },
   {
     path: '',
+    component: ListSongNewComponent
+  },
+  {
+    path: 'home',
     component: ListSongNewComponent
   },
   {
@@ -92,6 +97,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'change-password',
+    component: ChangePasswordComponent
   }
 ];
 

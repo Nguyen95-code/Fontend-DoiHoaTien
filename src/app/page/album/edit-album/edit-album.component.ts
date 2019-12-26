@@ -47,7 +47,7 @@ export class EditAlbumComponent implements OnInit {
       this.userService.getUserByUsername(username).subscribe(next => {
         this.currentUser = next;
         console.log(this.currentUser);
-        if (this.currentUser.roles !== 'ROLE_SINGER'){
+        if (this.currentUser.roles !== 'ROLE_SINGER') {
           alert('Bạn không có quyền sửa album');
           this.router.navigate(['/']);
         }

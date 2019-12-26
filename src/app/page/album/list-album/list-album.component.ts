@@ -31,7 +31,7 @@ export class ListAlbumComponent implements OnInit {
       const username = this.authenticationService.currentUserValue.username;
       this.userService.getUserByUsername(username).subscribe(next => {
         this.currentUser = next;
-        if (this.currentUser.roles.name === 'ROLE_SINGER'){
+        if (this.currentUser.roles.name === 'ROLE_SINGER') {
           this.isSinger = true;
         } else { this.isSinger = false; }
         console.log(this.currentUser);

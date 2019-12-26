@@ -28,6 +28,7 @@ import { ListAlbumComponent } from './page/album/list-album/list-album.component
 import { EditAlbumComponent } from './page/album/edit-album/edit-album.component';
 import { PlayAlbumComponent } from './page/album/play-album/play-album.component';
 import {JwtInterceptor} from './helper/jwt-interceptor';
+import { ChangePasswordComponent } from './page/users/change-password/change-password.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import {JwtInterceptor} from './helper/jwt-interceptor';
     CreateAlbumComponent,
     ListAlbumComponent,
     EditAlbumComponent,
-    PlayAlbumComponent
+    PlayAlbumComponent,
+    ChangePasswordComponent
   ],
   imports: [
     BrowserModule,

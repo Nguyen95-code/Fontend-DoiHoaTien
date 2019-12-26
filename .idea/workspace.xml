@@ -1,51 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="453a4fa7-5ba2-4604-bb8a-60748c1601a8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/service/authentication/authentication.service.ts" afterDir="false" />
+    <list default="true" id="027f4594-96e6-47f6-9e9b-89c80e24e71f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/block/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/block/header/header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/block/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/block/header/header.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/interface/album.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/interface/album.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/interface/playlist.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/interface/playlist.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/interface/singer.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/interface/song.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/interface/song.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/interface/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/interface/user.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page/album/create-album/create-album.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/album/create-album/create-album.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page/album/edit-album/edit-album.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/album/edit-album/edit-album.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page/album/list-album/list-album.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/album/list-album/list-album.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page/album/list-album/list-album.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/album/list-album/list-album.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page/album/play-album/play-album.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/album/play-album/play-album.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page/album/play-album/play-album.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/album/play-album/play-album.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page/playlist/create-playlist/create-playlist.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/playlist/create-playlist/create-playlist.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page/playlist/detail-playlist/detail-playlist.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/playlist/detail-playlist/detail-playlist.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page/playlist/edit-playlist/edit-playlist.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/playlist/edit-playlist/edit-playlist.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page/playlist/list-playlist/list-playlist.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/playlist/list-playlist/list-playlist.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page/singer/list-singer/list-singer.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page/singer/list-singer/list-singer.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/helper/jwt-interceptor.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page/singer/list-singer/list-singer.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page/singer/list-singer/list-singer.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page/singer/singer.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page/singer/singer.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/interface/user-token.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page/singer/singer.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page/singer/singer.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page/song/create-song/create-song.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/song/create-song/create-song.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page/song/delete-song/delete-song.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/song/delete-song/delete-song.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page/song/detail-song/detail-song.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/song/detail-song/detail-song.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page/song/detail-song/detail-song.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/song/detail-song/detail-song.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page/song/list-song-new/list-song-new.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/song/list-song-new/list-song-new.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page/users/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/users/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page/users/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/users/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page/users/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/users/register/register.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page/users/register/register.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/users/register/register.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/service/album/album.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/service/album/album.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/service/playlist/playlist.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/service/playlist/playlist.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/service/singer/singer.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/service/song/song.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/service/song/song.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/service/user/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/service/user/user.service.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -61,22 +24,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/page/song/create-song/create-song.component.ts">
+        <entry file="file://$PROJECT_DIR$/src/app/page/users/register/register.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#50#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="229">
+              <caret line="41" column="129" lean-forward="true" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="129" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/page/song/delete-song/delete-song.component.ts">
+        <entry file="file://$PROJECT_DIR$/src/app/page/users/change-password/change-password.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+            <state relative-caret-position="104">
+              <caret line="40" column="11" lean-forward="true" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="11" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -85,28 +45,79 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app/page/album/list-album/list-album.component.ts">
+        <entry file="file://$PROJECT_DIR$/src/app/page/users/change-password/change-password.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+            <state relative-caret-position="153">
+              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+              <folding>
+                <element signature="n#style#0;n#div#2;n#form#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/page/album/play-album/play-album.component.ts">
+        <entry file="file://$PROJECT_DIR$/src/app/app-routing.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+            <state relative-caret-position="138">
+              <caret line="102" column="38" lean-forward="true" selection-start-line="102" selection-start-column="38" selection-end-line="102" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/page/song/detail-song/detail-song.component.ts">
+        <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="51" column="41" lean-forward="true" selection-start-line="49" selection-start-column="8" selection-end-line="51" selection-end-column="41" />
+            <state relative-caret-position="189">
+              <caret line="57" column="16" lean-forward="true" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#58#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/block/header/header.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="47" column="69" lean-forward="true" selection-start-line="47" selection-start-column="69" selection-end-line="47" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/page/users/login/login.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="25" column="17" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="25" selection-end-column="17" />
+              <folding>
+                <element signature="n#style#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/page/users/register/register.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="141" column="37" lean-forward="true" selection-start-line="139" selection-start-column="4" selection-end-line="141" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#48#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/block/header/header.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="348">
+              <caret line="34" column="28" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
@@ -115,66 +126,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/page/song/detail-song/detail-song.component.html">
+        <entry file="file://$PROJECT_DIR$/src/app/service/user/user.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+            <state relative-caret-position="144">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#mat-toolbar#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#mat-toolbar#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#1;n#mat-toolbar#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#mat-toolbar-row#0;n#mat-toolbar#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#mat-slider#0;n#div#0;n#mat-toolbar-row#0;n#mat-toolbar#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/page/album/play-album/play-album.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="48" selection-start-column="48" selection-end-column="48" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#mat-toolbar#0;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#mat-toolbar#0;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#1;n#mat-toolbar#0;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#1;n#mat-toolbar#0;n#div#2;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/page/album/list-album/list-album.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="44" selection-start-column="44" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/page/song/list-song/list-song.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="34" column="25" lean-forward="true" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#48#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/page/song/list-song-new/list-song-new.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#48#0" expanded="true" />
+                <element signature="e#0#43#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -207,8 +164,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/page/login/login.component.html" />
-        <option value="$PROJECT_DIR$/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/src/environments/environment.ts" />
         <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/src/app/page/playlist/create-playlist/create-playlist.component.html" />
@@ -230,10 +185,8 @@
         <option value="$PROJECT_DIR$/src/app/helper/ErrorInterceptor.ts" />
         <option value="$PROJECT_DIR$/src/app/page/users/register/register.component.html" />
         <option value="$PROJECT_DIR$/src/app/interface/user.ts" />
-        <option value="$PROJECT_DIR$/src/app/app-routing.module.ts" />
         <option value="$PROJECT_DIR$/src/app/page/users/login/login.component.html" />
         <option value="$PROJECT_DIR$/src/app/page/users/login/login.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/service/user/user.service.ts" />
         <option value="$PROJECT_DIR$/src/app/page/users/register/register.component.ts" />
         <option value="$PROJECT_DIR$/src/app/interface/role.ts" />
         <option value="$PROJECT_DIR$/src/app/interface/user-token.ts" />
@@ -241,10 +194,8 @@
         <option value="$PROJECT_DIR$/src/app/helper/jwt.interceptor.ts" />
         <option value="$PROJECT_DIR$/src/app/helper/jwt-interceptor.ts" />
         <option value="$PROJECT_DIR$/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/src/app/block/header/header.component.html" />
         <option value="$PROJECT_DIR$/src/app/page/album/play-album/play-album.component.ts" />
         <option value="$PROJECT_DIR$/src/app/page/album/play-album/play-album.component.html" />
-        <option value="$PROJECT_DIR$/src/app/block/header/header.component.ts" />
         <option value="$PROJECT_DIR$/src/app/page/playlist/list-playlist/list-playlist.component.html" />
         <option value="$PROJECT_DIR$/src/app/page/playlist/list-playlist/list-playlist.component.ts" />
         <option value="$PROJECT_DIR$/src/app/page/playlist/create-playlist/create-playlist.component.ts" />
@@ -258,6 +209,12 @@
         <option value="$PROJECT_DIR$/src/app/page/song/detail-song/detail-song.component.html" />
         <option value="$PROJECT_DIR$/src/app/page/album/list-album/list-album.component.html" />
         <option value="$PROJECT_DIR$/src/app/page/album/list-album/list-album.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/block/header/header.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/block/header/header.component.html" />
+        <option value="$PROJECT_DIR$/src/app/app-routing.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/page/users/change-password/change-password.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/service/user/user.service.ts" />
+        <option value="$PROJECT_DIR$/src/app/page/users/change-password/change-password.component.html" />
       </list>
     </option>
   </component>
@@ -337,6 +294,15 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="page" type="462c0819:PsiDirectoryNode" />
               <item name="album" type="462c0819:PsiDirectoryNode" />
+              <item name="create-album" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zing-front-end" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zing-front-end" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
+              <item name="album" type="462c0819:PsiDirectoryNode" />
               <item name="edit-album" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -356,6 +322,50 @@
               <item name="page" type="462c0819:PsiDirectoryNode" />
               <item name="album" type="462c0819:PsiDirectoryNode" />
               <item name="play-album" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zing-front-end" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zing-front-end" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
+              <item name="playlist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zing-front-end" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zing-front-end" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
+              <item name="playlist" type="462c0819:PsiDirectoryNode" />
+              <item name="create-playlist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zing-front-end" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zing-front-end" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
+              <item name="playlist" type="462c0819:PsiDirectoryNode" />
+              <item name="detail-playlist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zing-front-end" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zing-front-end" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
+              <item name="playlist" type="462c0819:PsiDirectoryNode" />
+              <item name="edit-playlist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zing-front-end" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zing-front-end" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
+              <item name="playlist" type="462c0819:PsiDirectoryNode" />
+              <item name="list-playlist" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zing-front-end" type="b2602c69:ProjectViewProjectNode" />
@@ -417,6 +427,15 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="page" type="462c0819:PsiDirectoryNode" />
               <item name="users" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zing-front-end" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zing-front-end" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+              <item name="change-password" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zing-front-end" type="b2602c69:ProjectViewProjectNode" />
@@ -540,7 +559,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94695000" />
+    <option name="totallyTimeSpent" value="97353000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -620,33 +639,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/page/album/edit-album/edit-album.component.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/page/song/create-song/create-song.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="8" selection-start-line="4" selection-start-column="2" selection-end-line="10" selection-end-column="8" />
-          <folding>
-            <element signature="n#style#0;n#textarea#0;n#div#6;n#form#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/page/playlist/edit-playlist/edit-playlist.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="10" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/interface/singer.ts" />
     <entry file="file://$PROJECT_DIR$/src/app/service/song/song.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -683,33 +675,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/page/users/login/login.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="124" selection-start-line="8" selection-start-column="124" selection-end-line="8" selection-end-column="124" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/helper/auth-guard.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/helper/error-interceptor.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/helper/auth-guard.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/helper/error-interceptor.ts" />
     <entry file="file://$PROJECT_DIR$/src/app/interface/playlist.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -752,8 +719,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/page/users/login/login.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
+        <state>
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
@@ -774,26 +740,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/page/users/register/register.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/service/user/user.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="26" column="97" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="97" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/interface/user-token.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -804,26 +750,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/helper/jwt.interceptor.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/app-routing.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="93" column="29" selection-start-line="93" selection-start-column="29" selection-end-line="93" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/helper/jwt.interceptor.ts" />
     <entry file="file://$PROJECT_DIR$/src/app/helper/jwt-interceptor.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -834,55 +761,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="57" column="16" lean-forward="true" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/interface/album.ts">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/block/header/header.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/block/header/header.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="30" column="58" selection-start-line="30" selection-start-column="58" selection-end-line="30" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/app.component.html">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/page/users/register/register.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="50" column="25" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/page/album/create-album/create-album.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="75" selection-start-column="57" selection-end-column="75" />
-          <folding>
-            <element signature="n#style#0;n#div#9;n#form#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/page/album/edit-album/edit-album.component.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -902,27 +785,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/page/playlist/create-playlist/create-playlist.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="23" column="46" selection-start-line="22" selection-start-column="14" selection-end-line="23" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/page/playlist/detail-playlist/detail-playlist.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="67" column="5" lean-forward="true" selection-start-line="57" selection-start-column="4" selection-end-line="67" selection-end-column="5" />
+        <state>
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/page/playlist/edit-playlist/edit-playlist.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-321">
-          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+        <state>
           <folding>
             <element signature="e#0#48#0" expanded="true" />
           </folding>
@@ -938,18 +812,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/page/playlist/list-playlist/list-playlist.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="20" column="46" selection-start-line="19" selection-start-column="14" selection-end-line="20" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/page/album/create-album/create-album.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="64" column="9" lean-forward="true" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
+        <state>
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
@@ -960,16 +823,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
           <caret line="52" column="9" lean-forward="true" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/page/song/create-song/create-song.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -984,26 +837,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="257">
           <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/page/song/list-song/list-song.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="127">
-          <caret line="34" column="25" lean-forward="true" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/page/song/list-song-new/list-song-new.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+          <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
           </folding>
@@ -1046,20 +886,167 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/page/album/list-album/list-album.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/page/song/detail-song/detail-song.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="51" column="41" lean-forward="true" selection-start-line="49" selection-start-column="8" selection-end-line="51" selection-end-column="41" />
+        <state relative-caret-position="359">
+          <caret line="55" column="37" lean-forward="true" selection-start-line="44" selection-start-column="4" selection-end-line="55" selection-end-column="37" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/page/album/list-album/list-album.component.ts">
+    <entry file="file://$PROJECT_DIR$/src/app/page/song/list-song-new/list-song-new.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+        <state relative-caret-position="172">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/page/album/create-album/create-album.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="75" selection-start-column="57" selection-end-column="75" />
+          <folding>
+            <element signature="n#style#0;n#div#9;n#form#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/page/album/create-album/create-album.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="64" column="9" lean-forward="true" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/page/playlist/create-playlist/create-playlist.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/page/playlist/create-playlist/create-playlist.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-134">
+          <caret line="23" column="46" selection-start-line="22" selection-start-column="14" selection-end-line="23" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/page/song/create-song/create-song.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/page/song/create-song/create-song.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="20" column="37" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/block/header/header.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="34" column="28" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/block/header/header.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="47" column="69" lean-forward="true" selection-start-line="47" selection-start-column="69" selection-end-line="47" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="57" column="16" lean-forward="true" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="102" column="38" lean-forward="true" selection-start-line="102" selection-start-column="38" selection-end-line="102" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/page/users/register/register.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="41" column="129" lean-forward="true" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="129" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/page/users/register/register.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="141" column="37" lean-forward="true" selection-start-line="139" selection-start-column="4" selection-end-line="141" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/page/users/change-password/change-password.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="40" column="11" lean-forward="true" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/service/user/user.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/page/users/login/login.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="25" column="17" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="25" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/page/users/change-password/change-password.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#form#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

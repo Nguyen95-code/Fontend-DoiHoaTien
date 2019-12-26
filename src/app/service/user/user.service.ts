@@ -27,8 +27,8 @@ export class UserService {
     return this.http.get<User>('http://zingdoihoatien.herokuapp.com/users?username=' + username);
   }
 
-  newPassword(user: User, id: number, token: string): Observable<User> {
-    return this.http.post<User>(this.USER_API + `/new-password/${id}?token=` + token, user);
+  newPassword(user: User, id: number): Observable<User> {
+    return this.http.post<User>(`http://zingdoihoatien.herokuapp.com/new-password/${id}`, user);
   }
 
   login(user: User): Observable<User> {
