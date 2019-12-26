@@ -84,6 +84,14 @@ const routes: Routes = [
   {
     path: 'list-album/detail-album/:id',
     component: PlayAlbumComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   }
 ];
 

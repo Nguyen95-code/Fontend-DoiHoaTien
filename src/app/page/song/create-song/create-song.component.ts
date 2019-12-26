@@ -1,10 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {SongService} from '../../../service/song/song.service';
 import {Router} from '@angular/router';
 import {AngularFireDatabase} from '@angular/fire/database';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import * as firebase from 'firebase';
 import {Song} from '../../../interface/song';
+import {AuthenticationService} from '../../../service/authentication/authentication.service';
+import {UserService} from '../../../service/user/user.service';
+import {User} from '../../../interface/user';
 
 
 @Component({
@@ -17,10 +20,13 @@ export class CreateSongComponent implements OnInit {
   constructor(private songService: SongService,
               private fb: FormBuilder,
               private db: AngularFireDatabase,
-              private  router: Router, ) { }
+              private  router: Router,
+              private authenticationService: AuthenticationService,
+              private userService: UserService) {
+  }
 
   songForm: FormGroup;
-
+  currentUser: User;
   nameAudioURL: string;
   checkAudio = true;
   uploadAudioSuccess: boolean;
@@ -28,6 +34,7 @@ export class CreateSongComponent implements OnInit {
   checkImage = true;
   uploadImageSuccess: boolean;
   song: Song;
+
   ngOnInit() {
     this.songForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(6)]],
@@ -35,10 +42,26 @@ export class CreateSongComponent implements OnInit {
       link: ['', [Validators.required]],
       image: ['', [Validators.required]]
     });
+    if (this.authenticationService.currentUserValue) {
+      const username = this.authenticationService.currentUserValue.username;
+      this.userService.getUserByUsername(username).subscribe(next => {
+        this.currentUser = next;
+        console.log(this.currentUser);
+        if (this.currentUser.roles !== 'ROLE_SINGER') {
+          alert('Bạn không có quyền tạo bài hát');
+          this.router.navigate(['/']);
+        }
+      }, error1 => {
+        console.log(error1);
+      });
+    } else {
+      this.router.navigate(['login']);
+    }
   }
+
   createSong() {
     const checkValid = this.songForm.valid && this.songForm.value.name.trim().length >= 6
-                        && this.songForm.value.description.trim().length >= 10;
+      && this.songForm.value.description.trim().length >= 10;
     if (checkValid) {
       if (!this.checkAudio) {
         alert('This is not audio');
@@ -107,7 +130,7 @@ export class CreateSongComponent implements OnInit {
     const file = event.target.files;
     const fileName: string = file[0].name;
     if (fileName.endsWith('png') || fileName.endsWith('jpg') || fileName.endsWith('gif') ||
-        fileName.endsWith('bmp') || fileName.endsWith('jpeg')) {
+      fileName.endsWith('bmp') || fileName.endsWith('jpeg')) {
       this.checkImage = true;
       const metadata = {
         contentType: 'image',
@@ -119,8 +142,8 @@ export class CreateSongComponent implements OnInit {
           const snap = snapshot as firebase.storage.UploadTaskSnapshot;
         },
         (error) => {
-        this.uploadImageSuccess = false;
-        console.log(error);
+          this.uploadImageSuccess = false;
+          console.log(error);
         },
         () => {
           uploadTask.snapshot.ref.getDownloadURL().then(downloadURL => {

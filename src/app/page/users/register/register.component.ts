@@ -1,12 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import { User} from '../../../interface/user';
+import {User} from '../../../interface/user';
 import {UserService} from '../../../service/user/user.service';
 import {Router} from '@angular/router';
-import {SongService} from '../../../service/song/song.service';
 import {AngularFireDatabase} from '@angular/fire/database';
 import {Song} from '../../../interface/song';
 import * as firebase from 'firebase';
+import {Role} from '../../../interface/role';
+import {Playlist} from '../../../interface/playlist';
+import {Album} from '../../../interface/album';
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -17,52 +20,85 @@ export class RegisterComponent implements OnInit {
   constructor(private userService: UserService,
               private fb: FormBuilder,
               private db: AngularFireDatabase,
-              private  router: Router, ) { }
+              private  router: Router) {
+  }
+
   user: User;
   userForm: FormGroup;
-  checkAudio = true;
-  uploadAudioSuccess: boolean;
   nameImageURL: string;
   checkImage = true;
   uploadImageSuccess: boolean;
   song: Song;
+
+  role: Role = {name: 'ROLE_USER'};
+  checkPass: boolean;
+
   ngOnInit() {
     this.userForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(6)]],
-      description: ['', [Validators.required, Validators.minLength(10)]],
-      link: ['', [Validators.required]],
-      image: ['', [Validators.required]]
+      image: ['', [Validators.required]],
+      address: '',
+      identityCard: '',
+      company: '',
+      username: '',
+      password: '',
+      confirmPassword: ''
     });
   }
+
   createUser() {
-    const checkValid = this.userForm.valid && this.userForm.value.name.trim().length >= 6
-      && this.userForm.value.description.trim().length >= 10;
+    const checkValid = this.userForm.valid && this.userForm.value.name.trim().length >= 6 && this.checkPass;
     if (checkValid) {
-        if (!this.checkImage) {
-          alert('This is not image');
+      if (!this.checkImage) {
+        alert('This is not image');
+      } else {
+        if (!this.uploadImageSuccess) {
+          alert('Please wait upload file');
         } else {
-          if (!this.uploadImageSuccess || !this.uploadAudioSuccess) {
-            alert('Please wait upload file');
+          if (this.role.name === 'ROLE_USER') {
+            this.user = {
+              name: this.userForm.value.name.trim(),
+              image: this.nameImageURL,
+              playlist: [],
+              myList: [],
+              albumList: [],
+              roles: this.role,
+              password: this.userForm.value.password,
+              confirmPassword: this.userForm.value.confirmPassword,
+              username: this.userForm.value.username
+            };
           } else {
             this.user = {
               name: this.userForm.value.name.trim(),
               image: this.nameImageURL,
               playlist: [],
+              albumList: [],
+              myList: [],
+              roles: this.role,
+              identityCard: this.userForm.value.identityCard.trim(),
+              address: this.userForm.value.address.trim(),
+              company: this.userForm.value.company.trim(),
+              password: this.userForm.value.password,
+              confirmPassword: this.userForm.value.confirmPassword,
+              username: this.userForm.value.username
             };
-            this.userService.create(this.user).subscribe(() => {
-              console.log('Add thành công!');
-              alert('Upload success');
-              this.router.navigate(['']);
-              this.userForm.reset();
-            }, error => {
-              console.log('lỗi' + error);
-            });
           }
+          console.log(this.user);
+          this.userService.register(this.user).subscribe(() => {
+            console.log('Add thành công!');
+            alert('Đăng ký thành công');
+            this.router.navigate(['']);
+            this.userForm.reset();
+          }, error => {
+            console.log('lỗi' + error);
+          });
         }
+      }
     } else {
       alert('Form is invalid');
     }
   }
+
   uploadImage(event) {
     const file = event.target.files;
     const fileName: string = file[0].name;
@@ -93,5 +129,16 @@ export class RegisterComponent implements OnInit {
     } else {
       this.checkImage = false;
     }
+  }
+
+  setRole(event) {
+    const value = event.target.value;
+    this.role = { name: value};
+    console.log(this.role);
+  }
+  checkPassword() {
+    if (this.userForm.value.password !== this.userForm.value.confirmPassword) {
+      this.checkPass = false;
+    } else { this.checkPass = true; }
   }
 }

@@ -6,6 +6,9 @@ import {Playlist} from '../../../interface/playlist';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import * as firebase from 'firebase';
 import {environment} from '../../../../environments/environment';
+import {AuthenticationService} from '../../../service/authentication/authentication.service';
+import {UserService} from '../../../service/user/user.service';
+import {User} from '../../../interface/user';
 
 firebase.initializeApp(environment.firebase);
 
@@ -25,11 +28,13 @@ export class EditPlaylistComponent implements OnInit {
   nameImageURL: string;
   uploadImageSuccess: boolean;
   checkImage: boolean;
-
+  currentUser: User;
   constructor(private playlistService: PlaylistService,
               private activateRoute: ActivatedRoute,
               private fb: FormBuilder,
-              private router: Router) {
+              private router: Router,
+              private authenticationService: AuthenticationService,
+              private userService: UserService) {
   }
 
   ngOnInit() {
@@ -41,6 +46,17 @@ export class EditPlaylistComponent implements OnInit {
         console.log(error1);
       });
     });
+    if (this.authenticationService.currentUserValue) {
+      const username = this.authenticationService.currentUserValue.username;
+      this.userService.getUserByUsername(username).subscribe(next => {
+        this.currentUser = next;
+        console.log(this.currentUser);
+      }, error1 => {
+        console.log(error1);
+      });
+    } else {
+      this.router.navigate(['login']);
+    }
   }
 
   editPlaylist() {

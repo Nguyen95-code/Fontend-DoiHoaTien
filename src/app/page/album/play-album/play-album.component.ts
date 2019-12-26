@@ -7,6 +7,9 @@ import {Subscription} from 'rxjs';
 import {StreamState} from '../../../interface/stream-state';
 import {AlbumService} from '../../../service/album/album.service';
 import {Album} from '../../../interface/album';
+import {AuthenticationService} from '../../../service/authentication/authentication.service';
+import {UserService} from '../../../service/user/user.service';
+import {User} from '../../../interface/user';
 
 @Component({
   selector: 'app-play-album',
@@ -18,12 +21,14 @@ export class PlayAlbumComponent implements OnInit {
               private activateRoute: ActivatedRoute,
               private audioService: AudioService,
               private songService: SongService,
-              private router: Router) {
+              private router: Router,
+              private authenticationService: AuthenticationService,
+              private userService: UserService) {
     this.audioService.getState().subscribe(state => {
       this.state = state;
     });
   }
-
+  currentUser: User;
   listSong: Song[] = [];
   song: Song;
   album: Album;
@@ -44,6 +49,16 @@ export class PlayAlbumComponent implements OnInit {
         console.log(error1);
       });
     });
+
+    if (this.authenticationService.currentUserValue) {
+      const username = this.authenticationService.currentUserValue.username;
+      this.userService.getUserByUsername(username).subscribe(next => {
+        this.currentUser = next;
+        console.log(this.currentUser);
+      }, error1 => {
+        console.log(error1);
+      });
+    }
 
     this.songService.getAllSong().subscribe(result => {
       this.songAll = result;

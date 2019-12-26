@@ -5,6 +5,9 @@ import {Router} from '@angular/router';
 import {PlaylistService} from '../../../service/playlist/playlist.service';
 import {Playlist} from '../../../interface/playlist';
 import * as firebase from 'firebase';
+import {AuthenticationService} from '../../../service/authentication/authentication.service';
+import {UserService} from '../../../service/user/user.service';
+import {User} from '../../../interface/user';
 
 @Component({
   selector: 'app-create-playlist',
@@ -16,7 +19,9 @@ export class CreatePlaylistComponent implements OnInit {
   constructor(private playlistService: PlaylistService,
               private fb: FormBuilder,
               private db: AngularFireDatabase,
-              private  router: Router) { }
+              private  router: Router,
+              private authenticationService: AuthenticationService,
+              private userService: UserService) { }
 
   playlistForm: FormGroup;
 
@@ -24,11 +29,23 @@ export class CreatePlaylistComponent implements OnInit {
   checkImage = true;
   uploadImageSuccess: boolean;
   playlist: Playlist;
+  currentUser: User;
   ngOnInit() {
     this.playlistForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(6)]],
       image: ['', [Validators.required]]
     });
+    if (this.authenticationService.currentUserValue) {
+      const username = this.authenticationService.currentUserValue.username;
+      this.userService.getUserByUsername(username).subscribe(next => {
+        this.currentUser = next;
+        console.log(this.currentUser);
+      }, error1 => {
+        console.log(error1);
+      });
+    } else {
+      this.router.navigate(['login']);
+    }
   }
   createPlaylist() {
     const checkValid = this.playlistForm.valid && this.playlistForm.value.name.trim().length >= 6;

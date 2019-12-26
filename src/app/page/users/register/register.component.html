@@ -1,4 +1,4 @@
-<form [formGroup]="userForm" (ngSubmit)="createUser()" >
+<form [formGroup]="userForm" (ngSubmit)="createUser()" class="form-group">
   <div *ngIf="uploadImageSuccess" class="alert-success alert">
     Upload Image Success
   </div>
@@ -6,27 +6,21 @@
     Uploading!!!
   </div>
   <div class="form-group">
-    <label>Tên đăng nhập: </label>
-    <input type="user" class="form-control" placeholder="Tên đăng nhập của bạn" required name="">
-    <label>Mật khẩu: </label>
-    <input type="password" class="form-control" placeholder="Password của bạn" required name="">
-    <label>Xác nhận lại mật khẩu: </label>
-    <input type="password" class="form-control" placeholder="Password của bạn" required name="">
-
     <div>
-        <label>Tên</label>
-        <input type="text" class="form-control" placeholder="Tên của bạn" formControlName="name">
+      <label>Tên</label>
+      <input type="text" class="form-control" placeholder="Tên của bạn" formControlName="name">
     </div>
     <div class="alert alert-danger" role="alert"
-         *ngIf="userForm.get('name').value.trim() == '' && userForm.get('name').touched">
+         *ngIf="userForm.value.name.trim() == '' && userForm.get('name').touched">
       Name is required
     </div>
     <div class="alert alert-danger" role="alert"
-         *ngIf="userForm.get('name').value.trim().length < 6 && userForm.get('name').touched">
+         *ngIf="userForm.value.name.trim().length < 6 && userForm.get('name').touched">
       Name must be longer than 6 characters
     </div>
+
     <div >
-      <label >Avata</label>
+      <label>Avatar</label>
       <input type="file" class="form-control-file" formControlName="image" (change)="uploadImage($event)">
     </div>
     <div class="alert alert-danger" role="alert"
@@ -36,9 +30,37 @@
     <div class="alert alert-danger" *ngIf="!checkImage">
       This is not image
     </div>
+
+    <label>Tên đăng nhập: </label>
+    <input type="user" class="form-control" placeholder="Tên đăng nhập của bạn" required formControlName="username">
+
+    <label>Mật khẩu: </label>
+    <input type="password" class="form-control" placeholder="Mật khẩu của bạn" required formControlName="password">
+
+    <label>Xác nhận lại mật khẩu: </label>
+    <input type="password" class="form-control" placeholder="Nhập lại mật khẩu của bạn" required formControlName="confirmPassword" (change)="checkPassword(this)">
+    <div *ngIf="!checkPass && userForm.get('confirmPassword').touched" class="alert alert-danger">Mật khẩu không giống nhau</div>
+
+    <label>Bạn là: </label>
+    <select (change)="setRole($event)">
+      <option> --Chọn-- </option>
+      <option value="ROLE_USER"> Người nghe nhạc </option>
+      <option value="ROLE_SINGER"> Ca sĩ </option>
+    </select>
+    <br/>
+    <div *ngIf="role.name == 'ROLE_SINGER'">
+      <label>Quê quán: </label>
+      <input type="text" class="form-control" placeholder="Quê quán" formControlName="address">
+
+      <label>Số CMND: </label>
+      <input type="text" class="form-control" placeholder="Số CMND" formControlName="identityCard">
+
+      <label>Đang làm việc / Đại diện thương hiệu cho công ty: </label>
+      <input type="text" class="form-control" placeholder="Công ty" formControlName="company">
+    </div>
     <input type="checkbox" required name="">
     <label> Tôi đồng ý điều khoản sử dụng </label>
     <br>
-    <button class="btn btn-success" type="submit">Gửi</button>
   </div>
+  <button class="btn btn-success" type="submit">Gửi</button>
 </form>

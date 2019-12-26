@@ -8,7 +8,7 @@ import {Album} from '../../interface/album';
   providedIn: 'root'
 })
 export class AlbumService {
-  private ALBUM_API = 'http://zingdoihoatien.herokuapp.com/api/albums';
+  private ALBUM_API = 'http://zingdoihoatien.herokuapp.com/albums';
 
   constructor(private http: HttpClient) {
   }
