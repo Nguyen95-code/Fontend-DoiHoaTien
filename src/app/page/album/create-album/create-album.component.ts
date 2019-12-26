@@ -8,6 +8,9 @@ import {Album} from '../../../interface/album';
 import {AlbumService} from '../../../service/album/album.service';
 import {Song} from '../../../interface/song';
 import {SongService} from '../../../service/song/song.service';
+import {AuthenticationService} from '../../../service/authentication/authentication.service';
+import {UserService} from '../../../service/user/user.service';
+import {User} from '../../../interface/user';
 
 @Component({
   selector: 'app-create-album',
@@ -20,7 +23,9 @@ export class CreateAlbumComponent implements OnInit {
               private fb: FormBuilder,
               private db: AngularFireDatabase,
               private  router: Router,
-              private songService: SongService) { }
+              private songService: SongService,
+              private authenticationService: AuthenticationService,
+              private userService: UserService) { }
   song: Song;
   albumForm: FormGroup;
   songForm: FormGroup;
@@ -32,6 +37,7 @@ export class CreateAlbumComponent implements OnInit {
   checkAudio = true;
   uploadAudioSuccess: boolean;
   songList: Song[] = [];
+  currentUser: User;
   ngOnInit() {
     this.albumForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(6)]],
@@ -44,6 +50,22 @@ export class CreateAlbumComponent implements OnInit {
       link: ['', [Validators.required]],
       image: ['', [Validators.required]]
     });
+
+    if (this.authenticationService.currentUserValue) {
+      const username = this.authenticationService.currentUserValue.username;
+      this.userService.getUserByUsername(username).subscribe(next => {
+        this.currentUser = next;
+        console.log(this.currentUser);
+        if (this.currentUser.roles !== 'ROLE_SINGER') {
+          alert('Bạn không có quyền tạo album');
+          this.router.navigate(['/']);
+        }
+      }, error1 => {
+        console.log(error1);
+      });
+    } else {
+      this.router.navigate(['login']);
+    }
   }
   createAlbum() {
     const checkValid = this.albumForm.valid && this.albumForm.value.name.trim().length >= 6;

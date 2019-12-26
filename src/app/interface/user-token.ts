@@ -1,15 +1,16 @@
-import {Playlist} from './playlist';
-import {Song} from './song';
-import {Album} from './album';
 import {Role} from './role';
+import {Song} from './song';
+import {Playlist} from './playlist';
+import {Album} from './album';
 
-export interface User {
-  id?: number;
+export interface UserToken {
+  id: number;
   name: string;
   image: string;
   username: string;
   password: string;
   confirmPassword: string;
+  accessToken?: string;
   address?: string;
   identityCard?: string;
   company?: string;

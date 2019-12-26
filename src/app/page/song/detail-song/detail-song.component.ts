@@ -5,6 +5,9 @@ import {SongService} from '../../../service/song/song.service';
 import {ActivatedRoute, ParamMap} from '@angular/router';
 import {StreamState} from '../../../interface/stream-state';
 import {AudioService} from '../../../service/player/audio.service';
+import {AuthenticationService} from '../../../service/authentication/authentication.service';
+import {UserService} from '../../../service/user/user.service';
+import {User} from '../../../interface/user';
 
 
 @Component({
@@ -15,7 +18,9 @@ import {AudioService} from '../../../service/player/audio.service';
 export class DetailSongComponent implements OnInit {
   constructor(private songService: SongService,
               private activateRoute: ActivatedRoute,
-              private audioService: AudioService) {
+              private audioService: AudioService,
+              private authenticationService: AuthenticationService,
+              private userService: UserService) {
     this.audioService.getState().subscribe(state => {
       this.state = state;
     });
@@ -25,9 +30,9 @@ export class DetailSongComponent implements OnInit {
   sub: Subscription;
   state: StreamState;
   volume;
-
+  currentUser: User;
   onVolume = true;
-
+  isSinger = false;
   ngOnInit() {
     this.sub = this.activateRoute.paramMap.subscribe((paraMap: ParamMap) => {
       const id = paraMap.get('id');
@@ -37,6 +42,18 @@ export class DetailSongComponent implements OnInit {
         console.log(error1);
       });
     });
+    if (this.authenticationService.currentUserValue) {
+      const username = this.authenticationService.currentUserValue.username;
+      this.userService.getUserByUsername(username).subscribe(next => {
+        this.currentUser = next;
+        console.log(this.currentUser);
+        if (this.currentUser.roles.name === 'ROLE_SINGER'){
+          this.isSinger = true;
+        } else { this.isSinger = false; }
+      }, error1 => {
+        console.log(error1);
+      });
+    } else { this.isSinger = false; }
   }
 
   isEndSongs() {

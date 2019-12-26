@@ -7,6 +7,9 @@ import {Subscription} from 'rxjs';
 import {StreamState} from '../../../interface/stream-state';
 import {PlaylistService} from '../../../service/playlist/playlist.service';
 import {Playlist} from '../../../interface/playlist';
+import {AuthenticationService} from '../../../service/authentication/authentication.service';
+import {UserService} from '../../../service/user/user.service';
+import {User} from '../../../interface/user';
 
 @Component({
   selector: 'app-detail-playlist',
@@ -18,12 +21,14 @@ export class DetailPlaylistComponent implements OnInit {
               private activateRoute: ActivatedRoute,
               private audioService: AudioService,
               private songService: SongService,
-              private router: Router) {
+              private router: Router,
+              private authenticationService: AuthenticationService,
+              private userService: UserService) {
     this.audioService.getState().subscribe(state => {
       this.state = state;
     });
   }
-
+  currentUser: User;
   listSong: Song[] = [];
   song: Song;
   playlist: Playlist;
@@ -50,6 +55,17 @@ export class DetailPlaylistComponent implements OnInit {
     }, error => {
       console.log(error);
     });
+    if (this.authenticationService.currentUserValue) {
+      const username = this.authenticationService.currentUserValue.username;
+      this.userService.getUserByUsername(username).subscribe(next => {
+        this.currentUser = next;
+        console.log(this.currentUser);
+      }, error1 => {
+        console.log(error1);
+      });
+    } else {
+      this.router.navigate(['login']);
+    }
   }
 
   isEndSongs() {

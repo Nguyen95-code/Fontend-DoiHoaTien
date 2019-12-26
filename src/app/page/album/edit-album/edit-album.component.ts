@@ -5,6 +5,9 @@ import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import * as firebase from 'firebase';
 import {Album} from '../../../interface/album';
 import {AlbumService} from '../../../service/album/album.service';
+import {AuthenticationService} from '../../../service/authentication/authentication.service';
+import {UserService} from '../../../service/user/user.service';
+import {User} from '../../../interface/user';
 
 @Component({
   selector: 'app-edit-album',
@@ -21,11 +24,13 @@ export class EditAlbumComponent implements OnInit {
   nameImageURL: string;
   uploadImageSuccess: boolean;
   checkImage: boolean;
-
+  currentUser: User;
   constructor(private albumService: AlbumService,
               private activateRoute: ActivatedRoute,
               private fb: FormBuilder,
-              private router: Router) {
+              private router: Router,
+              private authenticationService: AuthenticationService,
+              private userService: UserService) {
   }
 
   ngOnInit() {
@@ -37,6 +42,21 @@ export class EditAlbumComponent implements OnInit {
         console.log(error1);
       });
     });
+    if (this.authenticationService.currentUserValue) {
+      const username = this.authenticationService.currentUserValue.username;
+      this.userService.getUserByUsername(username).subscribe(next => {
+        this.currentUser = next;
+        console.log(this.currentUser);
+        if (this.currentUser.roles !== 'ROLE_SINGER'){
+          alert('Bạn không có quyền sửa album');
+          this.router.navigate(['/']);
+        }
+      }, error1 => {
+        console.log(error1);
+      });
+    } else {
+      this.router.navigate(['login']);
+    }
   }
 
   editAlbum() {

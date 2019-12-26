@@ -1,4 +1,4 @@
-<a routerLink="create-album">Create album</a>
+<a routerLink="create-album" *ngIf="isSinger">Create album</a>
 <div class="row">
   <div *ngFor="let album of listAlbum" class="col-md-3">
     <div [routerLink]="['detail-album', album.id]">

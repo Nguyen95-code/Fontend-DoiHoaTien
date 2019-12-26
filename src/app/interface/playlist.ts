@@ -1,6 +1,5 @@
 import {Song} from './song';
 import {User} from './user';
-import {Singer} from './singer';
 
 export interface Playlist {
   id?: string;
@@ -8,5 +7,4 @@ export interface Playlist {
   image: string;
   songList: Song[];
   user?: User;
-  singer?: Singer;
 }
