@@ -3,14 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="453a4fa7-5ba2-4604-bb8a-60748c1601a8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/block/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/block/header/header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page/login/login.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/login/login.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page/users/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/users/register/register.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page/users/register/register.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page/users/register/register.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -100,6 +92,9 @@
       <workItem from="1577010311663" duration="7152000" />
       <workItem from="1577063096397" duration="4009000" />
       <workItem from="1577069408943" duration="4709000" />
+      <workItem from="1577236192445" duration="1820000" />
+      <workItem from="1577542776941" duration="1210000" />
+      <workItem from="1578190164002" duration="257000" />
     </task>
     <servers />
   </component>
