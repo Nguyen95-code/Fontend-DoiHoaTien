@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SongService {
-  private songUrl = 'http://zingdoihoatien.herokuapp.com/api/songs';
-  private newSongUrl = 'http://zingdoihoatien.herokuapp.com/api/songs/new';
+  private songUrl = 'http://zingdoihoatien.herokuapp.com/songs';
+  private newSongUrl = 'http://zingdoihoatien.herokuapp.com/songs/new';
   constructor(private http: HttpClient) { }
   getListNew(): Observable<Song[]> {
     return this.http.get<Song[]>(this.newSongUrl);
@@ -21,6 +21,9 @@ export class SongService {
   }
   delete(id: number): Observable<Song> {
     return  this.http.delete<Song>(this.songUrl + '/' + id);
+  }
+  edit(song: Song, id: number): Observable<Song> {
+    return this.http.put<Song>(this.songUrl + `${id}`, song);
   }
   getAllSong(): Observable<Song[]> {
     return this.http.get<Song[]>(this.songUrl);

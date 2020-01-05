@@ -1,0 +1,70 @@
+<a *ngIf="currentUser.roles.name == 'ROLE_SINGER'" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Thêm bài hát
+</a>
+<div (click)="playAll()">
+  <span class="glyphicon glyphicon-play"></span><span>  Nghe tất cả</span>
+</div>
+<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+  <a class="dropdown-item" *ngFor="let song of songAll" (click)="addSong(song.id)">{{song.name}}</a>
+</div>
+<div class="container">
+  <mat-toolbar color="primary" class="main-toolbar">
+    <div style="position: relative; width: 97%">{{album.name}}</div>
+    <div style="position: relative; width: 10%; float: right">
+      <a [routerLink]="['edit-album',album.id]"
+         style="color: #bb0000;">Edit</a>
+      <button (click)="delete(album)"
+         style="color: white; padding-left: 10%">Delete</button>
+    </div>
+  </mat-toolbar>
+  <div class="content">
+    <div class="logo container">
+      <img src="{{album.image}}" style="position:relative; width: 30%; height: 30%;">
+    </div>
+  </div>
+  <div class="media-footer">
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <button mat-button (click)="previous()">
+          <mat-icon mat-list-icon>skip_previous</mat-icon>
+        </button>
+        <button mat-button (click)="play()" [disabled]="state?.error" *ngIf="!state?.playing">
+          <mat-icon mat-list-icon>play_circle_filled</mat-icon>
+        </button>
+        <button mat-button (click)="pause()" *ngIf="state?.playing">
+          <mat-icon mat-list-icon>pause</mat-icon>
+        </button>
+        <button mat-button (click)="next()">
+          <mat-icon mat-list-icon>skip_next</mat-icon>
+        </button>
+        {{ state?.readableCurrentTime }}
+        <mat-slider class="time-slider" min="0" [max]="state?.duration" step="1" [value]="state?.currentTime"
+                    (input)="onSliderChangeEnd($event)"
+                    [disabled]="state?.error">
+        </mat-slider>
+        {{ state?.readableDuration}}
+        <div style="padding-left: 2rem">
+              <span *ngIf="!onVolume">
+                <span class="glyphicon glyphicon-volume-off" (click)="turnOnVolume()"></span>
+              </span>
+          <span *ngIf="onVolume">
+                  <span class="glyphicon glyphicon-volume-up" (click)="turnOffVolume()"></span>
+                </span>
+          <mat-slider class="time-slider" min="0" [max]="100" step="1" [value]="volume"
+                      (input)="onChangVolume($event)" style="width: 10%!important; position: relative"></mat-slider>
+        </div>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <table class="table table-borderless">
+      <tbody>
+      <tr *ngFor="let song of listSong">
+        <td (click)="playSong(song.id)">{{song.name}}</td>
+        <td *ngIf="song === listSong[songIdNow]" (click)="playSong(song.id)"><span class="glyphicon glyphicon-play"></span></td>
+        <td *ngIf="song !== listSong[songIdNow]" (click)="playSong(song.id)"></td>
+        <td><button class="glyphicon glyphicon-remove" (click)="remove(song)"></button></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

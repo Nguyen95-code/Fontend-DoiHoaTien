@@ -12,14 +12,14 @@ import {StreamState} from '../../../interface/stream-state';
   styleUrls: ['./list-song.component.scss']
 })
 export class ListSongComponent implements OnInit {
+  song: Song;
   songList: Song[] = [];
-  number: number[] = [];
   sub: Subscription;
   state: StreamState;
   volume;
-
   onVolume = true;
-
+  playSong: boolean[] = [];
+  currentTime: number;
   constructor(private songService: SongService,
               private activateRoute: ActivatedRoute,
               private audioService: AudioService) {
@@ -34,10 +34,6 @@ export class ListSongComponent implements OnInit {
     }, error => {
       console.log(error);
     });
-
-    for (let i = 0; i < this.songList.length; i++) {
-      this.number.push(i);
-    }
   }
 
   isEndSongs() {
@@ -57,13 +53,24 @@ export class ListSongComponent implements OnInit {
 
   pause() {
     this.audioService.pause();
+    this.currentTime = this.state.currentTime;
   }
 
   play(song) {
+    // tslint:disable-next-line:prefer-for-of
+    for (let i = 0; i < this.songList.length; i++) {
+      this.playSong[this.songList[i].id] = false;
+    }
+    this.playSong[song.id] = true;
     console.log(song);
-    this.audioService.stop();
+    if (this.song !== song) {
+      this.song = song;
+      this.currentTime = 0;
+      this.audioService.stop();
+    }
     this.playStream(song.link);
     this.audioService.play();
+    this.audioService.seekTo(this.currentTime);
   }
 
   stop() {

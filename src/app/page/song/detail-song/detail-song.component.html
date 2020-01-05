@@ -1,11 +1,8 @@
-<br/>
-<br/>
-
 <div class="container">
   <mat-toolbar color="primary" class="main-toolbar">
     <div style="position: relative; width: 97%">{{song.name}}</div>
-    <div style="position: relative; width: 3%; float: right">
-      <a class="glyphicon glyphicon-remove" [routerLink]="['delete-song',song.id]"
+    <div *ngIf="isSinger" style="position: relative; width: 3%; float: right">
+      <a  lass="glyphicon glyphicon-remove" [routerLink]="['delete-song',song.id]"
          style="color: #bb0000; font-size: 200%"></a>
     </div>
   </mat-toolbar>

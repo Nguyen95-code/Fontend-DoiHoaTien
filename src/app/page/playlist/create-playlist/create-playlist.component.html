@@ -1,0 +1,33 @@
+<form [formGroup]="playlistForm" (ngSubmit)="createPlaylist()" class="form-group">
+  <div *ngIf="uploadImageSuccess" class="alert-success alert">
+    Upload Image Thành Công
+  </div>
+  <div *ngIf="(!uploadImageSuccess && playlistForm.get('image').value != '')" class="alert alert-danger">
+    Đang Upload. Xin vui lòng chờ trong giây lát!!!
+  </div>
+  <div >
+    <label >Tên Playlist</label>
+    <input type="text" class="form-control" formControlName="name" placeholder="Tên Playlist">
+  </div>
+  <div class="alert alert-danger" role="alert"
+       *ngIf="playlistForm.get('name').value.trim() == '' && playlistForm.get('name').touched">
+    Tên Playlist không được để trống
+  </div>
+  <div class="alert alert-danger" role="alert"
+       *ngIf="playlistForm.get('name').value.trim().length < 6 && playlistForm.get('name').touched">
+    Tên Playlist phải dài hơn 6 ký tự
+  </div>
+  <div >
+    <label >File ảnh đại diện Playlist</label>
+    <input type="file" class="form-control-file" formControlName="image" (change)="uploadImage($event)">
+  </div>
+  <div class="alert alert-danger" role="alert"
+       *ngIf="playlistForm.get('image').invalid && playlistForm.get('image').touched">
+    Chưa chọn file ảnh
+  </div>
+  <div class="alert alert-danger" *ngIf="!checkImage">
+    File đã chọn không phải file ảnh
+  </div>
+  <input type="submit" class="btn btn-success mr-2" value="Thêm mới">
+  <button type="button" class="btn btn-warning " routerLink="">Hủy</button>
+</form>
