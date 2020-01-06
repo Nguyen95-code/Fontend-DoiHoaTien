@@ -47,7 +47,7 @@ export class CreateSongComponent implements OnInit {
       this.userService.getUserByUsername(username).subscribe(next => {
         this.currentUser = next;
         console.log(this.currentUser);
-        if (this.currentUser.roles !== 'ROLE_SINGER') {
+        if (this.currentUser.roles.name !== 'ROLE_SINGER') {
           alert('Bạn không có quyền tạo bài hát');
           this.router.navigate(['/']);
         }
@@ -63,6 +63,7 @@ export class CreateSongComponent implements OnInit {
     const checkValid = this.songForm.valid && this.songForm.value.name.trim().length >= 6
       && this.songForm.value.description.trim().length >= 10;
     if (checkValid) {
+      this.song.view = 0;
       if (!this.checkAudio) {
         alert('This is not audio');
       } else {

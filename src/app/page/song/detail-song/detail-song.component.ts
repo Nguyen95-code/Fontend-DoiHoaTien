@@ -62,7 +62,7 @@ export class DetailSongComponent implements OnInit {
   }
 
   upViews() {
-    this.song.view++;
+    this.song.view = 0;
     this.songService.edit(this.song, this.song.id).subscribe(() => {
       console.log('edit thanh cong');
     }, error => {

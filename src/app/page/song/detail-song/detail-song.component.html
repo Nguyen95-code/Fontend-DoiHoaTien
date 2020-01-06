@@ -1,6 +1,7 @@
 <div class="container">
   <mat-toolbar color="primary" class="main-toolbar">
     <div style="position: relative; width: 97%">{{song.name}}</div>
+    <div style="position: relative; width: 97%">{{song.view}}</div>
     <div *ngIf="isSinger" style="position: relative; width: 3%; float: right">
       <a  lass="glyphicon glyphicon-remove" [routerLink]="['delete-song',song.id]"
          style="color: #bb0000; font-size: 200%"></a>
@@ -12,6 +13,7 @@
       <div>{{song.description}}</div>
     </div>
   </div>
+  <button (click)="upViews()">Up</button>
   <div class="media-footer">
     <mat-toolbar color="primary">
       <mat-toolbar-row>
@@ -45,6 +47,7 @@
         </div>
       </mat-toolbar-row>
     </mat-toolbar>
+
 
   </div>
 </div>
