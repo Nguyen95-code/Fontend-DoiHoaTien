@@ -47,7 +47,7 @@ export class CreateSongComponent implements OnInit {
       this.userService.getUserByUsername(username).subscribe(next => {
         this.currentUser = next;
         console.log(this.currentUser);
-        if (this.currentUser.roles !== 'ROLE_SINGER') {
+        if (this.currentUser.roles.name !== 'ROLE_SINGER') {
           alert('Bạn không có quyền tạo bài hát');
           this.router.navigate(['/']);
         }
