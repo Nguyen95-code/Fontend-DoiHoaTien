@@ -63,7 +63,6 @@ export class CreateSongComponent implements OnInit {
     const checkValid = this.songForm.valid && this.songForm.value.name.trim().length >= 6
       && this.songForm.value.description.trim().length >= 10;
     if (checkValid) {
-      this.song.view = 0;
       if (!this.checkAudio) {
         alert('This is not audio');
       } else {

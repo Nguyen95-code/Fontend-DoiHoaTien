@@ -16,6 +16,7 @@ import {ListAlbumComponent} from './page/album/list-album/list-album.component';
 import {EditAlbumComponent} from './page/album/edit-album/edit-album.component';
 import {PlayAlbumComponent} from './page/album/play-album/play-album.component';
 import {ChangePasswordComponent} from './page/users/change-password/change-password.component';
+import {TopSongViewsComponent} from './page/song/top-song-views/top-song-views.component';
 
 const routes: Routes = [
   {
@@ -101,6 +102,10 @@ const routes: Routes = [
   {
     path: 'change-password',
     component: ChangePasswordComponent
+  },
+  {
+    path: 'top-song-views',
+    component: TopSongViewsComponent
   }
 ];
 

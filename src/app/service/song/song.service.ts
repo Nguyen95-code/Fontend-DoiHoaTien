@@ -9,9 +9,13 @@ import { Observable } from 'rxjs';
 export class SongService {
   private songUrl = 'http://zingdoihoatien.herokuapp.com/songs';
   private newSongUrl = 'http://zingdoihoatien.herokuapp.com/songs/new';
+  private topSongViewUrl = 'http://zingdoihoatien.herokuapp.com/songs/views';
   constructor(private http: HttpClient) { }
   getListNew(): Observable<Song[]> {
     return this.http.get<Song[]>(this.newSongUrl);
+  }
+  getListTopView(): Observable<Song[]> {
+    return this.http.get<Song[]>(this.topSongViewUrl);
   }
   create(song): Observable<Song> {
     return this.http.post<Song>(this.songUrl, song);
@@ -22,8 +26,8 @@ export class SongService {
   delete(id: number): Observable<Song> {
     return  this.http.delete<Song>(this.songUrl + '/' + id);
   }
-  edit(song: Song, id: number): Observable<Song> {
-    return this.http.put<Song>(this.songUrl + `${id}`, song);
+  edit(song: Song): Observable<Song> {
+    return this.http.put<Song>(this.songUrl, song);
   }
   getAllSong(): Observable<Song[]> {
     return this.http.get<Song[]>(this.songUrl);

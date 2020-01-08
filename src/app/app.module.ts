@@ -29,6 +29,7 @@ import { EditAlbumComponent } from './page/album/edit-album/edit-album.component
 import { PlayAlbumComponent } from './page/album/play-album/play-album.component';
 import {JwtInterceptor} from './helper/jwt-interceptor';
 import { ChangePasswordComponent } from './page/users/change-password/change-password.component';
+import { TopSongViewsComponent } from './page/song/top-song-views/top-song-views.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { ChangePasswordComponent } from './page/users/change-password/change-pas
     ListAlbumComponent,
     EditAlbumComponent,
     PlayAlbumComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    TopSongViewsComponent
   ],
   imports: [
     BrowserModule,

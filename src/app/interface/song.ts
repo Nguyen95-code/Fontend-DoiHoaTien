@@ -11,5 +11,5 @@ export interface Song {
   user?: User;
   playlist: Playlist[];
   album: Album[];
-  view?: number;
+  views?: number;
 }

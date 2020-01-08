@@ -33,12 +33,15 @@ export class DetailSongComponent implements OnInit {
   currentUser: User;
   onVolume = true;
   isSinger = false;
+  view = 0;
 
   ngOnInit() {
     this.sub = this.activateRoute.paramMap.subscribe((paraMap: ParamMap) => {
       const id = paraMap.get('id');
       this.songService.detail(id).subscribe(next => {
         this.song = next;
+        this.view = this.song.views;
+        console.log(this.song);
       }, error1 => {
         console.log(error1);
       });
@@ -61,14 +64,14 @@ export class DetailSongComponent implements OnInit {
     }
   }
 
-  upViews() {
-    this.song.view = 0;
-    this.songService.edit(this.song, this.song.id).subscribe(() => {
-      console.log('edit thanh cong');
-    }, error => {
-      console.log('loi' + error);
-    });
-  }
+  // upViews() {
+  //   this.song.view = 0;
+  //   this.songService.edit(this.song, this.song.id).subscribe(() => {
+  //     console.log('edit thanh cong');
+  //   }, error => {
+  //     console.log('loi' + error);
+  //   });
+  // }
 
   isEndSongs() {
     if (this.state.readableCurrentTime === this.state.readableDuration) {
@@ -93,6 +96,25 @@ export class DetailSongComponent implements OnInit {
     this.audioService.stop();
     this.playStream(this.song.link);
     this.audioService.play();
+    this.view++;
+    this.song = {
+      id: this.song.id,
+      name: this.song.name,
+      description: this.song.description,
+      image: this.song.image,
+      views: this.view,
+      user: this.song.user,
+      album: this.song.album,
+      playlist: this.song.playlist,
+      link: this.song.link
+    };
+    console.log(this.view);
+    console.log(this.song);
+    this.songService.edit(this.song).subscribe(() => {
+      console.log('Update thanh cong');
+    }, error => {
+      console.log(error);
+    });
   }
 
   stop() {
