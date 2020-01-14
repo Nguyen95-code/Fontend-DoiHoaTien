@@ -8,6 +8,9 @@ import {AudioService} from '../../../service/player/audio.service';
 import {AuthenticationService} from '../../../service/authentication/authentication.service';
 import {UserService} from '../../../service/user/user.service';
 import {User} from '../../../interface/user';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {CommentService} from '../../../service/comment/comment.service';
+import {Comment} from '../../../interface/comment';
 
 
 @Component({
@@ -20,12 +23,13 @@ export class DetailSongComponent implements OnInit {
               private activateRoute: ActivatedRoute,
               private audioService: AudioService,
               private authenticationService: AuthenticationService,
-              private userService: UserService) {
+              private userService: UserService,
+              private commentService: CommentService,
+              private fb: FormBuilder) {
     this.audioService.getState().subscribe(state => {
       this.state = state;
     });
   }
-
   song: Song;
   sub: Subscription;
   state: StreamState;
@@ -34,6 +38,9 @@ export class DetailSongComponent implements OnInit {
   onVolume = true;
   isSinger = false;
   view = 0;
+  comment: Comment;
+  commentForm: FormGroup;
+  listCommentSong: Comment[] = [];
 
   ngOnInit() {
     this.sub = this.activateRoute.paramMap.subscribe((paraMap: ParamMap) => {
@@ -45,23 +52,39 @@ export class DetailSongComponent implements OnInit {
       }, error1 => {
         console.log(error1);
       });
+      this.commentService.getListCommentSong(id).subscribe(result => {
+        this.listCommentSong = result;
+        console.log(result);
+      }, error => {
+        console.log(error);
+      });
     });
     if (this.authenticationService.currentUserValue) {
       const username = this.authenticationService.currentUserValue.username;
       this.userService.getUserByUsername(username).subscribe(next => {
-        this.currentUser = next;
+        this.currentUser = next[0];
         console.log(this.currentUser);
         if (this.currentUser.roles.name === 'ROLE_SINGER') {
           this.isSinger = true;
         } else {
           this.isSinger = false;
         }
-      }, error1 => {
-        console.log(error1);
+      }, error2 => {
+        console.log(error2);
       });
     } else {
       this.isSinger = false;
     }
+
+    this.commentForm = this.fb.group({
+      description: ['', [Validators.required]]
+    });
+    // this.commentService.getListCommentSong(this.song.id).subscribe(result => {
+    //   this.listCommentSong = result;
+    //   console.log(result);
+    // }, error => {
+    //   console.log(error);
+    // });
   }
 
   // upViews() {
@@ -145,5 +168,19 @@ export class DetailSongComponent implements OnInit {
 
   onChangVolume(volume) {
     this.audioService.changeVolume(volume.value / 100);
+  }
+
+  createComment() {
+    this.comment = {
+      description: this.commentForm.value.description,
+      song: this.song,
+      user: this.currentUser
+    };
+    this.commentService.create(this.comment, this.song.id).subscribe(() => {
+      console.log('Add thành công!');
+      this.commentForm.reset();
+    }, error => {
+      console.log('lỗi' + error);
+    });
   }
 }

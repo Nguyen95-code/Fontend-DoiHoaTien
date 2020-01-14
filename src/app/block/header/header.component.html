@@ -34,16 +34,16 @@
             <a class="nav-link" routerLink="list-playlist">Playlist</a>
           </li>
         </ul>
-        <div *ngIf="!curentUser">
+        <div *ngIf="!currentUser">
           <a routerLink="login">Đăng nhập</a>|<a routerLink="register">Đăng ký</a>
         </div>
-        <div class="btn-group form-inline dropdown " *ngIf="curentUser">
+        <div class="btn-group form-inline dropdown " *ngIf="currentUser">
           <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                   aria-expanded="false">
-            {{curentUser.name}}
+            {{currentUser.name}}
           </button>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <button class="dropdown-item" type="button" routerLink="create-song" *ngIf="curentUser.roles.name === 'ROLE_SINGER'"><i class='fas'>&#xf574;</i>
+            <button class="dropdown-item" type="button" routerLink="create-song" *ngIf="currentUser.roles.name === 'ROLE_SINGER'"><i class='fas'>&#xf574;</i>
               Tạo bài hát mới
             </button>
             <div class="dropdown-item">Thông tin tài khoản</div>

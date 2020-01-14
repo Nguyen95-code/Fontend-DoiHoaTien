@@ -11,7 +11,7 @@ import {UserService} from '../../service/user/user.service';
 })
 export class HeaderComponent implements OnInit {
 
-  curentUser: User;
+  currentUser: User;
   constructor(private activatedRoute: ActivatedRoute,
               private router: Router,
               private authenticationService: AuthenticationService,
@@ -19,8 +19,8 @@ export class HeaderComponent implements OnInit {
     if (this.authenticationService.currentUserValue) {
       const username = this.authenticationService.currentUserValue.username;
       userService.getUserByUsername(username).subscribe(next => {
-        this.curentUser = next;
-        console.log(this.curentUser);
+        this.currentUser = next[0];
+        console.log(this.currentUser);
       }, error1 => {
         console.log(error1);
       });

@@ -30,6 +30,9 @@ import { PlayAlbumComponent } from './page/album/play-album/play-album.component
 import {JwtInterceptor} from './helper/jwt-interceptor';
 import { ChangePasswordComponent } from './page/users/change-password/change-password.component';
 import { TopSongViewsComponent } from './page/song/top-song-views/top-song-views.component';
+import { CreateSongCommentComponent } from './page/comment/song-comment/create-song-comment/create-song-comment.component';
+import { DetailSongCommentComponent } from './page/comment/song-comment/detail-song-comment/detail-song-comment.component';
+import { DetailUserComponent } from './page/users/detail-user/detail-user.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +56,10 @@ import { TopSongViewsComponent } from './page/song/top-song-views/top-song-views
     EditAlbumComponent,
     PlayAlbumComponent,
     ChangePasswordComponent,
-    TopSongViewsComponent
+    TopSongViewsComponent,
+    CreateSongCommentComponent,
+    DetailSongCommentComponent,
+    DetailUserComponent
   ],
   imports: [
     BrowserModule,
