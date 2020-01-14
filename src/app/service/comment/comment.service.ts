@@ -8,9 +8,9 @@ import {Song} from '../../interface/song';
   providedIn: 'root'
 })
 export class CommentService {
-  private commentSongUrl = 'http://zingdoihoatien.herokuapp.com/songs/';
-  private commentPlaylistUrl = 'http://zingdoihoatien.herokuapp.com/playlists/';
-  private commentSingerUrl = 'http://zingdoihoatien.herokuapp.com/singers/';
+  private commentSongUrl = 'https://zingdoihoatien.herokuapp.com/songs/';
+  private commentPlaylistUrl = 'https://zingdoihoatien.herokuapp.com/playlists/';
+  private commentSingerUrl = 'https://zingdoihoatien.herokuapp.com/singers/';
 
   constructor(private http: HttpClient) {
   }

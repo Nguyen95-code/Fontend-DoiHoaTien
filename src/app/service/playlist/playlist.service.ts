@@ -9,7 +9,7 @@ import {Song} from '../../interface/song';
   providedIn: 'root'
 })
 export class PlaylistService {
-  private PLAYLIST_API = 'http://zingdoihoatien.herokuapp.com/playlists';
+  private PLAYLIST_API = 'https://zingdoihoatien.herokuapp.com/playlists';
 
   constructor(private http: HttpClient) {
   }

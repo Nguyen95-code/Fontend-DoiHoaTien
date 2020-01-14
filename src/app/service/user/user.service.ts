@@ -10,11 +10,11 @@ import {Song} from '../../interface/song';
 })
 export class UserService {
   constructor(private http: HttpClient) { }
-  private USER_API = 'http://zingdoihoatien.herokuapp.com/users';
-  private USER_CURRENT = 'http://zingdoihoatien.herokuapp.com/userCurrent';
-  private UrlSinger = 'http://zingdoihoatien.herokuapp.com/singers';
+  private USER_API = 'https://zingdoihoatien.herokuapp.com/users';
+  private USER_CURRENT = 'https://zingdoihoatien.herokuapp.com/userCurrent';
+  private UrlSinger = 'https://zingdoihoatien.herokuapp.com/singers';
   register(user): Observable<User> {
-    return this.http.post<User>('http://zingdoihoatien.herokuapp.com/register', user);
+    return this.http.post<User>('https://zingdoihoatien.herokuapp.com/register', user);
   }
 
   detail(id): Observable<User> {
@@ -26,15 +26,15 @@ export class UserService {
   }
 
   getUserByUsername(username: string): Observable<User> {
-    return this.http.get<User>('http://zingdoihoatien.herokuapp.com/users?username=' + username);
+    return this.http.get<User>('https://zingdoihoatien.herokuapp.com/users?username=' + username);
   }
 
   newPassword(user: User, id: number): Observable<User> {
-    return this.http.post<User>(`http://zingdoihoatien.herokuapp.com/new-password/${id}`, user);
+    return this.http.post<User>(`https://zingdoihoatien.herokuapp.com/new-password/${id}`, user);
   }
 
   login(user: User): Observable<User> {
-    return this.http.post<User>( 'http://zingdoihoatien.herokuapp.com/login', user);
+    return this.http.post<User>( 'https://zingdoihoatien.herokuapp.com/login', user);
   }
 
   detailSinger(id: string): Observable<User> {
