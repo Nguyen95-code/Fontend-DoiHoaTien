@@ -1,9 +1,49 @@
-<div class="span3 well">
+<div>
+  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <div class="row">
+    <div class="span2">
+      <img src="{{singer.image}}"  alt="" class="img-rounded">
+    </div>
+    <div class="span4">
+      <blockquote>
+        <p>{{singer.name}}</p>
+        <small><cite title="Source Title">{{singer.address}}<i class="icon-map-marker"></i></cite></small>
+      </blockquote>
+      <p>
+        <i class="icon-envelope"></i> {{singer.company}}<br>
+        <i class="icon-globe"></i> www.bootsnipp.com <br>
+        <i class="icon-gift"></i> January 30, 1974
+      </p>
+    </div>
+</div>
+<!--<div class="span3 well">-->
 
-    <a href="#aboutModal" data-toggle="modal" data-target="#myModal"><img src="{{singer.image}}" name="aboutme" width="140" height="140" class="img-circle"></a>
-    <h3>{{singer.name}}</h3>
-  <h3>{{singer.albumList}}</h3>
-  <h3>{{singer.company}}</h3>
-    <em>{{singer.address}}</em>
-
+<!--    <a href="#aboutModal" data-toggle="modal" data-target="#myModal"><img src="{{singer.image}}" name="aboutme" width="140" height="140" class="img-circle"></a>-->
+<!--    <h3>{{singer.name}}</h3>-->
+<!--  <h3>{{singer.albumList}}</h3>-->
+<!--  <h3>{{singer.company}}</h3>-->
+<!--    <em>{{singer.address}}</em>-->
+<!--</div>-->
+<div class="media comment-box">
+  <form [formGroup]="commentForm" (ngSubmit)="createComment()">
+    <div class="media-body">
+      <input type="text" class="form-control" formControlName="description" placeholder="Bình luận của bạn" >
+      <br/>
+      <input type="submit" class="btn btn-outline-primary" value="Thêm mới bình luận">
+    </div>
+  </form>
+</div>
+<div>
+  <div class="media comment-box" [routerLink]="['detail-singer', singer.id]" *ngFor="let comment of listCommentSinger">
+    <div class="media-left" >
+      <a href="#"><img class="img-responsive user-photo" src="{{comment.user.image}}">
+      </a>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">{{comment.user.name}}</h4>
+      <p>{{comment.description}}</p>
+    </div>
+  </div>
 </div>

@@ -4,7 +4,7 @@ import {Subscription} from 'rxjs';
 import {StreamState} from '../../../interface/stream-state';
 import {UserService} from '../../../service/user/user.service';
 import {CommentService} from '../../../service/comment/comment.service';
-import {FormBuilder, FormGroup} from '@angular/forms';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {AuthenticationService} from '../../../service/authentication/authentication.service';
 import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {Comment} from '../../../interface/comment';
@@ -22,7 +22,7 @@ export class DetailSingerComponent implements OnInit {
   state: StreamState;
   comment: Comment;
   commentForm: FormGroup;
-  listCommentUser: Comment[] = [];
+  listCommentSinger: Comment[] = [];
 
   constructor(private userService: UserService,
               private router: Router,
@@ -41,6 +41,12 @@ export class DetailSingerComponent implements OnInit {
       }, error1 => {
         console.log(error1);
       });
+      this.commentService.getListCommentSinger(id).subscribe(result => {
+        this.listCommentSinger = result;
+        console.log(result);
+      }, error => {
+        console.log(error);
+      });
     });
     if (this.authenticationService.currentUserValue) {
       const username = this.authenticationService.currentUserValue.username;
@@ -53,5 +59,22 @@ export class DetailSingerComponent implements OnInit {
     } else {
       this.router.navigate(['login']);
     }
+    this.commentForm = this.fb.group({
+      description: ['', [Validators.required]]
+    });
+  }
+
+  createComment() {
+    this.comment = {
+      description: this.commentForm.value.description,
+      singer: this.singer,
+      user: this.currentUser
+    };
+    this.commentService.createCommentSong(this.comment, this.singer.id).subscribe(() => {
+      console.log('Add thành công!');
+      this.commentForm.reset();
+    }, error => {
+      console.log('lỗi' + error);
+    });
   }
 }
