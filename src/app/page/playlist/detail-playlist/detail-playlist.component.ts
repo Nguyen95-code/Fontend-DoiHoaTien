@@ -201,7 +201,8 @@ export class DetailPlaylistComponent implements OnInit {
       playlist: this.playlist,
       user: this.currentUser
     };
-    this.commentService.createCommentPlaylist(this.comment, this.playlist.id).subscribe(() => {
+    this.commentService.createCommentPlaylist(this.comment, this.playlist.id).subscribe(next => {
+      this.listCommentPlaylist.unshift(next);
       console.log('Add thành công!');
       this.commentForm.reset();
       }, error => {

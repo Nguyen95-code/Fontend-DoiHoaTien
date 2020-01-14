@@ -54,7 +54,7 @@ export class DetailSongComponent implements OnInit {
       });
       this.commentService.getListCommentSong(id).subscribe(result => {
         this.listCommentSong = result;
-        console.log(result);
+        this.listCommentSong.shift();
       }, error => {
         console.log(error);
       });
@@ -176,7 +176,8 @@ export class DetailSongComponent implements OnInit {
       song: this.song,
       user: this.currentUser
     };
-    this.commentService.createCommentSong(this.comment, this.song.id).subscribe(() => {
+    this.commentService.createCommentSong(this.comment, this.song.id).subscribe(next => {
+      this.listCommentSong.unshift(next);
       console.log('Add thành công!');
       this.commentForm.reset();
     }, error => {

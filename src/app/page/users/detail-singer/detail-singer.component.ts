@@ -70,7 +70,8 @@ export class DetailSingerComponent implements OnInit {
       singer: this.singer,
       user: this.currentUser
     };
-    this.commentService.createCommentSong(this.comment, this.singer.id).subscribe(() => {
+    this.commentService.createCommentSong(this.comment, this.singer.id).subscribe(next => {
+      this.listCommentSinger.unshift(next);
       console.log('Add thành công!');
       this.commentForm.reset();
     }, error => {
