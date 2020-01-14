@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {Observable} from 'rxjs';
 import {User} from '../../interface/user';
 import {HttpClient, } from '@angular/common/http';
+import {Song} from '../../interface/song';
 
 
 @Injectable({
@@ -11,6 +12,7 @@ export class UserService {
   constructor(private http: HttpClient) { }
   private USER_API = 'http://zingdoihoatien.herokuapp.com/users';
   private USER_CURRENT = 'http://zingdoihoatien.herokuapp.com/userCurrent';
+  private UrlSinger = 'http://zingdoihoatien.herokuapp.com/singers';
   register(user): Observable<User> {
     return this.http.post<User>('http://zingdoihoatien.herokuapp.com/register', user);
   }
@@ -33,5 +35,12 @@ export class UserService {
 
   login(user: User): Observable<User> {
     return this.http.post<User>( 'http://zingdoihoatien.herokuapp.com/login', user);
+  }
+
+  detailSinger(id: string): Observable<User> {
+    return this.http.get<User>(this.UrlSinger + '/' + id);
+  }
+  getAllSinger(): Observable<User[]> {
+    return this.http.get<User[]>(this.UrlSinger);
   }
 }

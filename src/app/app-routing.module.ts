@@ -17,6 +17,8 @@ import {EditAlbumComponent} from './page/album/edit-album/edit-album.component';
 import {PlayAlbumComponent} from './page/album/play-album/play-album.component';
 import {ChangePasswordComponent} from './page/users/change-password/change-password.component';
 import {TopSongViewsComponent} from './page/song/top-song-views/top-song-views.component';
+import {DetailSingerComponent} from './page/users/detail-singer/detail-singer.component';
+import {ListSingerComponent} from './page/users/list-singer/list-singer.component';
 
 const routes: Routes = [
   {
@@ -26,6 +28,10 @@ const routes: Routes = [
   {
     path: 'detail-song/:id',
     component: DetailSongComponent
+  },
+  {
+    path: 'detail-singer/:id',
+    component: DetailSingerComponent
   },
   {
     path: 'create-song',
@@ -82,6 +88,10 @@ const routes: Routes = [
   {
     path: 'list-album',
     component: ListAlbumComponent
+  },
+  {
+    path: 'list-singer',
+    component: ListSingerComponent
   },
   {
     path: 'list-album/detail-album/:id/edit-album/:id',
