@@ -106,10 +106,6 @@ const routes: Routes = [
   {
     path: 'top-song-views',
     component: TopSongViewsComponent
-  },
-  {
-    path: 'create-song-comment',
-    component: CreateSongComponent
   }
 ];
 

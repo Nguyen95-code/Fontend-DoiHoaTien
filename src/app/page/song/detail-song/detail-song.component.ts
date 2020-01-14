@@ -176,7 +176,7 @@ export class DetailSongComponent implements OnInit {
       song: this.song,
       user: this.currentUser
     };
-    this.commentService.create(this.comment, this.song.id).subscribe(() => {
+    this.commentService.createCommentSong(this.comment, this.song.id).subscribe(() => {
       console.log('Add thành công!');
       this.commentForm.reset();
     }, error => {

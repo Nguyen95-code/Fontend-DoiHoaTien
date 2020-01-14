@@ -66,3 +66,26 @@
   </div>
 </div>
 
+<div class="media comment-box">
+  <form [formGroup]="commentForm" (ngSubmit)="createComment()">
+    <div class="media-body">
+      <input type="text" class="form-control" formControlName="description" placeholder="Bình luận của bạn" >
+      <br/>
+      <input type="submit" class="btn btn-outline-primary" value="Thêm mới bình luận">
+    </div>
+  </form>
+</div>
+
+<div>
+  <div class="media comment-box" [routerLink]="['detail-playlist', playlist.id]" *ngFor="let comment of listCommentPlaylist">
+    <div class="media-left" >
+      <a href="#"><img class="img-responsive user-photo" src="{{comment.user.image}}">
+      </a>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">{{comment.user.name}}</h4>
+      <p>{{comment.description}}</p>
+    </div>
+  </div>
+</div>
+

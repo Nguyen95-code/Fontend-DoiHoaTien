@@ -10,6 +10,9 @@ import {Playlist} from '../../../interface/playlist';
 import {AuthenticationService} from '../../../service/authentication/authentication.service';
 import {UserService} from '../../../service/user/user.service';
 import {User} from '../../../interface/user';
+import {CommentService} from '../../../service/comment/comment.service';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {Comment} from '../../../interface/comment';
 
 @Component({
   selector: 'app-detail-playlist',
@@ -23,7 +26,9 @@ export class DetailPlaylistComponent implements OnInit {
               private songService: SongService,
               private router: Router,
               private authenticationService: AuthenticationService,
-              private userService: UserService) {
+              private userService: UserService,
+              private commentService: CommentService,
+              private fb: FormBuilder) {
     this.audioService.getState().subscribe(state => {
       this.state = state;
     });
@@ -38,6 +43,9 @@ export class DetailPlaylistComponent implements OnInit {
   songIdNow: number;
   songAll: Song[] = [];
   onVolume = true;
+  comment: Comment;
+  commentForm: FormGroup;
+  listCommentPlaylist: Comment[] = [];
 
   ngOnInit() {
     this.sub = this.activateRoute.paramMap.subscribe((paraMap: ParamMap) => {
@@ -48,8 +56,17 @@ export class DetailPlaylistComponent implements OnInit {
       }, error1 => {
         console.log(error1);
       });
+      this.commentService.getListCommentPlaylist(id).subscribe(result => {
+        this.listCommentPlaylist = result;
+        console.log(result);
+      }, error => {
+        console.log(error);
+      });
     });
 
+    this.commentForm = this.fb.group({
+      description: ['', [Validators.required]]
+    });
     this.songService.getAllSong().subscribe(result => {
       this.songAll = result;
     }, error => {
@@ -176,6 +193,19 @@ export class DetailPlaylistComponent implements OnInit {
       window.location.reload();
     }, error => {
       console.log(error);
+    });
+  }
+  createComment() {
+    this.comment = {
+      description: this.commentForm.value.description,
+      playlist: this.playlist,
+      user: this.currentUser
+    };
+    this.commentService.createCommentPlaylist(this.comment, this.playlist.id).subscribe(() => {
+      console.log('Add thành công!');
+      this.commentForm.reset();
+      }, error => {
+      console.log('lỗi' + error);
     });
   }
 }

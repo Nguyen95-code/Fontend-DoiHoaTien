@@ -18,13 +18,26 @@ export class CommentService {
   getListCommentSong(songId: string): Observable<Comment[]> {
     return this.http.get<Comment[]>(this.commentSongUrl  + songId + '/comments');
   }
-  create(comment: Comment, songId: number): Observable<Comment> {
+  createCommentSong(comment: Comment, songId: number): Observable<Comment> {
     return this.http.post<Comment>(this.commentSongUrl  + songId + '/comments', comment);
   }
-  delete(id: number, songId: number): Observable<Comment> {
+  deleteCommentSong(id: number, songId: number): Observable<Comment> {
     return  this.http.delete<Comment>(this.commentSongUrl + songId + '/comments' + '/' + id);
   }
-  edit(comment: Comment, songId: number): Observable<Comment> {
+  editCommentSong(comment: Comment, songId: number): Observable<Comment> {
     return this.http.put<Comment>(this.commentSongUrl + songId + '/comments', comment);
+  }
+  getListCommentPlaylist(playlistId: string): Observable<Comment[]> {
+    return this.http.get<Comment[]>(this.commentPlaylistUrl  + playlistId + '/comments');
+  }
+
+  createCommentPlaylist(comment: Comment, playlistId: string): Observable<Comment> {
+    return this.http.post<Comment>(this.commentPlaylistUrl  + playlistId + '/comments', comment);
+  }
+  deleteCommentPlaylist(id: number, playlistId: number): Observable<Comment> {
+    return  this.http.delete<Comment>(this.commentPlaylistUrl + playlistId + '/comments' + '/' + id);
+  }
+  editCommentPlaylist(comment: Comment, playlistId: number): Observable<Comment> {
+    return this.http.put<Comment>(this.commentPlaylistUrl + playlistId + '/comments', comment);
   }
 }
