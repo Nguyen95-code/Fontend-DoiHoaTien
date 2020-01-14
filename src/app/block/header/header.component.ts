@@ -16,18 +16,18 @@ export class HeaderComponent implements OnInit {
               private router: Router,
               private authenticationService: AuthenticationService,
               private userService: UserService) {
+  }
+
+  ngOnInit() {
     if (this.authenticationService.currentUserValue) {
       const username = this.authenticationService.currentUserValue.username;
-      userService.getUserByUsername(username).subscribe(next => {
-        this.currentUser = next[0];
+      this.userService.getUserByUsername(username).subscribe(next => {
+        this.currentUser = next;
         console.log(this.currentUser);
       }, error1 => {
         console.log(error1);
       });
     }
-  }
-
-  ngOnInit() {
   }
 
   logout() {
