@@ -1,0 +1,25 @@
+<div class="form-group">
+  <form [formGroup]="searchForm" (ngSubmit)="search()">
+    <label for="search">Nhập tên bài hát muốn tìm kiếm</label>
+    <input type="text" class="form-control" id="search" formControlName="name">
+    <button type="submit" class="btn btn-primary">
+      Tìm kiếm
+    </button>
+  </form>
+</div>
+<div *ngIf="songList.length>0">
+  <div class="row">
+      <span class="col-md-6 col-lg-4 mb-5 mb-lg-5" (click)="routerLink(song)" *ngFor="let song of songList">
+        <div class="team-member" >
+          <img src="{{song.image}}" alt="Image" class="img-fluid">
+          <h2 style="background-color: #edf0f5; width: 100%; text-align: center;">{{song.name}}</h2>
+          <div class="text container">
+            <p class="mb-4">{{song.description}}</p>
+          </div>
+        </div>
+      </span>
+  </div>
+</div>
+<div *ngIf="songList.length == 0">
+  <h2>Không có bài hát</h2>
+</div>

@@ -62,7 +62,7 @@ export class DetailSongComponent implements OnInit {
     if (this.authenticationService.currentUserValue) {
       const username = this.authenticationService.currentUserValue.username;
       this.userService.getUserByUsername(username).subscribe(next => {
-        this.currentUser = next[0];
+        this.currentUser = next;
         console.log(this.currentUser);
         if (this.currentUser.roles.name === 'ROLE_SINGER') {
           this.isSinger = true;

@@ -19,6 +19,7 @@ import {ChangePasswordComponent} from './page/users/change-password/change-passw
 import {TopSongViewsComponent} from './page/song/top-song-views/top-song-views.component';
 import {DetailSingerComponent} from './page/users/detail-singer/detail-singer.component';
 import {ListSingerComponent} from './page/users/list-singer/list-singer.component';
+import {SearchSongComponent} from './page/song/search-song/search-song.component';
 
 const routes: Routes = [
   {
@@ -116,6 +117,14 @@ const routes: Routes = [
   {
     path: 'top-song-views',
     component: TopSongViewsComponent
+  },
+  {
+    path: 'search-song',
+    component: SearchSongComponent
+  },
+  {
+    path: 'search-song/detail-song/:id',
+    component: DetailSongComponent
   }
 ];
 
