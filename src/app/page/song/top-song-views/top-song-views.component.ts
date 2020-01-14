@@ -14,7 +14,7 @@ export class TopSongViewsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.songService.getListNew().subscribe(result => {
+    this.songService.getListTopView().subscribe(result => {
       this.listTopViewSong = result;
     }, error => {
       console.log(error);
