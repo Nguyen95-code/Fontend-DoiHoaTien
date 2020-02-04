@@ -32,7 +32,7 @@ export class SongService {
   getAllSong(): Observable<Song[]> {
     return this.http.get<Song[]>(this.songUrl);
   }
-  getSongByName(name: string): Observable<Song[]>{
-    return this.http.get<Song[]>(this.songUrl + '?name=' + name)
+  getSongByName(name: string): Observable<Song[]> {
+    return this.http.get<Song[]>(this.songUrl + '?name=' + name);
   }
 }

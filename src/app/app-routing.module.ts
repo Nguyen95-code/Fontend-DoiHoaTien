@@ -20,6 +20,8 @@ import {TopSongViewsComponent} from './page/song/top-song-views/top-song-views.c
 import {DetailSingerComponent} from './page/users/detail-singer/detail-singer.component';
 import {ListSingerComponent} from './page/users/list-singer/list-singer.component';
 import {SearchSongComponent} from './page/song/search-song/search-song.component';
+import {EditSongComponent} from './page/song/edit-song/edit-song.component';
+import {EditProfileUserComponent} from './page/users/edit-profile-user/edit-profile-user.component';
 
 const routes: Routes = [
   {
@@ -29,6 +31,10 @@ const routes: Routes = [
   {
     path: 'detail-song/:id',
     component: DetailSongComponent
+  },
+  {
+    path: 'edit-song',
+    component: EditSongComponent,
   },
   {
     path: 'detail-singer/:id',
@@ -113,6 +119,10 @@ const routes: Routes = [
   {
     path: 'change-password',
     component: ChangePasswordComponent
+  },
+  {
+    path: 'edit-profile-user',
+    component: EditProfileUserComponent
   },
   {
     path: 'top-song-views',

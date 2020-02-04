@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {User} from '../../../interface/user';
 import {Subscription} from 'rxjs';
 import {UserService} from '../../../service/user/user.service';
@@ -16,9 +16,11 @@ export class ListSingerComponent implements OnInit {
   singerList: User[];
   sub: Subscription;
   currentUser: User;
+
   constructor(private userService: UserService,
               private authenticationService: AuthenticationService,
-              private router: Router) { }
+              private router: Router) {
+  }
 
   ngOnInit() {
     this.userService.getAllSinger().subscribe(result => {
@@ -37,6 +39,10 @@ export class ListSingerComponent implements OnInit {
     } else {
       this.router.navigate(['login']);
     }
+  }
+
+  routerLink(singer: User) {
+    this.router.navigate(['detail-singer/' + singer.id]);
   }
 
 }

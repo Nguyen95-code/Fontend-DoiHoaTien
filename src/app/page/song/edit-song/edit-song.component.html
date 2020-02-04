@@ -1,4 +1,4 @@
-<form [formGroup]="songForm" (ngSubmit)="createSong()" class="form-group">
+<form [formGroup]="songForm" (ngSubmit)="editSong()" class="form-group">
   <div *ngIf="uploadAudioSuccess" class="alert-success alert">
     Upload Audio Thành Công
   </div>
@@ -11,7 +11,7 @@
   </div>
   <div >
     <label >Tên bài hát</label>
-    <input type="text" class="form-control" formControlName="name" placeholder="Tên bài hát">
+    <input type="text" class="form-control" formControlName="name" placeholder="Tên bài hát" value ="{{song.name}}">
   </div>
   <div class="alert alert-danger" role="alert"
        *ngIf="songForm.get('name').value.trim() == '' && songForm.get('name').touched">
@@ -23,7 +23,7 @@
   </div>
   <div>
     <label >Mô tả bài hát</label>
-    <textarea type="text" class="form-control" formControlName="description" placeholder="Mô tả bài hát" style="height: 300px"></textarea>
+    <textarea type="text" class="form-control" formControlName="description" placeholder="Mô tả bài hát" style="height: 300px" value ="{{song.description}}"></textarea>
   </div>
   <div class="alert alert-danger" role="alert"
        *ngIf="songForm.get('description').value.trim() == '' && songForm.get('description').touched">
@@ -32,17 +32,6 @@
   <div class="alert alert-danger" role="alert"
        *ngIf="songForm.get('description').value.trim().length < 10 && songForm.get('description').touched">
     Mô tả phải dài hơn 10 ký tự
-  </div>
-  <div >
-    <label >File bài hát</label>
-    <input type="file" class="form-control-file" formControlName="link" (change)="uploadAudio($event)">
-  </div>
-  <div class="alert alert-danger" role="alert"
-       *ngIf="songForm.get('link').invalid && songForm.get('link').touched">
-    Chưa chọn file nhạc
-  </div>
-  <div class="alert alert-danger" *ngIf="!checkAudio">
-    File đã chọn không phải file audio
   </div>
   <div >
     <label >File ảnh đại diện bài hát</label>
@@ -56,6 +45,17 @@
   <div class="alert alert-danger" *ngIf="!checkImage">
     File đã chọn không phải file ảnh
   </div>
-  <input type="submit" class="btn btn-success mr-2" value="Thêm mới">
+  <div >
+    <label >File bài hát</label>
+    <input type="file" class="form-control-file" formControlName="link" (change)="uploadAudio($event)">
+  </div>
+  <div class="alert alert-danger" role="alert"
+       *ngIf="songForm.get('link').invalid && songForm.get('link').touched">
+    Chưa chọn file nhạc
+  </div>
+  <div class="alert alert-danger" *ngIf="!checkAudio">
+    File đã chọn không phải file audio
+  </div>
+  <input type="submit" class="btn btn-success mr-2" value="Cập nhập">
   <button type="button" class="btn btn-warning " routerLink="">Hủy</button>
 </form>
