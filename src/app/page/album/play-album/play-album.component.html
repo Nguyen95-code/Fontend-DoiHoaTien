@@ -1,6 +1,12 @@
-<a *ngIf="currentUser.roles.name == 'ROLE_SINGER'" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-  Thêm bài hát
-</a>
+<div *ngIf="currentUser">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Thêm bài hát
+  </a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <a class="dropdown-item" *ngFor="let song of songAll" (click)="addSong(song.id)">{{song.name}}</a>
+  </div>
+</div>
+
 <div (click)="playAll()">
   <span class="glyphicon glyphicon-play"></span><span>  Nghe tất cả</span>
 </div>
@@ -10,11 +16,14 @@
 <div class="container">
   <mat-toolbar color="primary" class="main-toolbar">
     <div style="position: relative; width: 97%">{{album.name}}</div>
-    <div style="position: relative; width: 10%; float: right">
-      <a [routerLink]="['edit-album',album.id]"
-         style="color: #bb0000;">Edit</a>
-      <button (click)="delete(album)"
-         style="color: white; padding-left: 10%">Delete</button>
+    <div *ngIf="currentUser">
+      <div style="position: relative; width: 10%; float: left">
+        <a [routerLink]="['edit-album',album.id]"
+           style="color: #bb0000;">Edit</a>
+        <p (click)="delete(album)"
+                style="color: white; padding-left: 10%">Delete
+        </p>
+      </div>
     </div>
   </mat-toolbar>
   <div class="content">
@@ -59,9 +68,12 @@
       <tbody>
       <tr *ngFor="let song of listSong">
         <td (click)="playSong(song.id)">{{song.name}}</td>
-        <td *ngIf="song === listSong[songIdNow]" (click)="playSong(song.id)"><span class="glyphicon glyphicon-play"></span></td>
+        <td *ngIf="song === listSong[songIdNow]" (click)="playSong(song.id)"><span
+          class="glyphicon glyphicon-play"></span></td>
         <td *ngIf="song !== listSong[songIdNow]" (click)="playSong(song.id)"></td>
-        <td><button class="glyphicon glyphicon-remove" (click)="remove(song)"></button></td>
+        <td>
+          <button class="glyphicon glyphicon-remove" (click)="remove(song)"></button>
+        </td>
       </tr>
       </tbody>
     </table>

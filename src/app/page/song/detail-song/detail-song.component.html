@@ -4,10 +4,10 @@
     <div style="position: relative; width: 97%">{{song.name}}</div>
     <div style="position: relative; width: 97%">{{view}} Lượt nghe</div>
     <div *ngIf="!checkLike">
-    <a class="btn btn-default" (click)="click()"><span class="glyphicon glyphicon-heart"></span></a>
+    <a class="btn btn-default" (click)="click()">{{countLike}}<span class="glyphicon glyphicon-heart"></span></a>
 </div>
 <div *ngIf="checkLike">
-  <a class="btn btn-danger" (click)="click()"><span class="glyphicon glyphicon-heart"></span></a>
+  <a class="btn btn-danger" (click)="click()">{{countLike}}<span class="glyphicon glyphicon-heart"></span></a>
 </div>
 <!--    <div *ngIf="isSinger" style="position: relative; width: 3%; float: right">-->
 <!--      <a  lass="glyphicon glyphicon-remove" [routerLink]="['edit-song',song.id]"-->

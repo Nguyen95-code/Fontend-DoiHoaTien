@@ -32,7 +32,10 @@ export class DetailSongComponent implements OnInit {
     this.audioService.getState().subscribe(state => {
       this.state = state;
     });
+
   }
+
+  likeList: Like[];
   song: Song;
   sub: Subscription;
   state: StreamState;
@@ -47,9 +50,61 @@ export class DetailSongComponent implements OnInit {
   // tslint:disable-next-line:ban-types
   checkLike: boolean;
   like: Like;
+  countLike = 0;
+  userId: number;
 
   ngOnInit() {
-
+    if (this.authenticationService.currentUserValue) {
+      const username = this.authenticationService.currentUserValue.username;
+      this.userService.getUserByUsername(username).subscribe(next => {
+        this.currentUser = next;
+        this.userId = this.currentUser.id;
+        console.log(this.userId);
+        if (this.currentUser.roles.name === 'ROLE_SINGER') {
+          this.isSinger = true;
+        } else {
+          this.isSinger = false;
+        }
+        this.sub = this.activateRoute.paramMap.subscribe((paraMap: ParamMap) => {
+          const id = paraMap.get('id');
+          this.songService.detail(id).subscribe(next1 => {
+            this.song = next1;
+            this.view = this.song.views;
+            console.log(this.song);
+          }, error1 => {
+            console.log(error1);
+          });
+          console.log(1);
+          this.commentService.getListCommentSong(id).subscribe(result => {
+            this.listCommentSong = result;
+            this.listCommentSong.shift();
+          }, error => {
+            console.log(error);
+          });
+          this.likeService.getAllLikeSong(id).subscribe(next2 => {
+            this.countLike = next2.length;
+            this.likeList = next2;
+            console.log(this.countLike);
+            console.log(this.userId);
+            for (let i = 0; i < this.countLike; i++) {
+              if (next2[i].user.id === this.userId) {
+                this.checkLike = true;
+                break;
+              } else if (i === this.countLike - 1) {
+                this.checkLike = false;
+              }
+            }
+            console.log(next2);
+          }, error1 => {
+            console.log(error1);
+          });
+        });
+      }, error2 => {
+        console.log(error2);
+      });
+    } else {
+      this.isSinger = false;
+    }
     this.sub = this.activateRoute.paramMap.subscribe((paraMap: ParamMap) => {
       const id = paraMap.get('id');
       this.songService.detail(id).subscribe(next => {
@@ -59,41 +114,33 @@ export class DetailSongComponent implements OnInit {
       }, error1 => {
         console.log(error1);
       });
+      console.log(1);
       this.commentService.getListCommentSong(id).subscribe(result => {
         this.listCommentSong = result;
         this.listCommentSong.shift();
       }, error => {
         console.log(error);
       });
-    });
-    if (this.authenticationService.currentUserValue) {
-      const username = this.authenticationService.currentUserValue.username;
-      this.userService.getUserByUsername(username).subscribe(next => {
-        this.currentUser = next;
-        console.log(this.currentUser);
-        if (this.currentUser.roles.name === 'ROLE_SINGER') {
-          this.isSinger = true;
-        } else {
-          this.isSinger = false;
-        }
-      }, error2 => {
-        console.log(error2);
+      this.likeService.getAllLikeSong(id).subscribe(next => {
+        this.countLike = next.length;
+        this.likeList = next;
+        console.log(this.countLike);
+        console.log(this.userId);
+        console.log(next);
+      }, error1 => {
+        console.log(error1);
       });
-    } else {
-      this.isSinger = false;
-    }
-
-    this.likeService.checkLikeSong(this.song.id, this.currentUser.id).subscribe( next => {
-      this.checkLike = next;
-      console.log(next);
-    }, error => {
-      console.log(error);
     });
 
-
+    console.log(3);
     this.commentForm = this.fb.group({
       description: ['', [Validators.required]]
     });
+
+    console.log(4);
+
+
+    console.log(6);
     // this.commentService.getListCommentSong(this.song.id).subscribe(result => {
     //   this.listCommentSong = result;
     //   console.log(result);
@@ -101,15 +148,6 @@ export class DetailSongComponent implements OnInit {
     //   console.log(error);
     // });
   }
-
-  // upViews() {
-  //   this.song.view = 0;
-  //   this.songService.edit(this.song, this.song.id).subscribe(() => {
-  //     console.log('edit thanh cong');
-  //   }, error => {
-  //     console.log('loi' + error);
-  //   });
-  // }
 
   isEndSongs() {
     if (this.state.readableCurrentTime === this.state.readableDuration) {
@@ -154,6 +192,7 @@ export class DetailSongComponent implements OnInit {
       console.log(error);
     });
   }
+
   click() {
     if (this.checkLike) {
       this.likeService.deleteLikeSong(this.song.id).subscribe(() => {
@@ -161,16 +200,18 @@ export class DetailSongComponent implements OnInit {
       }, error => {
         console.log(error);
       });
+      this.countLike--;
     } else {
       this.like = {
         song: this.song,
         user: this.currentUser
       };
-      this.likeService.createLikeSong(this.like, this.song.id).subscribe(() => {
+      this.likeService.createLikeSong(this.like, this.song.id).subscribe(next => {
         console.log('like thanh cong');
       }, error => {
         console.log(error);
       });
+      this.countLike++;
     }
     this.checkLike = !this.checkLike;
   }

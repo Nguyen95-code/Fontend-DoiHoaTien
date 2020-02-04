@@ -53,6 +53,7 @@ export class DetailPlaylistComponent implements OnInit {
       this.playlistService.detail(id).subscribe(next => {
         this.playlist = next;
         this.listSong = this.playlist.songList;
+        console.log(this.playlist);
       }, error1 => {
         console.log(error1);
       });
