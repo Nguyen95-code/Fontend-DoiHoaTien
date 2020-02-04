@@ -11,6 +11,8 @@ import {User} from '../../../interface/user';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {CommentService} from '../../../service/comment/comment.service';
 import {Comment} from '../../../interface/comment';
+import {LikeService} from '../../../service/like/like.service';
+import {Like} from '../../../interface/like';
 
 
 @Component({
@@ -25,7 +27,8 @@ export class DetailSongComponent implements OnInit {
               private authenticationService: AuthenticationService,
               private userService: UserService,
               private commentService: CommentService,
-              private fb: FormBuilder) {
+              private fb: FormBuilder,
+              private likeService: LikeService) {
     this.audioService.getState().subscribe(state => {
       this.state = state;
     });
@@ -41,8 +44,12 @@ export class DetailSongComponent implements OnInit {
   comment: Comment;
   commentForm: FormGroup;
   listCommentSong: Comment[] = [];
+  // tslint:disable-next-line:ban-types
+  checkLike: boolean;
+  like: Like;
 
   ngOnInit() {
+
     this.sub = this.activateRoute.paramMap.subscribe((paraMap: ParamMap) => {
       const id = paraMap.get('id');
       this.songService.detail(id).subscribe(next => {
@@ -75,6 +82,14 @@ export class DetailSongComponent implements OnInit {
     } else {
       this.isSinger = false;
     }
+
+    this.likeService.checkLikeSong(this.song.id, this.currentUser.id).subscribe( next => {
+      this.checkLike = next;
+      console.log(next);
+    }, error => {
+      console.log(error);
+    });
+
 
     this.commentForm = this.fb.group({
       description: ['', [Validators.required]]
@@ -138,6 +153,26 @@ export class DetailSongComponent implements OnInit {
     }, error => {
       console.log(error);
     });
+  }
+  click() {
+    if (this.checkLike) {
+      this.likeService.deleteLikeSong(this.song.id).subscribe(() => {
+        console.log('Huy like thanh cong');
+      }, error => {
+        console.log(error);
+      });
+    } else {
+      this.like = {
+        song: this.song,
+        user: this.currentUser
+      };
+      this.likeService.createLikeSong(this.like, this.song.id).subscribe(() => {
+        console.log('like thanh cong');
+      }, error => {
+        console.log(error);
+      });
+    }
+    this.checkLike = !this.checkLike;
   }
 
   stop() {

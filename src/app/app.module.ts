@@ -33,6 +33,8 @@ import { TopSongViewsComponent } from './page/song/top-song-views/top-song-views
 import { DetailSingerComponent } from './page/users/detail-singer/detail-singer.component';
 import { ListSingerComponent } from './page/users/list-singer/list-singer.component';
 import { SearchSongComponent } from './page/song/search-song/search-song.component';
+import { EditSongComponent } from './page/song/edit-song/edit-song.component';
+import { EditProfileUserComponent } from './page/users/edit-profile-user/edit-profile-user.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +61,9 @@ import { SearchSongComponent } from './page/song/search-song/search-song.compone
     TopSongViewsComponent,
     DetailSingerComponent,
     ListSingerComponent,
-    SearchSongComponent
+    SearchSongComponent,
+    EditSongComponent,
+    EditProfileUserComponent
   ],
   imports: [
     BrowserModule,

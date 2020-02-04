@@ -1,0 +1,10 @@
+<div *ngIf="!checkEditName">
+  {{currentUser.name}}
+</div>
+<div *ngIf="checkEditName">
+  <form [formGroup]="nameForm" (ngSubmit)="editName()">
+    <input formControlName="name">
+    <button type = "submit">Cập nhât</button>
+  </form>
+</div>
+<button (click)="changeEditName()">Edit</button>

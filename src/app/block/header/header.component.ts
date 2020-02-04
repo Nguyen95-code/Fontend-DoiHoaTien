@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {AuthenticationService} from '../../service/authentication/authentication.service';
 import {User} from '../../interface/user';
@@ -12,6 +12,7 @@ import {UserService} from '../../service/user/user.service';
 export class HeaderComponent implements OnInit {
 
   currentUser: User;
+
   constructor(private activatedRoute: ActivatedRoute,
               private router: Router,
               private authenticationService: AuthenticationService,
@@ -35,4 +36,12 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['/']);
     window.location.reload();
   }
+
+  routerLink() {
+    this.router.navigate(['detail-singer/' + this.currentUser.id]);
+  }
+  edit() {
+    this.router.navigate(['edit-profile-user/' + this.currentUser.id]);
+  }
+
 }

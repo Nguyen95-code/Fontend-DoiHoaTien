@@ -13,6 +13,7 @@ export class UserService {
   private USER_API = 'https://zingdoihoatien.herokuapp.com/users';
   private USER_CURRENT = 'https://zingdoihoatien.herokuapp.com/userCurrent';
   private UrlSinger = 'https://zingdoihoatien.herokuapp.com/singers';
+  private URL_EDIT_USER = 'https://zingdoihoatien.herokuapp.com/users';
   register(user): Observable<User> {
     return this.http.post<User>('https://zingdoihoatien.herokuapp.com/register', user);
   }
@@ -31,6 +32,9 @@ export class UserService {
 
   newPassword(user: User, id: number): Observable<User> {
     return this.http.post<User>(`https://zingdoihoatien.herokuapp.com/new-password/${id}`, user);
+  }
+  editUser(user: User): Observable<User> {
+    return this.http.put<User>(this.URL_EDIT_USER, user);
   }
 
   login(user: User): Observable<User> {

@@ -1,6 +1,4 @@
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
 <!------ Include the above in your HEAD tag ---------->
 
 <a href="http://bootsnipp.com/mouse0270/snippets/4l0k2" class="btn btn-danger hide" id="back-to-bootsnipp">Back to Bootsnipp</a>
@@ -27,14 +25,14 @@
             </div>
           </div>
         </div>
-        <ul class="list-group" id="contact-list" *ngFor="let user of singerList">
-          <li class="list-group-item">
+        <ul class="list-group" id="contact-list" *ngFor="let singer of singerList">
+          <li class="list-group-item" (click)="routerLink(singer)">
             <div class="col-xs-12 col-sm-3">
-              <img src="{{user.image}}" alt="{{user.name}}" [routerLink]="['detail-singer',user.id]" class="img-responsive img-circle" />
-              <a [routerLink]="['detail-singer',user.id]"></a>
+              <img src="{{singer.image}}" alt="{{singer.name}}"  class="img-responsive img-circle" style="height: 50px; width: 50px; border-radius: 50%" />
+              <a [routerLink]="['detail-singer',singer.id]"></a>
             </div>
             <div class="col-xs-12 col-sm-9">
-              <span class="name">{{user.name}}</span><br/>
+              <span class="name">{{singer.name}}</span><br/>
               <span class="glyphicon glyphicon-map-marker text-muted c-info" data-toggle="tooltip" title="5842 Hillcrest Rd"></span>
               <span class="visible-xs"> <span class="text-muted">5842 Hillcrest Rd</span><br/></span>
               <span class="glyphicon glyphicon-earphone text-muted c-info" data-toggle="tooltip" title="(870) 288-4149"></span>
@@ -49,7 +47,5 @@
     </div>
   </div>
 
-  <!-- JavaScrip Search Plugin -->
-  <script src="//rawgithub.com/stidges/jquery-searchable/master/dist/jquery.searchable-1.0.0.min.js"></script>
 
 </div>

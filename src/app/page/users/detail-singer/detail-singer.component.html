@@ -1,21 +1,18 @@
 <div>
-  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
   <div class="row">
-    <div class="span2">
-      <img src="{{singer.image}}"  alt="" class="img-rounded">
+    <div class="col-4">
+      <img src="{{singer.image}}"  style="position: relative; width: 100%">
     </div>
-    <div class="span4">
+    <div class="col-3">
       <blockquote>
         <p>{{singer.name}}</p>
         <small><cite title="Source Title">{{singer.address}}<i class="icon-map-marker"></i></cite></small>
       </blockquote>
       <p>
-        <i class="icon-envelope"></i> {{singer.company}}<br>
-        <i class="icon-globe"></i> www.bootsnipp.com <br>
-        <i class="icon-gift"></i> January 30, 1974
-      </p>
+      <i class="icon-envelope"></i> {{singer.company}}<br>
+      <i class="icon-globe"></i> www.bootsnipp.com <br>
+      <i class="icon-gift"></i> January 30, 1974
+    </p>
     </div>
 </div>
 <!--<div class="span3 well">-->
@@ -35,6 +32,7 @@
     </div>
   </form>
 </div>
+
 <div>
   <div class="media comment-box" [routerLink]="['detail-singer', singer.id]" *ngFor="let comment of listCommentSinger">
     <div class="media-left" >
@@ -46,4 +44,5 @@
       <p>{{comment.description}}</p>
     </div>
   </div>
+</div>
 </div>
