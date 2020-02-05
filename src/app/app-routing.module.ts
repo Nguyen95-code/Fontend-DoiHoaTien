@@ -33,7 +33,7 @@ const routes: Routes = [
     component: DetailSongComponent
   },
   {
-    path: 'edit-song',
+    path: 'detail-song/:id/edit-song/:id',
     component: EditSongComponent,
   },
   {
