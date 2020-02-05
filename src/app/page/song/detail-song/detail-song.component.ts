@@ -13,6 +13,8 @@ import {CommentService} from '../../../service/comment/comment.service';
 import {Comment} from '../../../interface/comment';
 import {LikeService} from '../../../service/like/like.service';
 import {Like} from '../../../interface/like';
+import {TagService} from '../../../service/tag/tag.service';
+import {Tag} from '../../../interface/tag';
 
 
 @Component({
@@ -28,7 +30,8 @@ export class DetailSongComponent implements OnInit {
               private userService: UserService,
               private commentService: CommentService,
               private fb: FormBuilder,
-              private likeService: LikeService) {
+              private likeService: LikeService,
+              private tagService: TagService) {
     this.audioService.getState().subscribe(state => {
       this.state = state;
     });
@@ -52,6 +55,8 @@ export class DetailSongComponent implements OnInit {
   like: Like;
   countLike = 0;
   userId: number;
+  tagList: Tag[] = [];
+  tagForm: FormGroup;
 
   ngOnInit() {
     if (this.authenticationService.currentUserValue) {
@@ -71,6 +76,11 @@ export class DetailSongComponent implements OnInit {
             this.song = next1;
             this.view = this.song.views;
             console.log(this.song);
+            this.tagService.getTags(id).subscribe(result => {
+              this.tagList = result;
+            }, error1 => {
+              console.log(error1);
+            });
           }, error1 => {
             console.log(error1);
           });
@@ -132,21 +142,12 @@ export class DetailSongComponent implements OnInit {
       });
     });
 
-    console.log(3);
+    this.tagForm = this.fb.group({
+      description: ''
+    });
     this.commentForm = this.fb.group({
       description: ['', [Validators.required]]
     });
-
-    console.log(4);
-
-
-    console.log(6);
-    // this.commentService.getListCommentSong(this.song.id).subscribe(result => {
-    //   this.listCommentSong = result;
-    //   console.log(result);
-    // }, error => {
-    //   console.log(error);
-    // });
   }
 
   isEndSongs() {
@@ -259,5 +260,20 @@ export class DetailSongComponent implements OnInit {
     }, error => {
       console.log('lỗi' + error);
     });
+  }
+
+  createTag() {
+    if (this.tagForm.value.description.trim() !== '') {
+      const tag: Tag = {
+        description: this.tagForm.value.description.trim(),
+        song: this.song
+      };
+      this.tagService.createTag(this.song.id, tag).subscribe(next => {
+        console.log(next);
+      }, error1 => {
+        console.log(error1);
+      });
+      this.tagList.push(tag);
+    }
   }
 }

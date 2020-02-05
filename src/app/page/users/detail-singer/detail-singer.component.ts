@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {User} from '../../../interface/user';
 import {Subscription} from 'rxjs';
 import {StreamState} from '../../../interface/stream-state';
@@ -8,6 +8,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {AuthenticationService} from '../../../service/authentication/authentication.service';
 import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {Comment} from '../../../interface/comment';
+import {Song} from '../../../interface/song';
 
 @Component({
   selector: 'app-detail-singer',
@@ -32,12 +33,19 @@ export class DetailSingerComponent implements OnInit {
               private fb: FormBuilder) {
   }
 
+  listSongOfSinger: Song[];
+
   ngOnInit() {
     this.sub = this.activateRoute.paramMap.subscribe((paraMap: ParamMap) => {
       const id = paraMap.get('id');
       this.userService.detail(id).subscribe(next => {
         this.singer = next;
         console.log(this.singer);
+        this.userService.getSongBySinger(id).subscribe(next2 => {
+          this.listSongOfSinger = next2;
+        }, error1 => {
+          console.log(error1);
+        });
       }, error1 => {
         console.log(error1);
       });
@@ -77,5 +85,9 @@ export class DetailSingerComponent implements OnInit {
     }, error => {
       console.log('lỗi' + error);
     });
+  }
+
+  routerLinkSong(song: Song) {
+    this.router.navigate(['detail-song', song.id]);
   }
 }
