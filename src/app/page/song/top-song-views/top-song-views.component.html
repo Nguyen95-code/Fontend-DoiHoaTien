@@ -1,19 +1,10 @@
 <h2>Bài hát nổi bật</h2>
-<div class="container-fluid padding">
-  <div class="row padding">
-    <div class="col-md-12 col-lg-6">
-      <span class="col-md-6 col-lg-4 mb-5 mb-lg-5" [routerLink]="['detail-song', song.id]" *ngFor="let song of listTopViewSong">
-        <div class="team-member" >
-          <img src="{{song.image}}" alt="Image" class="img-fluid">
-          <h2 style="background-color: #edf0f5; width: 100%; text-align: center;">{{song.name}}</h2>
-          <div class="text container">
-            <p class="mb-4">{{song.description}}</p>
-          </div>
-        </div>
-      </span>
+<ul class="list-unstyled row" >
+  <li class="media col-3" [routerLink]="['detail-song', song.id]" *ngFor="let song of listTopViewSong">
+    <img src="{{song.image}}" class="mr-3" height="65" width="65">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">{{song.name}}</h5>
+      {{song.description}}
     </div>
-    <hr class="my-4">
-  </div>
-</div>
-<br>
-<br>
+  </li>
+</ul>
