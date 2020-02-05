@@ -1,10 +1,49 @@
-<div *ngIf="!checkEditName">
-  {{currentUser.name}}
-</div>
-<div *ngIf="checkEditName">
-  <form [formGroup]="nameForm" (ngSubmit)="editName()">
-    <input formControlName="name">
-    <button type = "submit">Cập nhât</button>
-  </form>
-</div>
-<button (click)="changeEditName()">Edit</button>
+<form [formGroup]="userForm" (ngSubmit)="editUser()" class="form-group">
+  <div *ngIf="uploadImageSuccess" class="alert-success alert">
+    Upload Image Success
+  </div>
+  <div *ngIf="(!uploadImageSuccess && userForm.get('image').value != '')" class="alert alert-primary">
+    Uploading!!!
+  </div>
+  <div class="form-group">
+    <div>
+      <label>Tên</label>
+      <input type="text" class="form-control" placeholder="Tên của bạn" formControlName="name" value="{{currentUser.name}}">
+    </div>
+    <div class="alert alert-danger" role="alert"
+         *ngIf="userForm.value.name.trim() == '' && userForm.get('name').touched">
+      Name is required
+    </div>
+    <div class="alert alert-danger" role="alert"
+         *ngIf="userForm.value.name.trim().length < 6 && userForm.get('name').touched">
+      Name must be longer than 6 characters
+    </div>
+
+    <div >
+      <label>Avatar</label>
+      <img src="{{currentUser.image}}" height="100px">
+      <input type="file" class="form-control-file" formControlName="image" (change)="uploadImage($event)">
+    </div>
+    <div class="alert alert-danger" role="alert"
+         *ngIf="userForm.get('image').invalid && userForm.get('image').touched">
+      Image is required
+    </div>
+    <div class="alert alert-danger" *ngIf="!checkImage">
+      This is not image
+    </div>
+
+    <br/>
+    <div *ngIf="currentUser.roles.name == 'ROLE_SINGER'">
+      <label>Quê quán: </label>
+      <input type="text" class="form-control" placeholder="Quê quán" formControlName="address" value="{{currentUser.address}}">
+
+      <label>Số CMND: </label>
+      <input type="text" class="form-control" placeholder="Số CMND" formControlName="identityCard" value="{{currentUser.identityCard}}">
+
+      <label>Đang làm việc / Đại diện thương hiệu cho công ty: </label>
+      <input type="text" class="form-control" placeholder="Công ty" formControlName="company" value="{{currentUser.company}}">
+    </div>
+    <br>
+  </div>
+  <button class="btn btn-success" type="submit">Cập nhật</button>
+</form>

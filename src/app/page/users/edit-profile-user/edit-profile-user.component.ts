@@ -25,18 +25,11 @@ export class EditProfileUserComponent implements OnInit {
 
   user: User;
   userForm: FormGroup;
-  nameForm: FormGroup;
-  nameImageURL: string;
+  nameImageURL = '';
   checkImage = true;
   uploadImageSuccess: boolean;
   song: Song;
-
-  role: Role = {name: 'ROLE_USER'};
-  checkPass: boolean;
   currentUser: User;
-
-  checkEditName: boolean = false;
-  userTemp: User;
 
   ngOnInit() {
     if (this.authenticationService.currentUserValue) {
@@ -56,67 +49,70 @@ export class EditProfileUserComponent implements OnInit {
       image: ['', [Validators.required]],
       address: '',
       identityCard: '',
-      company: '',
-      username: '',
-      password: '',
-      confirmPassword: ''
-    });
-    this.nameForm = this.fb.group({
-      name: ''
+      company: ''
     });
   }
 
   editUser() {
-    const checkValid = this.userForm.valid && this.userForm.value.name.trim().length >= 6 && this.checkPass;
-    if (checkValid) {
-      if (!this.checkImage) {
-        alert('This is not image');
-      } else {
-        if (!this.uploadImageSuccess) {
-          alert('Please wait upload file');
-        } else {
-          if (this.role.name === 'ROLE_USER') {
-            this.user = {
-              name: this.userForm.value.name.trim(),
-              image: this.nameImageURL,
-              playlist: [],
-              myList: [],
-              albumList: [],
-              roles: this.role,
-              password: this.userForm.value.password,
-              confirmPassword: this.userForm.value.confirmPassword,
-              username: this.userForm.value.username
-            };
-          } else {
-            this.user = {
-              name: this.userForm.value.name.trim(),
-              image: this.nameImageURL,
-              playlist: [],
-              albumList: [],
-              myList: [],
-              roles: this.role,
-              identityCard: this.userForm.value.identityCard.trim(),
-              address: this.userForm.value.address.trim(),
-              company: this.userForm.value.company.trim(),
-              password: this.userForm.value.password,
-              confirmPassword: this.userForm.value.confirmPassword,
-              username: this.userForm.value.username
-            };
-          }
-          console.log(this.user);
-          this.userService.register(this.user).subscribe(() => {
-            console.log('Add thành công!');
-            alert('Đăng ký thành công');
-            this.router.navigate(['']);
-            this.userForm.reset();
-          }, error => {
-            console.log('lỗi' + error);
-          });
-        }
-      }
+    let name: string;
+    let image: string;
+    let address: string;
+    let identityCard: string;
+    let company: string;
+
+    if (this.userForm.value.name.trim() !== '') {
+      name = this.userForm.value.name.trim();
     } else {
-      alert('Form is invalid');
+      name = this.currentUser.name;
     }
+
+    if (this.nameImageURL !== '') {
+      image = this.nameImageURL;
+    } else {
+      image = this.currentUser.image;
+    }
+
+    if (this.userForm.value.address.trim() !== '') {
+      address = this.userForm.value.address.trim();
+    } else {
+      address = this.currentUser.address;
+    }
+
+    if (this.userForm.value.identityCard.trim() !== '') {
+      identityCard = this.userForm.value.identityCard.trim();
+    } else {
+      identityCard = this.currentUser.identityCard;
+    }
+
+    if (this.userForm.value.company.trim() !== '') {
+      company = this.userForm.value.company.trim();
+    } else {
+      company = this.currentUser.company;
+    }
+
+    const userTemp: User = {
+      id: this.currentUser.id,
+      name,
+      image,
+      address,
+      identityCard,
+      company,
+      username: this.currentUser.username,
+      password: this.currentUser.password,
+      confirmPassword: this.currentUser.confirmPassword,
+      playlist: this.currentUser.playlist,
+      albumList: this.currentUser.albumList,
+      myList: this.currentUser.myList,
+      roles: this.currentUser.roles
+    };
+
+    this.userService.editUser(userTemp).subscribe(next => {
+      console.log(next);
+      alert('Cập nhật thành công');
+      window.location.reload();
+    }, error1 => {
+      console.log(error1);
+    });
   }
 
   uploadImage(event) {
@@ -149,33 +145,5 @@ export class EditProfileUserComponent implements OnInit {
     } else {
       this.checkImage = false;
     }
-  }
-
-  changeEditName(){
-    this.checkEditName = true;
-  }
-  editName() {
-    this.userTemp = {
-      id: this.currentUser.id,
-      name: this.nameForm.value.name,
-      image: this.currentUser.image,
-      playlist: this.currentUser.playlist,
-      albumList: this.currentUser.albumList,
-      myList: this.currentUser.myList,
-      roles: this.currentUser.roles,
-      identityCard: this.currentUser.identityCard,
-      address: this.currentUser.address,
-      company: this.currentUser.company,
-      password: this.currentUser.password,
-      confirmPassword: this.currentUser.confirmPassword,
-      username: this.currentUser.username
-    };
-    console.log(this.userTemp);
-    this.userService.editUser(this.userTemp).subscribe(next => {
-      this.currentUser = next;
-    }, error => {
-      console.log(error);
-    });
-    this.checkEditName = false;
   }
 }
