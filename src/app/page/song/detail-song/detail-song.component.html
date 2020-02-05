@@ -13,9 +13,10 @@
     <!--          style="color: #bb0000; font-size: 200%">Edit</a>-->
     <!--    </div>-->
 
-    <div *ngIf="isSinger" style="position: relative; width: 3%; float: right">
+    <div *ngIf="isSinger && song.user.id === currentUser.id" style="position: relative; width: 3%; float: right">
       <!--      <a  lass="glyphicon glyphicon-remove" [routerLink]="['delete-song',song.id]"-->
       <!--         style="color: #bb0000; font-size: 200%">Delete</a>-->
+      <a class="btn btn-default" [routerLink]="['edit-song',song.id]"><span class="glyphicon glyphicon-edit"></span></a>
       <a class="btn btn-default" [routerLink]="['delete-song',song.id]"><span class="glyphicon glyphicon-trash"></span></a>
     </div>
   </mat-toolbar>
