@@ -32,6 +32,7 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
+    this.authenticationService.logout();
     this.submitted = true;
     this.loading = true;
     this.authenticationService.login(this.userForm.value.username, this.userForm.value.password)
